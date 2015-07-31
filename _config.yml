@@ -7,6 +7,7 @@ url: "http://nexerq.cf" # the base hostname & protocol for your site
 twitter_username: n2468txd
 github_username:  n2468txd
 osu_username: Nexerq
+disqus_shortname: nexerq
 
 # Build settings
 markdown: kramdown

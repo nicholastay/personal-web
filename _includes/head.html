@@ -11,4 +11,18 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
   <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+
+  <script type="text/javascript">
+      /* Disqus config */
+      /* * * CONFIGURATION VARIABLES * * */
+      var disqus_shortname = '{{ site.disqus_shortname }}';
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+          var s = document.createElement('script'); s.async = true;
+          s.type = 'text/javascript';
+          s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+  </script>
 </head>
