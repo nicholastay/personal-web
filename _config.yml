@@ -10,6 +10,7 @@ osu_username: Nexerq
 disqus_shortname: nexerq
 youtube_nickname: Nexerq # Display name
 youtube_channel_id: UCL1Ifo1tPouRGYosSm6N14w # This must be the ID in /channel/ (permalink)
+twitch_username: n2468txd
 
 # Build settings
 markdown: kramdown

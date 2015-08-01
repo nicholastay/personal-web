@@ -58,6 +58,23 @@
           </li>
           {% endif %}
 
+          {% if site.twitch_username %}
+          <li>
+            <a href="https://twitch.tv/{{ site.twitch_username }}">
+              <span class="icon  icon--twitchtv">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M11.4,13.8H8.3l-2,2h-2v-2H0.5V2.9l1-2.7h14v9.5L11.4,13.8z M14.1,9V1.5H2.9v9.9H6v2l2-2h3.7L14.1,9z"/>
+	<g id="Solo_Glitch_136_">
+		<g>
+			<path fill="#828282" d="M10.4,4.2v4.1h1.4V4.2H10.4z M6.6,8.3H8V4.2H6.6V8.3z"/>
+                </svg>
+              </span>
+
+              <span class="username">{{ site.twitch_username }}</span>
+            </a>
+          </li>
+          {% endif %}
+
           {% if site.osu_username %}
           <li>
             <a href="https://osu.ppy.sh/u/{{ site.osu_username }}">
