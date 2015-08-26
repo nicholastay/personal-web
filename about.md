@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hey guys, I'm Nexerq, previously known as n2468txd. My real name is Nicholas, but you can call me Nick. I enjoy programming and also playing video games.
+Hey guys, I'm Nicholas Tay but online I prefer to be called Nick, or as my handle Nexerq (previous: n2468txd). I enjoy programming and also playing video games.
 
 ### Contact me
 
