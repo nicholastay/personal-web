@@ -23,9 +23,9 @@
 	<script>
 	(function() {
 
-	if (!window.location.search)
+	var base = decodeURIComponent(window.location.search).replace("?", "").replace(/^https?:/, "");
+	if (!base)
 		return document.body.innerHTML = "Set a query url first by adding ? then the url you want with the template query as %s.";
-	var base = window.location.search.replace("?", "");
 
 	document.getElementById("query").addEventListener("keyup", function(e) {
 	    e.preventDefault();
@@ -40,7 +40,7 @@
 	function go() {
 		var q = document.getElementById("query").value;
 		if (q !== "")
-			document.getElementById("qframe").setAttribute("src", base.replace("%s", q));
+			document.getElementById("qframe").src = base.replace("%s", q);
 	}
 
 	document.getElementById("query").focus();
