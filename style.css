@@ -1,0 +1,52 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	font-family: "맑은 고딕", "Malgun Gothic", "Segoe UI", Helvetica, sans-serif;
+}
+
+html {
+	background-color: #1F1F1F;
+}
+
+body {
+	color: white;
+}
+
+h1 {
+	color: #FF9FFE;
+}
+
+.hi {
+	font-weight: 600;
+	font-size: 1.3em;
+}
+
+.head-line {
+	top: 0;
+	height: 15px;
+	background-color: #0D0D0D;
+}
+
+.content {
+	width: 650px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.subtitle {
+	font-size: 15px;
+	/*font-style: italic;*/
+	color: #EEEEEE;
+}
+
+.link {
+	padding-left: 5px;
+	padding-right: 5px;
+}
