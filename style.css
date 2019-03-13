@@ -20,6 +20,11 @@ h1 {
 	color: #FF9FFE;
 }
 
+a {
+	text-decoration: none;
+	color: white;
+}
+
 .hi {
 	font-weight: 600;
 	font-size: 1.3em;
