@@ -5,7 +5,7 @@
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<title>Nicholas Tay</title>
-		<meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8, user-scalable=no">
 
 		<meta name="description" content="Nicholas Tay - BCom/BCompSci Student at Monash University">
 		<meta property="og:title" content="Nicholas Tay">
@@ -52,6 +52,9 @@
 		[ 'KR', '안녕하세요? 저는', 'Nicholas Tay', '입니다', 'BCom/BCompSci 학생 | 모나쉬 대학교 (Monash University)' ],
 		[ 'FR', 'Salut, je m\'appelle', 'Nicholas Tay', '', 'BCom/BCompSci étudiant | L\'université Monash (Monash University)' ]
 	];
+
+	// thanks ios
+	document.ontouchmove = function (e) { e.preventDefault(); }
 
 	document.getElementById('translate').style.display = '';
 	if (window.location.hash && window.location.hash != '#EN') {
