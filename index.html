@@ -53,6 +53,15 @@
 	];
 
 	document.getElementById('translate').style.display = '';
+	if (window.location.hash && window.location.hash != '#EN') {
+		var hash = window.location.hash.replace('#', '');
+		for (var i = 0; i < langData.length; ++i) {
+			if (hash === langData[i][0]) {
+				lang = i;
+				setLang();
+			}
+		}
+	}
 
 	function changeLang(e) {
 		e.preventDefault();
@@ -60,8 +69,13 @@
 			lang = 0;
 
 		// animation stuff
+		setLang();
+	}
+
+	function setLang() {
 		document.body.className = 'fadeOut';
 		setTimeout(function() {
+			window.location.hash = lang !== 0 ? langData[lang][0] : '';
 			setElem('translate-lang', 0);
 			setElem('hi', 1);
 			setElem('myname', 2);
