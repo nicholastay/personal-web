@@ -12,14 +12,18 @@
 		<meta property="og:description" content="Nicholas Tay - BCom/BCompSci Student at Monash University">
 		<meta property="og:image" content="http://nicholastay.github.io/assets/circle-prof.png">
 	</head>
-	<body>
+	<body class="firstFade">
 		<div class="head-line"></div>
 		<div class="content">
-			<p class="hi">Hi, I'm</p>
+			<p id="hi" class="hi">Hi, I'm</p>
 			<img src="assets/circle-prof.png" alt="My face" width="250px">
-			<h1>Nicholas Tay</h1>
-			<span class="subtitle">BCom/BCompSci Student | Monash University</span>
-			<div style="margin-top: 55px">
+			<h1 id="myname">Nicholas Tay</h1>
+			<div id="subname" class="name-ending hi" style="margin-top: -20px;"></div>
+			<p id="subtitle" class="subtitle">BCom/BCompSci Student | Monash University</p>
+			<div style="margin-top: 25px">
+				<a href="https://github.com/nicholastay" class="link">
+					<img src="assets/github.png" alt="GitHub / nicholastay" height="25px">
+				</a>
 				<a href="https://twitter.com/@specialistmaths" class="link">
 					<img src="assets/twitter.png" alt="Twitter / specialistmaths" height="25px">
 				</a>
@@ -29,7 +33,44 @@
 				<a href="https://www.youtube.com/channel/UC3PCZ5I5prckJHg15hLG5Sg" class="link">
 					<img src="assets/youtube.png" alt="YouTube / Nicholas Tay" height="25px">
 				</a>
+				<a href="#" class="link" id="translate" onclick="changeLang(event)" style="display: none;">
+					<span style="position: relative; width: 25px;">
+						<img src="assets/translate.png" alt="Translate!" height="25px">
+						<span id="translate-lang" class="back-slight" style="padding: 2px; opacity: 0.6; font-size: 6.5pt; position: absolute; top: -10px; right: 0;">EN</span>
+					</span>
+				</a>
 			</div>
 		</div>
 	</body>
+
+	<script>
+	var lang = 0;
+	var langData = [
+		[ 'EN', 'Hi, I\'m', 'Nicholas Tay', '', 'BCom/BCompSci Student | Monash University' ],
+		[ 'ZH', '你好，我是', '鄭能鏗', '（Nicholas Tay）', 'BCom/BCompSci 学生 | 莫纳什大学 （Monash University）' ]
+	];
+
+	document.getElementById('translate').style.display = '';
+
+	function changeLang(e) {
+		e.preventDefault();
+		if (++lang >= langData.length)
+			lang = 0;
+
+		// animation stuff
+		document.body.className = 'fadeOut';
+		setTimeout(function() {
+			setElem('translate-lang', 0);
+			setElem('hi', 1);
+			setElem('myname', 2);
+			setElem('subname', 3);
+			setElem('subtitle', 4);
+			document.body.className = '';
+		}, 500);
+	}
+
+	function setElem(elId, index) {
+		document.getElementById(elId).textContent = langData[lang][index];
+	}
+	</script>
 </html>
