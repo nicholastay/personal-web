@@ -31,6 +31,9 @@
 				<a href="https://linkedin.com/in/nktay" class="link">
 					<img src="assets/linkedin.png" alt="LinkedIn / nktay" height="25px">
 				</a>
+				<a class="link" id="mail" style="display: none;">
+					<img src="assets/mail.png" alt="Mail" height="25px">
+				</a>
 				<a href="https://www.youtube.com/channel/UC3PCZ5I5prckJHg15hLG5Sg" class="link">
 					<img src="assets/youtube.png" alt="YouTube / Nicholas Tay" height="25px">
 				</a>
@@ -51,11 +54,19 @@
 		[ 'ZH', '你好，我是', '鄭能鏗', '（Nicholas Tay）', 'BCom/BCompSci 学生 | 莫纳什大学 （Monash University）' ],
 		[ 'FR', 'Salut, je m\'appelle', 'Nicholas Tay', '', 'BCom/BCompSci étudiant | L\'université Monash (Monash University)' ]
 	];
+	var mailData = '84728083918633858074798683729021852191729639788472808321748684';
 
 	// thanks ios
 	document.body.addEventListener('touchmove', function(e) { e.preventDefault(); }, { passive: false });
-
+	
+	// js is ok
 	document.getElementById('translate').style.display = '';
+	document.getElementById('mail').style.display = '';
+
+	// mail security stuff
+	document.getElementById('mail').href = mailData.match(/.{1,2}/g).map(a => String.fromCharCode(Number(a)+25)).join('');
+
+	// translate stuffs
 	if (window.location.hash && window.location.hash != '#EN') {
 		var hash = window.location.hash.replace('#', '');
 		for (var i = 0; i < langData.length; ++i) {
