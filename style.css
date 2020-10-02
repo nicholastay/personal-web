@@ -38,6 +38,10 @@ h1 {
 	color: #FF9FFE;
 }
 
+.zoom:hover {
+	transform: scale(1.5);
+}
+
 a {
 	text-decoration: none;
 	color: white;
