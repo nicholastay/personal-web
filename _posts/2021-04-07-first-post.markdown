@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Using Jekyll as a basic static site generator"
+title:  "I'm back! - and with a neat little site with Jekyll"
 date:   2021-04-07 23:56:18 +1000
 tags: jekyll website github
 ---
