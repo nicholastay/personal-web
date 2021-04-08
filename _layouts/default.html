@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/style.css">
+		<title>{% if page.title %}{{ page.title }} - {% endif %}Nicholas Tay</title>
+		<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8, user-scalable=no">
+
+		<meta name="description" content="Nicholas Tay - BCom/BCompSci Student at Monash University">
+		<meta property="og:title" content="{% if page.title %}{{ page.title }} - {% else %}Nicholas Tay{% endif %}">
+<!-- 		<meta property="og:url" content="http://nicholastay.github.io"> -->
+		<meta property="og:description" content="Nicholas Tay - BCom/BCompSci Student at Monash University">
+		<meta property="og:image" content="http://nicholastay.github.io/assets/circle-prof.png">
+	</head>
+	<body class="firstFade">
+		<div class="head-line"></div>
+		<div class="content">
+			{{ content }}
+		</div>
+	</body>
+</html>

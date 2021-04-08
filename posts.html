@@ -1,0 +1,53 @@
+---
+layout: default
+title: Posts
+---
+
+<style>
+	.tag {
+		display: inline;
+	}
+	.tag-links {
+		display: none;
+		/* for hover to work properly */
+		margin: 0;
+		padding-top: 5px;
+		padding-bottom: 10px;
+	}
+	.tag:hover {
+		padding-bottom: 20px;
+	}
+	.tag:hover .tag-links {
+		display: block;
+	}
+</style>
+
+<div class="post" style="margin-top: 25px;">
+	<div>
+		<a href="/">
+			&lt;&lt; Return home
+		</a>
+	</div>
+	<h1>Posts</h1>
+
+	<ul>
+		{% for post in site.posts %}
+			<li>
+				{{ post.date | date: "%Y-%m-%d" }}: <a href="{{ post.url }}">{{ post.title }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+
+	<div class="tags" style="margin-top: 65px; color: grey;">
+		Tags: 
+		{% for tag in site.tags %}
+			<div class="tag">{{ tag[0] }} <ul class="tag-links">
+					{% for post in tag[1] %}
+						<li>
+							{{ post.date | date: "%Y-%m-%d" }}: <a href="{{ post.url }}">{{ post.title }}</a>
+						</li>
+					{% endfor %}
+			</ul></div>
+		{% endfor %}
+	</div>
+</div>

@@ -38,7 +38,17 @@ h1 {
 	color: #FF9FFE;
 }
 
+h2 {
+	color: #ad68ad;
+	font-size: 1em;
+}
+
 a {
+	text-decoration: underline;
+	color: #009db5;
+}
+
+a.no-link {
 	text-decoration: none;
 	color: white;
 }
@@ -54,13 +64,17 @@ a {
 	background-color: #624662;
 }
 
-.content {
-	width: 650px;
+.home-centre {
+	min-width: 450px;
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
+}
+
+.content {
+	padding: 35px;
 }
 
 .subtitle {
@@ -70,11 +84,27 @@ a {
 	margin-top: 25px;
 }
 
-.link {
+.home-link {
 	padding-left: 5px;
 	padding-right: 5px;
+	display: inline;
 }
 
 .back-slight {
 	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.post {
+	max-width: 1000px;
+	margin: auto;
+}
+
+code {
+	font-family: monospace;
+}
+
+pre {
+	background-color: #262626;
+	padding: 10px 20px;
+	border-radius: 2px;
 }

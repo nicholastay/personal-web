@@ -1,116 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<link rel="shortcut icon" href="/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<title>Nicholas Tay</title>
-		<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8, user-scalable=no">
+---
+layout: default
+---
 
-		<meta name="description" content="Nicholas Tay - BCom/BCompSci Student at Monash University">
-		<meta property="og:title" content="Nicholas Tay">
-		<meta property="og:url" content="http://nicholastay.github.io">
-		<meta property="og:description" content="Nicholas Tay - BCom/BCompSci Student at Monash University">
-		<meta property="og:image" content="http://nicholastay.github.io/assets/circle-prof.png">
-	</head>
-	<body class="firstFade">
-		<div class="head-line"></div>
-		<div class="content">
-			<p id="hi" class="hi">Hi, I'm</p>
-			<img src="assets/circle-prof.png" alt="My face" width="250px">
-			<h1 id="myname">Nicholas Tay</h1>
-			<div id="subname" class="name-ending hi" style="margin-top: -20px;"></div>
-			<p id="subtitle" class="subtitle">BCom/BCompSci Student | Monash University</p>
-			<div style="margin-top: 25px">
-				<a href="https://github.com/nicholastay" class="link">
-					<img src="assets/github.png" alt="GitHub / nicholastay" height="25px">
-				</a>
-				<a href="https://twitter.com/@nnktay" class="link">
-					<img src="assets/twitter.png" alt="Twitter / nnktay" height="25px">
-				</a>
-				<a href="https://linkedin.com/in/nktay" class="link">
-					<img src="assets/linkedin.png" alt="LinkedIn / nktay" height="25px">
-				</a>
-				<a class="link" id="mail" style="display: none;" onclick="showMail(event)" href="#">
-					<span style="position: relative;">
-						<span id="mail-notice" class="back-slight" style="display: none; padding: 2px; opacity: 0.6; font-size: 9pt; position: absolute; top: 30px; width: 170px;">business only emails please!: <span id="mail-protect" style="color: pink;"></span></span>
-						<img src="assets/mail.png" alt="Mail" height="25px">
-					</span>
-				</a>
-				<a href="https://www.youtube.com/channel/UC3PCZ5I5prckJHg15hLG5Sg" class="link">
-					<img src="assets/youtube.png" alt="YouTube / Nicholas Tay" height="25px">
-				</a>
-				<a href="#" class="link" id="translate" onclick="changeLang(event)" style="display: none;">
-					<span style="position: relative; width: 25px;">
-						<img src="assets/translate.png" alt="Translate!" height="25px">
-						<span id="translate-lang" class="back-slight" style="padding: 2px; opacity: 0.6; font-size: 6.5pt; position: absolute; top: -10px; right: 0;">EN</span>
-					</span>
-				</a>
-			</div>
+<div class="home-centre">
+	<p id="hi" class="hi">Hi, I'm</p>
+	<img src="assets/circle-prof.png" alt="My face" width="250px">
+	<h1 id="myname">Nicholas Tay</h1>
+	<div id="subname" class="name-ending hi" style="margin-top: -20px;"></div>
+	<p id="subtitle" class="subtitle">BCom/BCompSci Student | Monash University</p>
+	<p style="margin-top: 25px">
+		<!-- Note: use divs so it's separated in text-based browsers -->
+		<div style="display: none;">
+			My links:
 		</div>
-	</body>
+		<div class="home-link">
+			<a href="https://github.com/nicholastay" class="no-link">
+				<img src="assets/github.png" alt="GitHub / nicholastay" height="25px">
+			</a>
+		</div>
+		<div class="home-link">
+			<a href="https://twitter.com/@nnktay" class="no-link">
+				<img src="assets/twitter.png" alt="Twitter / nnktay" height="25px">
+			</a>
+		</div>
+		<div class="home-link">
+			<a href="https://linkedin.com/in/nktay" class="no-link">
+				<img src="assets/linkedin.png" alt="LinkedIn / nktay" height="25px">
+			</a>
+		</div>
+		<div class="home-link">
+			<a class="no-link" id="mail" style="display: none;" onclick="showMail(event)" href="#">
+				<span style="position: relative;">
+					<span id="mail-notice" class="back-slight" style="display: none; padding: 2px; opacity: 0.6; font-size: 9pt; position: absolute; top: 30px; width: 170px;">business only emails please!: <span id="mail-protect" style="color: pink;">[email protected with JavaScript, sorry!]</span></span>
+					<img src="assets/mail.png" alt="Mail" height="25px">
+				</span>
+			</a>
+		</div>
+		<div class="home-link">
+			<a href="https://www.youtube.com/channel/UC3PCZ5I5prckJHg15hLG5Sg" class="no-link">
+				<img src="assets/youtube.png" alt="YouTube / Nicholas Tay" height="25px">
+			</a>
+		</div>
+		<div class="home-link">
+			<a href="#" class="no-link" id="translate" onclick="changeLang(event)" style="display: none;">
+				<span style="position: relative; width: 25px;">
+					<img src="assets/translate.png" alt="Translate! (requires JavaScript)" height="25px">
+					<span id="translate-lang" class="back-slight" style="padding: 2px; opacity: 0.6; font-size: 6.5pt; position: absolute; top: -10px; right: 0;">EN</span>
+				</span>
+			</a>
+		</div>
+	</p>
+	<div style="margin-top: 45px; color: #b5b5b5;">
+		<p>
+			...and lately, I've been up to:
+			{% for post in site.posts limit:1 %}
+				<a href="{{ post.url }}">{{ post.title }}</a>
+			{% endfor %}
+			and <a href="/posts">more</a>...
+		</p>
+	</div>
+</div>
 
-	<script>
-	var lang = 0;
-	var langData = [
-		[ 'EN', 'Hi, I\'m', 'Nicholas Tay', '', 'BCom/BCompSci Student | Monash University' ],
-		[ 'ZH', '你好，我是', '鄭能鏗', '（Nicholas Tay）', 'BCom/BCompSci 学生 | 莫纳什大学 （Monash University）' ],
-		[ 'FR', 'Salut, je m\'appelle', 'Nicholas Tay', '', 'BCom/BCompSci étudiant | L\'université Monash (Monash University)' ]
-	];
-	var mailData = '858074798683729021852191729639788472808321748684';
+<script>
+var lang = 0;
+var langData = [
+	[ 'EN', 'Hi, I\'m', 'Nicholas Tay', '', 'BCom/BCompSci Student | Monash University' ],
+	[ 'ZH', '你好，我是', '鄭能鏗', '（Nicholas Tay）', 'BCom/BCompSci 学生 | 莫纳什大学 （Monash University）' ],
+	[ 'FR', 'Salut, je m\'appelle', 'Nicholas Tay', '', 'BCom/BCompSci étudiant | L\'université Monash (Monash University)' ]
+];
+var mailData = '858074798683729021852191729639788472808321748684';
 
-	// thanks ios
-	document.body.addEventListener('touchmove', function(e) { e.preventDefault(); }, { passive: false });
-	
-	// js is ok
-	document.getElementById('translate').style.display = '';
-	document.getElementById('mail').style.display = '';
+// thanks ios
+document.body.addEventListener('touchmove', function(e) { e.preventDefault(); }, { passive: false });
 
-	// mail security stuff
-	function showMail(e) {
-		e.preventDefault();
-		var mailD = mailData.match(/.{1,2}/g).map(a => String.fromCharCode(Number(a)+25)).join('');
-		document.getElementById('mail').onclick = null;
-		document.getElementById('mail-notice').style.display = '';
-		document.getElementById('mail-protect').innerText = mailD;
-		document.getElementById('mail').href = 'mailto:' + mailD;
-	}
+// js is ok
+document.getElementById('translate').style.display = '';
+document.getElementById('mail').style.display = '';
 
-	// translate stuffs
-	if (window.location.hash && window.location.hash != '#EN') {
-		var hash = window.location.hash.replace('#', '');
-		for (var i = 0; i < langData.length; ++i) {
-			if (hash === langData[i][0]) {
-				lang = i;
-				setLang();
-			}
+// mail security stuff
+function showMail(e) {
+	e.preventDefault();
+	var mailD = mailData.match(/.{1,2}/g).map(a => String.fromCharCode(Number(a)+25)).join('');
+	document.getElementById('mail').onclick = null;
+	document.getElementById('mail-notice').style.display = '';
+	document.getElementById('mail-protect').innerText = mailD;
+	document.getElementById('mail').href = 'mailto:' + mailD;
+}
+
+// translate stuffs
+if (window.location.hash && window.location.hash != '#EN') {
+	var hash = window.location.hash.replace('#', '');
+	for (var i = 0; i < langData.length; ++i) {
+		if (hash === langData[i][0]) {
+			lang = i;
+			setLang();
 		}
 	}
+}
 
-	function changeLang(e) {
-		e.preventDefault();
-		if (++lang >= langData.length)
-			lang = 0;
+function changeLang(e) {
+	e.preventDefault();
+	if (++lang >= langData.length)
+		lang = 0;
 
-		// animation stuff
-		setLang();
-	}
+	// animation stuff
+	setLang();
+}
 
-	function setLang() {
-		document.body.className = 'fadeOut';
-		setTimeout(function() {
-			window.location.hash = lang !== 0 ? langData[lang][0] : '';
-			setElem('translate-lang', 0);
-			setElem('hi', 1);
-			setElem('myname', 2);
-			setElem('subname', 3);
-			setElem('subtitle', 4);
-			document.body.className = '';
-		}, 500);
-	}
+function setLang() {
+	document.body.className = 'fadeOut';
+	setTimeout(function() {
+		window.location.hash = lang !== 0 ? langData[lang][0] : '';
+		setElem('translate-lang', 0);
+		setElem('hi', 1);
+		setElem('myname', 2);
+		setElem('subname', 3);
+		setElem('subtitle', 4);
+		document.body.className = '';
+	}, 500);
+}
 
-	function setElem(elId, index) {
-		document.getElementById(elId).textContent = langData[lang][index];
-	}
-	</script>
-</html>
+function setElem(elId, index) {
+	document.getElementById(elId).textContent = langData[lang][index];
+}
+</script>
