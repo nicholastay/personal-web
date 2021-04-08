@@ -11,6 +11,6 @@ I wanted a balance between a light, simple HTML page, but also convenience in up
 
 It turns out that you can simply write HTML pages, not only Markdown posts, and simply weave in those 'moustache' clauses to mix in dynamic content at build time, which is exactly what I wanted.
 
-A primary goal of mine with this site is to keep it slim and usable - no heavy JavaScript frameworks, just simple ones where needed, and some CSS. Even if JavaScript is disabled, the site should still function perfectly, just with some reduced 'nice' features, such as the translation on the front page.
+A primary goal of mine with this site is to keep it slim and usable - no heavy JavaScript frameworks, just simple ones where needed, and some CSS. Even if JavaScript is disabled, the site should still function perfectly, just with some reduced 'nice' features, such as the translation on the front page. Heck, I've even made this website usable with a text-based browser (hopefully!), so feel free to give that a try!
 
 So now we're here! Hopefully I post more in the future... but we'll see.
