@@ -7,9 +7,10 @@
 		<title>{% if page.title %}{{ page.title }} - {% endif %}Nicholas Tay</title>
 		<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8, user-scalable=no">
 
-		<meta name="description" content="{{ page.excerpt }}">
+		{% assign description = page.excerpt | strip_html | strip | truncatewords: 50 %}
+		<meta name="description" content="{{ description }}">
 		<meta property="og:title" content="{% if page.title %}{{ page.title }} - {% else %}Nicholas Tay{% endif %}">
-		<meta property="og:description" content="{{ page.excerpt }}">
+		<meta property="og:description" content="{{ description }}">
 		<meta property="og:image" content="https://nick.tay.blue/assets/circle-prof.png">
 
 		<link rel="alternate" type="application/rss+xml" title="Nicholas Tay (RSS)" href="https://nick.tay.blue/rss.xml" />
