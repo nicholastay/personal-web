@@ -48,7 +48,28 @@
 						<img src="/assets/rss.png" alt="RSS Feed" height="25px" style="filter: brightness(0.25);">
 					</a>
 				</div>
+
+				<div id="comments" onclick="loadComments();" style="margin-top: 35px"></div>
 			</div>
 		</div>
+	
+	<script>
+		var comments = document.getElementById("comments");
+		comments.innerText = "Click to load comments (utteranc.es)...";
+
+		function loadComments() {
+			comments.onclick = null;
+			comments.innerText = "";
+			var utt = document.createElement("script");
+			utt.src = "https://utteranc.es/client.js";
+			utt.async = true;
+			utt.crossOrigin = "anonymous";
+			utt.setAttribute("repo", "nicholastay/personal-web");
+			utt.setAttribute("issue-term", "pathname");
+			utt.setAttribute("label", "blog comments");
+			utt.setAttribute("theme", "github-dark");
+			comments.appendChild(utt);
+		}
+	</script>
 	</body>
 </html>

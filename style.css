@@ -108,3 +108,8 @@ pre {
 	padding: 10px 20px;
 	border-radius: 2px;
 }
+
+#comments {
+	color: grey;
+	cursor: pointer;
+}
