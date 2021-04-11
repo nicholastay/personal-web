@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "Setting up macOS, and having a different password for FileVault"
+date:   2021-04-11 11:39:12 +1000
+tags: macos encryption
+---
+
+So I'm already back with another post!
+
+Over the weekend I decided to play around with an old MacBook Air I still had lying around - it's a 13" mid-2011 model. But it still does run well! It was on High Sierra (10.13) though, and unfortunately that's the last supported version on it. Not to worry though, the [Mojave Patcher](http://dosdude1.com/mojave/) exists, so I decided to give it a try and it is working pretty great so far on this model. There seems to be more issues with Catalina though, so I'm happy to just settle with 10.14 for now. I also get to use the App Store version of WireGuard which makes things easier (I use it to connect back to my homelab with personal internal services).
+
+On to the topic in the post title: FileVault. This is my first time trying out FileVault - only fairly recently had I looked into encrypting all the things at rest, including setting up LUKS on my Linux machines. It really is great how simple it is to enable, and given you have hardware acceleration for encryption standards (which you should), there really is no real reason not to have it on, especially on a laptop that you may lose out in the wild. (Although, I'm making this point as the Celeron 847 in the ThinkPad X220i doesn't even have AVX and LUKS can add a bit of slowdown to boot and general usage.)
+
+Coming from this background of LUKS, I liked having a separate, stronger key to decrypt the system on boot, then have a *slightly* weaker password for general usage (lock screen, sudo). I know, probably not the best practice, but FileVault not having such an option and insisting on synchronising passwords with main user accounts kinda sucked. I was able to put together a workaround however, with bits and pieces of information around the webs.
+
+So here we go, how to have a separate password for FileVault (assuming it is already enabled, and there is only one user on the system):
+
+1. Create a "Sharing Only" user for decryption purposes. I named mine "FDE Login" with the username "fdeuser". The password set here will be the one used when turning on the Mac.
+	- Side note: We use a "Sharing Only" account so it will not show up as a user on the Mac on the login screen. On a technical level its shell is restricted and has no home directory (/dev/null).
+2. Add in the account to FileVault with the terminal command: `sudo fdesetup add -usertooadd fdeuser`.
+3. Enter your **main user** ('nick' here) credentials (username, then password).
+4. Then, enter in the decryption user's password.
+5. Now we will remove the main user from FileVault: `sudo fdesetup remove -user nick`.
+	- You probably can remove more users with this step if there are more.
+6. Verify the only user is the "fdeuser" with: `sudo fdesetup list`.
+7. On a reboot, the only user that comes up on FileVault should be the new "FDE Login" user, then you should be brought to the standard login screen after entering the password.
+
+And that's it! As a note, the recovery key you got when enabling FileVault should still work should it ever be required.
