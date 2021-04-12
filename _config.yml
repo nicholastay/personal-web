@@ -53,3 +53,10 @@
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - assets/
+  - tools/
+  - .gitignore
+  - style.css
