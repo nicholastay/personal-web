@@ -56,7 +56,8 @@
 exclude:
   - Gemfile
   - Gemfile.lock
+  - .gitignore
+livereload_ignore:
   - assets/
   - tools/
-  - .gitignore
   - style.css

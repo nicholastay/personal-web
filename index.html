@@ -1,10 +1,12 @@
 ---
 layout: default
+content_class: home
 ---
 
+<div class="home-centre-parent">
 <div class="home-centre">
 	<p id="hi" class="hi">Hi, I'm</p>
-	<img src="assets/circle-prof.png" alt="My face" width="250px">
+	<img src="assets/circle-prof.png" alt="[My face!]" width="250px">
 	<h1 id="myname">Nicholas Tay</h1>
 	<div id="subname" class="name-ending hi" style="margin-top: -20px;"></div>
 	<p id="subtitle" class="subtitle">BCom/BCompSci Student | Monash University</p>
@@ -65,6 +67,7 @@ layout: default
 		</p>
 	</div>
 </div>
+</div>
 
 <script>
 var lang = 0;
@@ -76,7 +79,8 @@ var langData = [
 var mailData = '858074798683729021852191729639788472808321748684';
 
 // thanks ios
-document.body.addEventListener('touchmove', function(e) { e.preventDefault(); }, { passive: false });
+if (document.body.addEventListener)
+	document.body.addEventListener('touchmove', function(e) { e.preventDefault(); }, { passive: false });
 
 // js is ok
 document.getElementById('translate').style.display = '';
@@ -84,8 +88,15 @@ document.getElementById('mail').style.display = '';
 
 // mail security stuff
 function showMail(e) {
-	e.preventDefault();
-	var mailD = mailData.match(/.{1,2}/g).map(a => String.fromCharCode(Number(a)+25)).join('');
+	if (e.preventDefault)
+		e.preventDefault();
+	else
+		e.returnValue = false;
+	var mailMatch = mailData.match(/.{1,2}/g);
+	var mailD = '';
+	for (var i = 0; i < mailMatch.length; ++i) {
+		mailD += String.fromCharCode(Number(mailMatch[i])+25);
+	}
 	document.getElementById('mail').onclick = null;
 	document.getElementById('mail-notice').style.display = '';
 	document.getElementById('mail-protect').innerText = mailD;
@@ -104,7 +115,10 @@ if (window.location.hash && window.location.hash != '#EN') {
 }
 
 function changeLang(e) {
-	e.preventDefault();
+	if (e.preventDefault)
+		e.preventDefault();
+	else
+		e.returnValue = false;
 	if (++lang >= langData.length)
 		lang = 0;
 
@@ -126,6 +140,6 @@ function setLang() {
 }
 
 function setElem(elId, index) {
-	document.getElementById(elId).textContent = langData[lang][index];
+	document.getElementById(elId).innerText = langData[lang][index];
 }
 </script>

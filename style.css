@@ -1,8 +1,8 @@
+/* Basic setup */
 html,
 body {
 	margin: 0;
 	padding: 0;
-	overflow-x: hidden;
 }
 
 * {
@@ -11,15 +11,19 @@ body {
 
 html {
 	background-color: #1F1F1F;
+	height: 100%;
 }
 
 body {
 	color: white;
-    transition: opacity 0.5s ease-in-out;
-    opacity: 1;
-    animation: fade 1s;
+	transition: opacity 0.5s ease-in-out;
+	opacity: 1;
+	animation: fade 1s;
+	height: 100%;
 }
 
+
+/* Fade animation on page loads */
 .fadeOut {
 	transition: opacity 0.5s ease-out;
 	opacity: 0;
@@ -34,6 +38,8 @@ body {
 	}
 }
 
+
+/* Basic HTML elements */
 h1 {
 	color: #FF9FFE;
 }
@@ -53,28 +59,59 @@ a.no-link {
 	color: white;
 }
 
+code {
+	font-family: monospace;
+}
+
+pre {
+	background-color: #262626;
+	padding: 10px 20px;
+	border-radius: 2px;
+}
+
+
+/* Generic elements */
+/* Pink bar across top of pages */
+.head-line {
+	height: 10px;
+	background-color: #624662;
+}
+
+/* Main area */
+.content {
+	margin: auto;
+	max-width: 1000px;
+}
+
+.content.home {
+	height: 600px; /* legacy browser workaround */
+	_margin-top: 100px;/* old ie hack */
+	height: calc(100% - 10px);
+}
+
+.content.post {
+	padding: 35px;
+	margin-top: 25px;
+}
+
+
+/* Home page */
 .hi {
 	font-weight: 600;
 	font-size: 1.3em;
 }
 
-.head-line {
-	top: 0;
-	height: 10px;
-	background-color: #624662;
+.home-centre-parent {
+	display: table;
+	margin: auto;
+	height: 100%;
 }
 
 .home-centre {
 	min-width: 450px;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
 	text-align: center;
-}
-
-.content {
-	padding: 35px;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .subtitle {
@@ -94,21 +131,8 @@ a.no-link {
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
-.post {
-	max-width: 1000px;
-	margin: auto;
-}
 
-code {
-	font-family: monospace;
-}
-
-pre {
-	background-color: #262626;
-	padding: 10px 20px;
-	border-radius: 2px;
-}
-
+/* Posts */
 #comments {
 	color: grey;
 	cursor: pointer;
