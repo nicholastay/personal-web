@@ -1,0 +1,47 @@
+---
+---
+
+<html>
+
+<head>
+	<title>Nicholas Tay</title>
+	<style>
+		body {
+			background-color: #c0c0c0;
+		}
+	</style>
+</head>
+
+<h1>Nicholas Tay</h1>
+
+<p>Welcome to the lite version of my website. If you stumbled across this, I assume you've decided to check out my website with an old/text browser for some reason - you're pretty cool then I guess! Or, maybe you decided to check out the source code of my website and found that weird bit up the top... that's pretty cool too!</p>
+
+<p>This is a personal portfolio site though, so I'll get on with the usual stuff.</p>
+
+<h2>My Links</h2>
+
+Here are my links (although, they probably won't display properly with the browser you're on!):
+
+<ul>
+	<li>Twitter: <a href="https://twitter.com/_nexerq">@_nexerq</a></li>
+	<li>GitHub: <a href="https://github.com/nicholastay">nicholastay</a></li>
+	<li>LinkedIn: <a href="https://linkedin.com/in/nktay">nktay</a></li>
+	<li>Email: (sorry for this) my name, with '.n.' in the middle at Google's email service</li>
+</ul>
+
+<h2>Blog</h2>
+
+<p>Feel free to also check out <a href="/posts">my blog</a> - it should be mostly okay to view with old browsers, as the HTML/CSS is quite clean.</p>
+
+<p>The latest post on there (sounds cool already right?) is:
+{% for post in site.posts limit:1 %}
+	<a href="{{ post.url }}">{{ post.title }}</a>
+{% endfor %}</p>
+
+<p>Maybe a <a href="/feed.xml">RSS feed</a> would be better suited for reading, though.</p>
+
+<h2>You're awesome!</h2>
+
+Thanks for visiting, and here's to more nice little webpages like this!
+
+</html>

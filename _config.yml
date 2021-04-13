@@ -61,3 +61,7 @@ livereload_ignore:
   - assets/
   - tools/
   - style.css
+
+# disable smart quotes so its more just plain text
+kramdown:
+    smart_quotes: ["apos", "apos", "quot", "quot"]
