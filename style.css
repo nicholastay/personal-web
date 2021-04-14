@@ -160,6 +160,25 @@ img.round {
 	color: grey;
 }
 
+.home-blocks h3 {
+	margin-top: 0;
+	margin-bottom: 8px;
+}
+
+@media(max-width: 650px) {
+	table.home-blocks,
+	.home-blocks td,
+	.home-blocks tr,
+	.home-blocks th {
+		display: block;
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.home-blocks h3 {
+		margin-top: 15px;
+	}
+}
 
 
 /* Posts */

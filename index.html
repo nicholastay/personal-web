@@ -69,13 +69,10 @@ content_class: home
 	</div>
 
 	<table class="home-blocks">
-		<tr>
-			<th>Recent Posts</th>
-			<th>My Info</th>
-			<th>Personal Projects</th>
-		</tr>
+		<tbody>
 		<tr>
 			<td>
+				<h3>Recent Posts</h3>
 				<ul>
 					{% for post in site.posts limit:3 %}
 						<li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -84,18 +81,21 @@ content_class: home
 				</ul>
 			</td>
 			<td>
+				<h3>My Info</h3>
 				<ul>
 					<li><a href="/about">About Me</a></li>
 					<li><a href="/pc">Computer Setups</a></li>
 				</ul>
 			</td>
 			<td>
+				<h3>Personal Projects</h3>
 				<ul>
 					<li><a href="https://github.com/nicholastay/dotfiles">dotfiles</a></li>
 					<li><a href="https://github.com/nicholastay/personal-web">This Website!</a></li>
 				</ul>
 			</td>
 		</tr>
+		</tbody>
 	</table>
 </div>
 </div>
