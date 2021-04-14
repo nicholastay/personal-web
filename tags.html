@@ -1,0 +1,43 @@
+---
+layout: default
+title: Tags
+content_class: post
+---
+
+<div>
+	<a href="/posts">
+		&lt; Posts
+	</a>
+</div>
+<div>
+	<a href="/">
+		&lt;&lt; Return home
+	</a>
+</div>
+
+<h1>Tags</h1>
+
+{% for tag in site.tags %}
+<div class="tag" id="{{ tag[0] }}">
+	{{ tag[0] }}
+	<ul class="tag-links">
+		{% for post in tag[1] %}
+		<li>
+			{{ post.date | date: "%Y-%m-%d" }}: <a href="{{ post.url }}">{{ post.title }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endfor %}
+
+<div style="margin-top: 15px; float: right;">
+	<a href="/rss.xml" class="no-link">
+		<img src="/assets/rss.gif" alt="RSS Feed" height="25px" style="filter: brightness(0.25);">
+	</a>
+</div>
+
+<script>
+	var hash = window.location.hash.substring(1);
+	if (window[hash])
+		window[hash].style.color = 'yellow';
+</script>

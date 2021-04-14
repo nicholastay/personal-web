@@ -4,25 +4,6 @@ title: Posts
 content_class: post
 ---
 
-<style>
-	.tag {
-		display: inline;
-	}
-	.tag-links {
-		display: none;
-		/* for hover to work properly */
-		margin: 0;
-		padding-top: 5px;
-		padding-bottom: 10px;
-	}
-	.tag:hover {
-		padding-bottom: 20px;
-	}
-	.tag:hover .tag-links {
-		display: block;
-	}
-</style>
-
 <div>
 	<a href="/">
 		&lt;&lt; Return home
@@ -38,21 +19,22 @@ content_class: post
 	{% endfor %}
 </ul>
 
-<div class="tags" style="margin-top: 65px; color: grey;">
+<div class="posts-tags" style="margin-top: 65px;">
 	Tags: 
 	{% for tag in site.tags %}
-		<div class="tag">{{ tag[0] }} <ul class="tag-links">
+		<a href="/tags#{{ tag[0] }}">{{ tag[0] }}</a>
+		<!-- <div class="tag">{{ tag[0] }} <ul class="tag-links">
 				{% for post in tag[1] %}
 					<li>
 						{{ post.date | date: "%Y-%m-%d" }}: <a href="{{ post.url }}">{{ post.title }}</a>
 					</li>
 				{% endfor %}
-		</ul></div>
+		</ul></div> -->
 	{% endfor %}
 </div>
 
 <div style="margin-top: 15px; float: right;">
 	<a href="/rss.xml" class="no-link">
-		<img src="assets/rss.png" alt="RSS Feed" height="25px" style="filter: brightness(0.25);">
+		<img src="/assets/rss.gif" alt="RSS Feed" height="25px" style="filter: brightness(0.25);">
 	</a>
 </div>

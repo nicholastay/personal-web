@@ -11,7 +11,7 @@
 		<meta name="description" content="{{ description }}">
 		<meta property="og:title" content="{% if page.title %}{{ page.title }} - {% else %}Nicholas Tay{% endif %}">
 		<meta property="og:description" content="{{ description }}">
-		<meta property="og:image" content="https://nick.tay.blue/assets/circle-prof.png">
+		<meta property="og:image" content="https://nick.tay.blue/assets/profile.jpg">
 
 		<link rel="alternate" type="application/rss+xml" title="Nicholas Tay (RSS)" href="https://nick.tay.blue/rss.xml" />
 	</head>
@@ -44,30 +44,32 @@
 
 			<div style="margin-top: 15px; float: right;">
 				<a href="/rss.xml" class="no-link">
-					<img src="/assets/rss.png" alt="RSS Feed" height="25px" style="filter: brightness(0.25);">
+					<img src="/assets/rss.gif" alt="RSS Feed" height="25px" style="filter: brightness(0.25);">
 				</a>
 			</div>
 
 			<div id="comments" onclick="loadComments();" style="margin-top: 35px"></div>
 		</div>
 	
-	<script>
-		var comments = document.getElementById("comments");
-		comments.innerText = "Click to load comments (utteranc.es)...";
+		<script>
+			if (document.getElementById) {
+				var comments = document.getElementById("comments");
+				comments.innerText = "Click to load comments (utteranc.es)...";
+			}
 
-		function loadComments() {
-			comments.onclick = null;
-			comments.innerText = "";
-			var utt = document.createElement("script");
-			utt.src = "https://utteranc.es/client.js";
-			utt.async = true;
-			utt.crossOrigin = "anonymous";
-			utt.setAttribute("repo", "nicholastay/personal-web");
-			utt.setAttribute("issue-term", "pathname");
-			utt.setAttribute("label", "blog comments");
-			utt.setAttribute("theme", "github-dark");
-			comments.appendChild(utt);
-		}
-	</script>
+			function loadComments() {
+				comments.onclick = null;
+				comments.innerText = "";
+				var utt = document.createElement("script");
+				utt.src = "https://utteranc.es/client.js";
+				utt.async = true;
+				utt.crossOrigin = "anonymous";
+				utt.setAttribute("repo", "nicholastay/personal-web");
+				utt.setAttribute("issue-term", "pathname");
+				utt.setAttribute("label", "blog comments");
+				utt.setAttribute("theme", "github-dark");
+				comments.appendChild(utt);
+			}
+		</script>
 	</body>
 </html>

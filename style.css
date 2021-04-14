@@ -3,15 +3,12 @@ html,
 body {
 	margin: 0;
 	padding: 0;
+	background-color: #1F1F1F;
+	height: 100%;
 }
 
 * {
 	font-family: "맑은 고딕", "Malgun Gothic", "Segoe UI", Helvetica, sans-serif;
-}
-
-html {
-	background-color: #1F1F1F;
-	height: 100%;
 }
 
 body {
@@ -19,7 +16,6 @@ body {
 	transition: opacity 0.5s ease-in-out;
 	opacity: 1;
 	animation: fade 1s;
-	height: 100%;
 }
 
 
@@ -67,6 +63,10 @@ pre {
 	background-color: #262626;
 	padding: 10px 20px;
 	border-radius: 2px;
+}
+
+img.round {
+	border-radius: 50%;
 }
 
 
@@ -136,4 +136,12 @@ pre {
 #comments {
 	color: grey;
 	cursor: pointer;
+}
+
+/* Tag listing */
+.posts-tags,
+.posts-tags a:link,
+.posts-tags a:visited {
+	color: grey;
+	text-decoration: none;
 }
