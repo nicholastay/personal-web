@@ -11,7 +11,7 @@ content_class: home
 
 <div id="main_home" class="home-centre-parent">
 <div class="home-centre">
-	<p id="hi" class="hi">Hi, I'm</p>
+	<h3 id="hi" class="hi">Hi, I'm</h3>
 	<img src="/assets/profile.jpg" class="round" alt="[My face!]" width="300px">
 	<h1 id="myname">Nicholas Tay</h1>
 	<div id="subname" class="name-ending hi" style="margin-top: -20px;"></div>
@@ -63,15 +63,40 @@ content_class: home
 			</a>
 		</div>
 	</p>
-	<div style="margin-top: 45px; color: #b5b5b5;">
-		<p>
-			...and lately, I've been up to:
-			{% for post in site.posts limit:1 %}
-				<a href="{{ post.url }}">{{ post.title }}</a>
-			{% endfor %}
-			and <a href="/posts">more</a>...
-		</p>
+
+	<div style="margin-top: 25px; margin-bottom: 25px;">
+		<hr>
 	</div>
+
+	<table class="home-blocks">
+		<tr>
+			<th>Recent Posts</th>
+			<th>My Info</th>
+			<th>Personal Projects</th>
+		</tr>
+		<tr>
+			<td>
+				<ul>
+					{% for post in site.posts limit:3 %}
+						<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+					{% endfor %}
+					<li><a href="/posts">See all...</a></li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li><a href="/about">About Me</a></li>
+					<li><a href="/pc">Computer Setups</a></li>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li><a href="https://github.com/nicholastay/dotfiles">dotfiles</a></li>
+					<li><a href="https://github.com/nicholastay/personal-web">This Website!</a></li>
+				</ul>
+			</td>
+		</tr>
+	</table>
 </div>
 </div>
 
