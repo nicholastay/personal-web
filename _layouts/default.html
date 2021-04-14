@@ -18,6 +18,14 @@
 	<body class="firstFade">
 		<div class="head-line"></div>
 		<div class="content {{ page.content_class }}">
+			{% if page.return %}
+			<div>
+				<a href="/">
+					&lt;&lt; Return home
+				</a>
+			</div>
+			{% endif %}
+
 			{{ content }}
 		</div>
 	</body>
