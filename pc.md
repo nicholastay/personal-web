@@ -22,9 +22,9 @@ My current, main computer I use when at home. Recently built: January 2021.
 - RAM: 16GB(2x8) Patriot Viper DDR4-3200 CL16 RGB White
 - GPU: ASUS NVIDIA GTX 980 STRIX 4GB
 - SSD: Samsung 970 EVO 500GB M.2 NVMe
-- HDD: Seagate Desktop SSHD 2TB 3.5" (64MB Cache) [moved over from `breeze`]
+- HDD: Seagate Desktop SSHD 2TB 3.5" (64MB Cache) [moved over from 'breeze']
 - CASE: InWin 101 Mid Tower ATX White
-- FAN: 3x InWin Siruis Pure ASP120 White ARGB
+- FAN: 3x InWin Sirius Pure ASP120 White ARGB
 
 Accessories include:
 
@@ -123,16 +123,31 @@ These aren't in active use anymore, but I might use them from time to time.
 My previous main desktop, serving me since 2012 (when I built it as my first desktop!), and upgraded through the years. Now being used as my testing grounds for VMs and containers for homelab. It was called 'breeze' when before 'angel' was built, then when I switched it over to a VM host, I renamed it to 'dream'.
 
 - CPU: Intel Core i5-4590
+	- Previously (to ~2015): AMD A10-5800K
 - MOBO: MSI Z97 Gaming 3 ATX
+	- Previously (to ~2015): ASUS F2A85-M Micro ATX FM2
 - RAM: 16GB(2x8GB) Patriot Viper 3 DDR3-1866
-- GPU: Gigabyte GeForce GTX 660 2GB
+- GPU: Gigabyte GeForce GTX 660 2GB (acquired ~2014)
 - SSD: OCZ Agility 3 240GB 2.5" SATA
+	- Previous HDD: Seagate Barracuda 2TB 3.5" 7200RPM (died ~2016)
 - CASE: Thermaltake Versa II ATX Mid Tower
 
 Other details
 
 - OS: Proxmox VE 6.3
+	- Previously (to ~2014): Microsoft Windows 8.1 Pro
+	- Previously (to 2021): Microsoft Windows 10 Pro
 - VMs/LXCs in testing include:
 	- OPNsense VM
 	- macOS Catalina VM
 	- Arch Linux LXC with headless display + VNC, for screen capture
+- Previous MONITOR2: LG Flatron L1510T 15" 4:3
+	- I know, this is just here for fun
+
+
+## Older accessories
+
+I don't use these that often, sometimes maybe I take them around if needed, or they are my older gear.
+
+- KEYBOARD: Obins Anne Pro (Cherry MX Brown) [small 60% keyboard]
+- MOUSE: Logitech G400S @ 850DPI [old gaming mouse]
