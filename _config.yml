@@ -64,4 +64,5 @@ livereload_ignore:
 
 # disable smart quotes so its more just plain text
 kramdown:
-    smart_quotes: ["apos", "apos", "quot", "quot"]
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+  toc_levels: 2..6

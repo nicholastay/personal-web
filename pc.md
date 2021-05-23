@@ -8,6 +8,8 @@ auto_ids: true
 
 # Computer Setups
 
+{% include toc.md %}
+
 At the moment, I frequently use a desktop, 2 laptops and a 'server' (of sorts). I'll list them based on the hostnames I gave them... there's a story behind each of them usually, but I'll keep them to myself :)
 
 With regards to the laptops, I just use what I feel like on the day.

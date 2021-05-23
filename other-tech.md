@@ -7,6 +7,8 @@ content_class: post pc
 
 # Other Tech
 
+{% include toc.md %}
+
 Other bits and pieces of technology I have. May or may not use them often.
 
 ## Phones

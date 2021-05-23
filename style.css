@@ -189,6 +189,25 @@ img.round {
 	cursor: pointer;
 }
 
+.toc {
+	display: inline-block;
+	background-color: #242424;
+	padding-bottom: 2px;
+	padding-left: 35px;
+	padding-right: 35px;
+	border: 1px solid #808080;
+}
+.toc h2 {
+	text-align: center;
+}
+.toc a {
+	text-decoration: none;
+}
+.toc ul#markdown-toc {
+	padding-left: 0;
+}
+
+
 /* Tag listing */
 .posts-tags,
 .posts-tags a:link,
