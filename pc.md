@@ -3,6 +3,7 @@ layout: default
 title: Computer Setups
 return: true
 content_class: post pc
+auto_ids: true
 ---
 
 # Computer Setups
@@ -22,7 +23,7 @@ My current, main computer I use when at home. Recently built: January 2021.
 - RAM: 16GB(2x8) Patriot Viper DDR4-3200 CL16 RGB White
 - GPU: ASUS NVIDIA GTX 980 STRIX 4GB
 - SSD: Samsung 970 EVO 500GB M.2 NVMe
-- HDD: Seagate Desktop SSHD 2TB 3.5" (64MB Cache) [moved over from 'breeze']
+- HDD: Seagate Desktop SSHD 2TB 3.5" (64MB Cache) [moved over from '[dream](#dream-aka-breeze)']
 - CASE: InWin 101 Mid Tower ATX White
 - FAN: 3x InWin Sirius Pure ASP120 White ARGB
 
@@ -42,7 +43,6 @@ Other details:
 - OS: Microsoft Windows 10 Education (from uni)
 	- I'd rather use Linux, but I use this desktop to play games too, ha...
 	- Education edition is actually quite nice as it doesn't come with the garbage like Candy Crush and Cortana
-
 
 ## Laptops
 
@@ -120,7 +120,9 @@ These aren't in active use anymore, but I might use them from time to time.
 
 ### dream (aka breeze)
 
-My previous main desktop, serving me since 2012 (when I built it as my first desktop!), and upgraded through the years. Now being used as my testing grounds for VMs and containers for homelab. It was called 'breeze' when before 'angel' was built, then when I switched it over to a VM host, I renamed it to 'dream'.
+My previous main desktop, serving me since 2012 (when I built it as my first desktop!), and upgraded through the years. Now being used as my testing grounds for VMs and containers for homelab.
+
+It was called 'breeze' when before '[angel](#angel)' was built, then when I switched it over to a VM host, I renamed it to 'dream'.
 
 - CPU: Intel Core i5-4590
 	- Previously (to ~2015): AMD A10-5800K
@@ -138,9 +140,9 @@ Other details
 	- Previously (to ~2014): Microsoft Windows 8.1 Pro
 	- Previously (to 2021): Microsoft Windows 10 Pro
 - VMs/LXCs in testing include:
-	- OPNsense VM
-	- macOS Catalina VM
-	- Arch Linux LXC with headless display + VNC, for screen capture
+	- trueno: OPNsense VM
+	- latte: macOS Catalina VM
+	- midnight: Arch Linux LXC with headless display + VNC, for screen capture
 - Previous MONITOR2: LG Flatron L1510T 15" 4:3
 	- I know, this is just here for fun
 

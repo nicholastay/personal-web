@@ -3,13 +3,16 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="shortcut icon" href="/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="/style.css">
 		<title>{% if page.title %}{{ page.title }} - {% endif %}Nicholas Tay</title>
 		<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=0.8, user-scalable=no">
 
+		<link rel="stylesheet" type="text/css" href="/style.css">
+		<style>body { background: #1F1F1F; }</style>
+
 		{% assign description = page.excerpt | strip_html | strip | truncatewords: 50 %}
 		<meta name="description" content="{{ description }}">
-		<meta property="og:title" content="{% if page.title %}{{ page.title }} - {% else %}Nicholas Tay{% endif %}">
+		<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}Nicholas Tay{% endif %}">
+		<meta property="og:url" content="https://nick.tay.blue{{ post.url }}">
 		<meta property="og:description" content="{{ description }}">
 		<meta property="og:image" content="https://nick.tay.blue/assets/profile.jpg">
 
