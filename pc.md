@@ -24,6 +24,7 @@ My current, main computer I use when at home. Recently built: January 2021.
 - GPU: ASUS NVIDIA GTX 980 STRIX 4GB
 - SSD: Samsung 970 EVO 500GB M.2 NVMe
 - HDD: Seagate Desktop SSHD 2TB 3.5" (64MB Cache) [moved over from '[dream](#dream-aka-breeze)']
+- PSU: be quiet! Pure Power 11 600W CM 80 PLUS Gold
 - CASE: InWin 101 Mid Tower ATX White
 - FAN: 3x InWin Sirius Pure ASP120 White ARGB
 
