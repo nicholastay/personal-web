@@ -180,6 +180,11 @@ img.round {
 	.home-blocks h3 {
 		margin-top: 15px;
 	}
+
+	#main_home {
+		margin-top: 2.5rem;
+		margin-bottom: 2.5rem;
+	}
 }
 
 
