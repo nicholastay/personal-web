@@ -189,6 +189,12 @@ img.round {
 
 
 /* Posts */
+h2.date {
+	font-size: 16pt;
+	text-align: right;
+	margin-bottom: -16px;
+}
+
 #comments {
 	color: grey;
 	cursor: pointer;
