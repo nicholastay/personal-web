@@ -1,0 +1,340 @@
+From 9432cf220b8dc105394b37e6c3308e61325ceab9 Mon Sep 17 00:00:00 2001
+From: Nicholas Tay <nick@windblume.net>
+Date: Wed, 23 Jun 2021 19:55:01 +1000
+Subject: [PATCH 1/4] F7D3402: first test
+
+This probably doesn't work...
+---
+ release/src/lzma-loader/decompress.c | 3 +++
+ release/src/router/rc/buttons.c      | 1 +
+ release/src/router/rc/mtd.c          | 4 ++++
+ release/src/router/shared/id.c       | 2 ++
+ release/src/router/shared/led.c      | 1 +
+ release/src/router/shared/shared.h   | 1 +
+ 6 files changed, 12 insertions(+)
+
+diff --git a/release/src/lzma-loader/decompress.c b/release/src/lzma-loader/decompress.c
+index 23ad9d178b..41f42eb1ae 100644
+--- a/release/src/lzma-loader/decompress.c
++++ b/release/src/lzma-loader/decompress.c
+@@ -132,6 +132,9 @@ void entry(unsigned long icache_size, unsigned long icache_lsize,
+ #ifdef TRX_MAGIC_F7D3302
+ 		  || ((struct trx_header *)data)->magic == TRX_MAGIC_F7D3302
+ #endif
++#ifdef TRX_MAGIC_F7D3402
++		  || ((struct trx_header *)data)->magic == TRX_MAGIC_F7D3402
++#endif
+ #ifdef TRX_MAGIC_F7D4302
+ 		  || ((struct trx_header *)data)->magic == TRX_MAGIC_F7D4302
+ #endif
+diff --git a/release/src/router/rc/buttons.c b/release/src/router/rc/buttons.c
+index eaf6bb9049..2f05edfa86 100644
+--- a/release/src/router/rc/buttons.c
++++ b/release/src/router/rc/buttons.c
+@@ -248,6 +248,7 @@ int buttons_main(int argc, char *argv[])
+ 		break;
+ 	case MODEL_F7D3301:
+ 	case MODEL_F7D3302:
++	case MODEL_F7D3402:
+ 	case MODEL_F7D4301:
+ 	case MODEL_F7D4302:
+ 	case MODEL_F5D8235v3:
+diff --git a/release/src/router/rc/mtd.c b/release/src/router/rc/mtd.c
+index ce50ef50a0..41099d6586 100644
+--- a/release/src/router/rc/mtd.c
++++ b/release/src/router/rc/mtd.c
+@@ -390,6 +390,7 @@ int mtd_write_main(int argc, char *argv[])
+ #ifndef CONFIG_BCMWL6
+ 	case TRX_MAGIC_F7D3301:
+ 	case TRX_MAGIC_F7D3302:
++	case TRX_MAGIC_F7D3402:
+ 	case TRX_MAGIC_F7D4302:
+ 	case TRX_MAGIC_F5D8235V3:
+ 	case TRX_MAGIC_QA:
+@@ -433,6 +434,9 @@ int mtd_write_main(int argc, char *argv[])
+ 	case MODEL_F7D3302:
+ 		trx.magic = TRX_MAGIC_F7D3302;
+ 		break;
++	case MODEL_F7D3402:
++		trx.magic = TRX_MAGIC_F7D3402;
++		break;
+ 	case MODEL_F7D4302:
+ 		trx.magic = TRX_MAGIC_F7D4302;
+ 		break;
+diff --git a/release/src/router/shared/id.c b/release/src/router/shared/id.c
+index 54ba8e62c4..18981ca760 100644
+--- a/release/src/router/shared/id.c
++++ b/release/src/router/shared/id.c
+@@ -103,6 +103,7 @@ WNR2000v2			BCM4716B0             0xe4cd       1         0x1700
+ 
+ F7D4301 v1			BCM4718               0xd4cf       12345     0x1204
+ F7D3301/F7D3302/F7D4302 v1	BCM4718               0xa4cf       12345     0x1102
++F7D3402 v1			BCM4718               0xa4cf       12345     0x1102
+ F5D8235-4 v3			BCM4718               0xa4cf       12345     0x1100
+ F9K1102 v1/v3			BCM5358U              0x0550       2040      0x1200    0x710
+ 
+@@ -436,6 +437,7 @@ int get_model(void)
+ 				case TRX_MAGIC_F7D3301:
+ 					return MODEL_F7D3301;
+ 				case TRX_MAGIC_F7D3302:
++				case TRX_MAGIC_F7D3402:
+ 					return MODEL_F7D3302;
+ 				default:
+ 					return MODEL_F7D4302;
+diff --git a/release/src/router/shared/led.c b/release/src/router/shared/led.c
+index 8333638213..fc94a1bf64 100644
+--- a/release/src/router/shared/led.c
++++ b/release/src/router/shared/led.c
+@@ -459,6 +459,7 @@ int do_led(int which, int mode)
+ 		break;
+ 	case MODEL_F7D3301:
+ 	case MODEL_F7D3302:
++	case MODEL_F7D3402:
+ 	case MODEL_F7D4301:
+ 	case MODEL_F7D4302:
+ 	case MODEL_F5D8235v3:
+diff --git a/release/src/router/shared/shared.h b/release/src/router/shared/shared.h
+index 741a9adcb0..5b100c9e86 100644
+--- a/release/src/router/shared/shared.h
++++ b/release/src/router/shared/shared.h
+@@ -243,6 +243,7 @@ enum {
+ 	MODEL_WNR2000v2,
+ 	MODEL_F7D3301,
+ 	MODEL_F7D3302,
++	MODEL_F7D3402,
+ 	MODEL_F7D4301,
+ 	MODEL_F7D4302,
+ 	MODEL_F5D8235v3,
+-- 
+2.20.1
+
+
+From d62afc0c6603766727476f13c412242b34dd62c2 Mon Sep 17 00:00:00 2001
+From: Nicholas Tay <nick@windblume.net>
+Date: Wed, 23 Jun 2021 20:35:00 +1000
+Subject: [PATCH 2/4] F7D3402: working
+
+---
+ release/src-rt/include/trxhdr.h                             | 1 +
+ .../linux/linux-2.6/arch/mips/brcm-boards/bcm947xx/setup.c  | 3 ++-
+ release/src/router/nvram/nvram.c                            | 1 +
+ release/src/router/rc/init.c                                | 6 ++++++
+ release/src/router/shared/id.c                              | 3 ++-
+ 5 files changed, 12 insertions(+), 2 deletions(-)
+
+diff --git a/release/src-rt/include/trxhdr.h b/release/src-rt/include/trxhdr.h
+index 74dfcef169..012ca61b85 100755
+--- a/release/src-rt/include/trxhdr.h
++++ b/release/src-rt/include/trxhdr.h
+@@ -34,6 +34,7 @@
+ 
+ #define TRX_MAGIC_F7D3301	0x20100322	/* Belkin Share Max */
+ #define TRX_MAGIC_F7D3302	0x20090928	/* Belkin Share */
++#define TRX_MAGIC_F7D3402	0x00017517	/* Belkin Share Modem-Router */
+ #define TRX_MAGIC_F7D4302	0x20091006	/* Belkin Play */
+ #define TRX_MAGIC_F5D8235V3	0x00017116	/* Belkin F5D8235V3 */
+ #define TRX_MAGIC_QA		0x12345678	/* QA firmware */
+diff --git a/release/src-rt/linux/linux-2.6/arch/mips/brcm-boards/bcm947xx/setup.c b/release/src-rt/linux/linux-2.6/arch/mips/brcm-boards/bcm947xx/setup.c
+index 5a569665a5..0ad8a8e659 100644
+--- a/release/src-rt/linux/linux-2.6/arch/mips/brcm-boards/bcm947xx/setup.c
++++ b/release/src-rt/linux/linux-2.6/arch/mips/brcm-boards/bcm947xx/setup.c
+@@ -281,7 +281,7 @@ enum {
+ 	RT_WNR3500L,	// Netgear WNR3500v2/U/L
+ 	RT_WNR2000V2,	// Netgear WNR2000v2
+ 	RT_WNDR,	// Netgear WNDR4000, WNDR3700v3, WNDR3400, WNDR3400v2, WNDR3400v3
+-	RT_BELKIN_F7D   // Belkin F7D3301, F7D3302, F7D4302, F7D8235V3
++	RT_BELKIN_F7D   // Belkin F7D3301, F7D3302, F7D3402, F7D4302, F7D8235V3
+ };
+ 
+ static int get_router(void)
+@@ -451,6 +451,7 @@ init_mtd_partitions(struct mtd_info *mtd, size_t size)
+ 		switch (le32_to_cpu(trx->magic)) {
+ 		case TRX_MAGIC_F7D3301:
+ 		case TRX_MAGIC_F7D3302:
++		case TRX_MAGIC_F7D3402:
+ 		case TRX_MAGIC_F7D4302:
+ 		case TRX_MAGIC_F5D8235V3:
+ 		case TRX_MAGIC_QA:
+diff --git a/release/src/router/nvram/nvram.c b/release/src/router/nvram/nvram.c
+index 27d95a67c6..e153e97ac8 100644
+--- a/release/src/router/nvram/nvram.c
++++ b/release/src/router/nvram/nvram.c
+@@ -211,6 +211,7 @@ static const char *nv_default_value(const defaults_t *t)
+ 		case MODEL_WRT610Nv2:
+ 		case MODEL_F7D3301:
+ 		case MODEL_F7D3302:
++		case MODEL_F7D3402:
+ 		case MODEL_F7D4301:
+ 		case MODEL_F7D4302:
+ 		case MODEL_F5D8235v3:
+diff --git a/release/src/router/rc/init.c b/release/src/router/rc/init.c
+index 5c07f9e892..e108aa2750 100644
+--- a/release/src/router/rc/init.c
++++ b/release/src/router/rc/init.c
+@@ -609,6 +609,7 @@ static int init_vlan_ports(void)
+ 	case MODEL_E1550:
+ 	case MODEL_E2500:
+ 	case MODEL_F7D3302:
++	case MODEL_F7D3402:
+ 	case MODEL_F7D4302:
+ 	case MODEL_DIR620C1:
+ 		dirty |= check_nv("vlan1ports", "0 1 2 3 5*");
+@@ -803,6 +804,7 @@ static void check_bootnv(void)
+ 		break;
+ 	case MODEL_F7D3301:
+ 	case MODEL_F7D3302:
++	case MODEL_F7D3402:
+ 	case MODEL_F7D4301:
+ 	case MODEL_F7D4302:
+ 	case MODEL_F5D8235v3:
+@@ -2906,6 +2908,7 @@ static int init_nvram(void)
+ 		break;
+ 	case MODEL_F7D3301:
+ 	case MODEL_F7D3302:
++	case MODEL_F7D3402:
+ 	case MODEL_F7D4301:
+ 	case MODEL_F7D4302:
+ 	case MODEL_F5D8235v3:
+@@ -2918,6 +2921,9 @@ static int init_nvram(void)
+ 		case MODEL_F7D3302:
+ 			name = "Share N300 (F7D3302/F7D7302) v1";
+ 			break;
++		case MODEL_F7D3402:
++			name = "Share N300 (F7D3402) v1";
++			break;
+ 		case MODEL_F7D4301:
+ 			name = "Play Max / N600 HD (F7D4301/F7D8301) v1";
+ 			break;
+diff --git a/release/src/router/shared/id.c b/release/src/router/shared/id.c
+index 18981ca760..5f380dbf06 100644
+--- a/release/src/router/shared/id.c
++++ b/release/src/router/shared/id.c
+@@ -437,8 +437,9 @@ int get_model(void)
+ 				case TRX_MAGIC_F7D3301:
+ 					return MODEL_F7D3301;
+ 				case TRX_MAGIC_F7D3302:
+-				case TRX_MAGIC_F7D3402:
+ 					return MODEL_F7D3302;
++				case TRX_MAGIC_F7D3402:
++					return MODEL_F7D3402;
+ 				default:
+ 					return MODEL_F7D4302;
+ 				}
+-- 
+2.20.1
+
+
+From 0c8640302f0707f8367b3e24eeef664b2b48f26c Mon Sep 17 00:00:00 2001
+From: Nicholas Tay <nick@windblume.net>
+Date: Wed, 23 Jun 2021 21:41:21 +1000
+Subject: [PATCH 3/4] F7D3402: fix model ID/LAN display
+
+Was shown as F5D8235v3 due to board rev, make it return the right model and
+apply the right port settings elsewhere (lan was broken)
+---
+ release/src/Makefile           | 5 +++--
+ release/src/router/shared/id.c | 9 +++++----
+ 2 files changed, 8 insertions(+), 6 deletions(-)
+
+diff --git a/release/src/Makefile b/release/src/Makefile
+index 68aa91bdf1..cce7f9b77f 100644
+--- a/release/src/Makefile
++++ b/release/src/Makefile
+@@ -302,10 +302,11 @@ ifeq ($(BELKIN_F5D),y)
+ 		| tee -a fpkg.log
+ endif
+ ifeq ($(BELKIN_F7D),y)
+-	# Create Belkin F7D3301, F7D3302, F7D4302 images
++	# Create Belkin F7D3301, F7D3302, F7D3402, F7D4302 images
+ 	@btools/fpkg -i lzma-loader/loader.gz -i $(LINUXDIR)/arch/mips/brcm-boards/bcm947xx/compressed/vmlinuz -a 1024 -i router/mipsel-uclibc/target.image \
+ 		-b 0x20100322,image/freshtomato-F7D3301$(current_BUILD_USB)$(RT_SUFFIX)-$(mips_rev)-$(current_TOMATO_VER)$(beta)$(V2)-$(current_BUILD_DESC).bin \
+ 		-b 0x20090928,image/freshtomato-F7D3302$(current_BUILD_USB)$(RT_SUFFIX)-$(mips_rev)-$(current_TOMATO_VER)$(beta)$(V2)-$(current_BUILD_DESC).bin \
++		-b 0x00017517,image/freshtomato-F7D3402$(current_BUILD_USB)$(RT_SUFFIX)-$(mips_rev)-$(current_TOMATO_VER)$(beta)$(V2)-$(current_BUILD_DESC).bin \
+ 		-b 0x20091006,image/freshtomato-F7D4302$(current_BUILD_USB)$(RT_SUFFIX)-$(mips_rev)-$(current_TOMATO_VER)$(beta)$(V2)-$(current_BUILD_DESC).bin \
+ 		| tee -a fpkg.log
+ endif
+@@ -1455,7 +1456,7 @@ help:
+ 	@echo ""
+ 	@echo "       Belkin F5D/F7D Series with 8MB Flash"
+ 	@echo "f5d            Belkin F5D8235v3 MIPSr2 Mini w/ USB, IPv6, VPN"
+-	@echo "f7d            Belkin F7D3301/3302/4302 MIPSr2 Mini w/ USB, IPv6, VPN"
++	@echo "f7d            Belkin F7D3301/3302/3402/4302 MIPSr2 Mini w/ USB, IPv6, VPN"
+ 	@echo ""
+ 	@echo "       Routers with 5Ghz USB Radio (wl_high module)"
+ 	@echo "       Before compilation you have to revert patch to the kernel:"
+diff --git a/release/src/router/shared/id.c b/release/src/router/shared/id.c
+index 5f380dbf06..5b6ecdd585 100644
+--- a/release/src/router/shared/id.c
++++ b/release/src/router/shared/id.c
+@@ -103,7 +103,7 @@ WNR2000v2			BCM4716B0             0xe4cd       1         0x1700
+ 
+ F7D4301 v1			BCM4718               0xd4cf       12345     0x1204
+ F7D3301/F7D3302/F7D4302 v1	BCM4718               0xa4cf       12345     0x1102
+-F7D3402 v1			BCM4718               0xa4cf       12345     0x1102
++F7D3402 v1			BCM4718               0xa4cf       12345     0x1100
+ F5D8235-4 v3			BCM4718               0xa4cf       12345     0x1100
+ F9K1102 v1/v3			BCM5358U              0x0550       2040      0x1200    0x710
+ 
+@@ -422,8 +422,7 @@ int get_model(void)
+ 			if (nvram_match("boardrev", "0x1204")) return MODEL_F7D4301;
+ 			break;
+ 		case 0xa4cf:
+-			if (nvram_match("boardrev", "0x1100")) return MODEL_F5D8235v3;
+-			if (nvram_match("boardrev", "0x1102")) {
++			if (nvram_match("boardrev", "0x1100") || nvram_match("boardrev", "0x1102")) {
+ 				FILE *fp;
+ 				char s[18];
+ 				uint32 sig = TRX_MAGIC;
+@@ -438,10 +437,12 @@ int get_model(void)
+ 					return MODEL_F7D3301;
+ 				case TRX_MAGIC_F7D3302:
+ 					return MODEL_F7D3302;
++				case TRX_MAGIC_F7D4302:
++					return MODEL_F7D4302;
+ 				case TRX_MAGIC_F7D3402:
+ 					return MODEL_F7D3402;
+ 				default:
+-					return MODEL_F7D4302;
++					return MODEL_F5D8235v3;
+ 				}
+ #endif
+ 			}
+-- 
+2.20.1
+
+
+From a9b43bdc1bceec9646a6ad4f5ecd0471045f6495 Mon Sep 17 00:00:00 2001
+From: Nicholas Tay <nick@windblume.net>
+Date: Wed, 23 Jun 2021 21:57:07 +1000
+Subject: [PATCH 4/4] F7D3402: add WAN port by default
+
+Makes the first, top port a wan port given this is modem/router combo and modem
+would not be used
+---
+ release/src/router/rc/init.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/release/src/router/rc/init.c b/release/src/router/rc/init.c
+index e108aa2750..9d276ad6e2 100644
+--- a/release/src/router/rc/init.c
++++ b/release/src/router/rc/init.c
+@@ -609,12 +609,15 @@ static int init_vlan_ports(void)
+ 	case MODEL_E1550:
+ 	case MODEL_E2500:
+ 	case MODEL_F7D3302:
+-	case MODEL_F7D3402:
+ 	case MODEL_F7D4302:
+ 	case MODEL_DIR620C1:
+ 		dirty |= check_nv("vlan1ports", "0 1 2 3 5*");
+ 		dirty |= check_nv("vlan2ports", "4 5");
+ 		break;
++	case MODEL_F7D3402:
++		dirty |= check_nv("vlan1ports", "0 1 2 5*");
++		dirty |= check_nv("vlan2ports", "3 4 5");
++		break;
+ 	case MODEL_E1000v2:
+ 	case MODEL_L600N:
+ 		dirty |= check_nv("vlan1ports", "1 2 3 4 5*");
+-- 
+2.20.1
+
