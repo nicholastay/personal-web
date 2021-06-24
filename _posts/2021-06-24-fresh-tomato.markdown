@@ -21,7 +21,7 @@ So I saw that the Belkin F7D3302v1 was supported - it looked similar, and appare
 
 However, upon downloading the F7D3302 firmware, it wouldn't flash. Didn't think it'd be this easy. The Belkin upload screen would instantly fail and not even try to flash, so it must be some sort of signature issue.
 
-Looks like I had to get a dev environment up. I spun up a Debian VM and followed the instructions as given by the dev: https://bitbucket.org/pedro311/freshtomato-mips/
+Looks like I had to get a dev environment up. I spun up a Debian VM, grabbed the MIPS repo for FreshTomato and followed the instructions as given by the dev: <https://bitbucket.org/pedro311/freshtomato-mips/>
 
 ## First attempt
 
