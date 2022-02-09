@@ -83,6 +83,35 @@
 				<h1 class="title">{{ page.title }}</h1>
 
 				{{ content }}
+
+				{% if page.layout == 'post' %}
+				<div style="margin-top: 15px; float: right;">
+					<a href="/rss.xml" class="no-link">
+						<img src="/assets/rss.gif" alt="RSS Feed" height="25px" style="opacity: 0.5;">
+					</a>
+				</div>
+				<div id="comments" onclick="loadComments();" style="margin-top: 35px"></div>
+				<script>
+					if (document.getElementById) {
+						var comments = document.getElementById("comments");
+						comments.innerText = "Click to load comments (utteranc.es)...";
+					}
+
+					function loadComments() {
+						comments.onclick = null;
+						comments.innerText = "";
+						var utt = document.createElement("script");
+						utt.src = "https://utteranc.es/client.js";
+						utt.async = true;
+						utt.crossOrigin = "anonymous";
+						utt.setAttribute("repo", "nicholastay/personal-web");
+						utt.setAttribute("issue-term", "pathname");
+						utt.setAttribute("label", "blog comments");
+						utt.setAttribute("theme", "github-light");
+						comments.appendChild(utt);
+					}
+				</script>
+				{% endif %}
 			</div>
 		</div>
 
