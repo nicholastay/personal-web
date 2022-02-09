@@ -1,7 +1,7 @@
 /* Basic setup */
 html {
 	height: 100%;
-	background: #1F1F1F;
+	background: #fafafa;
 }
 
 * {
@@ -12,43 +12,26 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
-	background: #1F1F1F;
-
-	color: white;
-	transition: opacity 0.5s ease-in-out;
-	opacity: 1;
-	animation: fade 1s;
-}
-
-
-/* Fade animation on page loads */
-.fadeOut {
-	transition: opacity 0.5s ease-out;
-	opacity: 0;
-}
-
-@keyframes fade {
-	0% { 
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+	background: #fafafa;
 }
 
 
 /* Basic HTML elements */
 h1 {
-	color: #FF9FFE;
+	color: #ad68ad;
 }
 
 h2 {
-	color: #ad68ad;
+	color: #c588d1;
 	font-size: 14pt;
 }
 
 h3 {
 	font-size: 12pt;
+}
+
+h1,h2,h3,h4 {
+	margin-top: 0;
 }
 
 a {
@@ -58,21 +41,29 @@ a {
 
 a.no-link {
 	text-decoration: none;
-	color: white;
+	color: black;
 }
 
 code {
+	background-color: #292929;
 	font-family: monospace;
+	color: white;
+	padding: 0.1rem 0.2rem;
 }
 
 pre {
-	background-color: #262626;
-	padding: 10px 20px;
 	border-radius: 2px;
 }
 
+img {
+	max-width:100%;
+	max-height:100%;
+}
 img.round {
 	border-radius: 50%;
+}
+img.smooth {
+	border-radius: 5%;
 }
 
 
@@ -80,85 +71,131 @@ img.round {
 /* Pink bar across top of pages */
 .head-line {
 	height: 10px;
-	background-color: #624662;
+	background-color: #feb3ff;
+	margin-bottom: 1rem;
 }
 
-/* Main area */
+/* Main area + Nav */
 .content {
 	margin: auto;
 	max-width: 1000px;
 }
 
-.content.home {
-	height: 600px; /* legacy browser workaround */
-	_margin-top: 100px;/* old ie hack */
-	height: calc(100% - 10px);
+.nav-bar,
+.main {
+	float: left;
+	padding: 1rem;
 }
 
-.content.post {
-	padding: 35px;
-	margin-top: 25px;
+.nav-bar {
+	width: 22%;
+	text-align: right;
 }
 
-
-/* Home page */
-.hi {
-	font-weight: 600;
-	font-size: 1.3em;
+.main {
+	width: 69%;
 }
 
-.home-centre-parent {
-	display: table;
-	margin: auto;
-	height: 100%;
+ul.nav-links {
+	padding: 0;
 }
-
-.home-centre {
-	min-width: 450px;
-	text-align: center;
-	display: table-cell;
-	vertical-align: middle;
+.nav-links a {
+	text-decoration: none;
 }
-
-.subtitle {
-	font-size: 15px;
-	/*font-style: italic;*/
-	color: #EEEEEE;
-	margin-top: 25px;
+.nav-links img {
+	height: 20px;
 }
-
-.home-link {
-	padding-left: 5px;
-	padding-right: 5px;
+.nav-links li {
+	padding-left: 1px;
+	padding-right: 1px;
 	display: inline;
+}
+
+#hi {
+	font-weight: 600;
+	font-size: 1.3rem;
+}
+
+#myname {
+	margin-top: 0.3rem;
+	margin-bottom: 0.3rem;
+}
+
+#subtitle {
+	font-size: 15px;
+	color: #363636;
+	margin-top: 0;
+}
+
+#mail-notice {
+	display: none;
+	padding: 2px;
+	opacity: 0.8;
+	font-size: 9pt;
+	position: absolute;
+	top: 30px;
+	width: 170px;
+	text-align: center;
+}
+
+#mail-protect {
+	color: pink;
 }
 
 .back-slight {
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
-.home-blocks td {
-	vertical-align: top;
-	padding-left: 10px;
-	padding-right: 10px;
-	width: 350px;
+/* Mobile */
+
+@media(max-width: 750px) {
+	.nav-bar,
+	.main {
+		width: 100%;
+		float: none;
+		padding: 0;
+	}
+
+	.content {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	#face {
+		width: 6rem;
+	}
+
+	.nav-bar {
+		text-align: center;
+	}
+
+	h1.title {
+		text-align: center;
+	}
+}
+
+/* Home Page */
+
+.home-blocks .block {
+	margin-bottom: 2rem;
 }
 
 .home-blocks ul {
 	margin: 0;
   	padding: 0;
   	list-style-type: none;
+  	margin-left: 0.5rem;
 }
 
 .home-blocks li {
-	margin-top: 2px;
-	margin-bottom: 8px;
+	margin-top: 0.1rem;
+	margin-bottom: 0.1rem;
 }
 
 .home-blocks li::before {
 	content: "▶";
 	margin-right: 5px;
-	font-size: 10px;
+	font-size: 10pt;
 	color: grey;
 }
 
@@ -167,32 +204,12 @@ img.round {
 	margin-bottom: 8px;
 }
 
-@media(max-width: 650px) {
-	table.home-blocks,
-	.home-blocks td,
-	.home-blocks tr,
-	.home-blocks th {
-		display: block;
-		width: 90%;
-		margin: 0 auto;
-	}
-
-	.home-blocks h3 {
-		margin-top: 15px;
-	}
-
-	#main_home {
-		margin-top: 2.5rem;
-		margin-bottom: 2.5rem;
-	}
-}
-
 
 /* Posts */
 h2.date {
 	font-size: 16pt;
 	text-align: right;
-	margin-bottom: -16px;
+	margin-bottom: 0.2rem;
 }
 
 #comments {
@@ -202,7 +219,7 @@ h2.date {
 
 .toc {
 	display: inline-block;
-	background-color: #242424;
+	background-color: #e0dede;
 	padding-bottom: 2px;
 	padding-left: 35px;
 	padding-right: 35px;

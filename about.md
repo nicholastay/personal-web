@@ -1,11 +1,7 @@
 ---
 layout: default
 title: About
-return: true
-content_class: post
 ---
-
-# About
 
 Hey, I'm Nicholas Tay - but feel free to call me Nick.
 

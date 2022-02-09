@@ -1,12 +1,8 @@
 ---
 layout: default
 title: Computer Setups
-return: true
-content_class: post pc
 auto_ids: true
 ---
-
-# Computer Setups
 
 {% include toc.md %}
 

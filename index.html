@@ -1,186 +1,35 @@
 ---
 layout: default
-content_class: home
+title: Home
 ---
 
-<div style="display: none">
-	<h1>Looks like you're on such an old browser, it can't see CSS properly!</h3>
-	<h2>Consider visiting <a href="/lite">the lite version of this page, made <em>just for you</em>!</a></h2>
-	<hr>
-</div>
 
-<div id="main_home" class="home-centre-parent">
-<div class="home-centre">
-	<h3 id="hi" class="hi">Hi, I'm</h3>
-	<img src="/assets/profile.jpg" class="round" alt="[My face!]" width="300px">
-	<h1 id="myname">Nicholas Tay</h1>
-	<div id="subname" class="name-ending hi" style="margin-top: -20px;"></div>
-	<p id="subtitle" class="subtitle">BCom/BCompSci Student | Monash University</p>
-	<p style="margin-top: 25px">
-		<!-- Note: use divs so it's separated in text-based browsers -->
-		<div style="display: none;">
-			My links:
-		</div>
-		<div class="home-link">
-			<a href="https://github.com/nicholastay" class="no-link">
-				<img src="/assets/github.gif" alt="GitHub / nicholastay" height="25px">
-			</a>
-		</div>
-		<div class="home-link">
-			<a href="https://twitter.com/@nnktay" class="no-link">
-				<img src="/assets/twitter.gif" alt="Twitter / nnktay" height="25px">
-			</a>
-		</div>
-		<div class="home-link">
-			<a class="no-link" id="mail" style="display: none;" onclick="showMail(event)" href="#">
-				<span style="position: relative;">
-					<span id="mail-notice" class="back-slight" style="display: none; padding: 2px; opacity: 0.6; font-size: 9pt; position: absolute; top: 30px; width: 170px;">business only emails please!: <span id="mail-protect" style="color: pink;">nick dot tay -@- windblume dot net</span></span>
-					<img src="/assets/mail.gif" alt="Mail" height="25px">
-				</span>
-			</a>
-		</div>
-		<div class="home-link">
-			<a href="/static/key.asc" class="no-link">
-				<img src="/assets/key.gif" alt="PGP Key / 515E81D498CC81FB" height="25px">
-			</a>
-		</div>
-		<div class="home-link">
-			<a href="/rss.xml" class="no-link">
-				<img src="/assets/rss.gif" alt="RSS Feed" height="25px">
-			</a>
-		</div>
-		<div class="home-link">
-			<a href="https://linkedin.com/in/nktay" class="no-link">
-				<img src="/assets/linkedin.gif" alt="LinkedIn / nktay" height="25px">
-			</a>
-		</div>
-		<div class="home-link">
-			<a href="https://www.youtube.com/channel/UC3PCZ5I5prckJHg15hLG5Sg" class="no-link">
-				<img src="/assets/youtube.gif" alt="YouTube / Nicholas Tay" height="25px">
-			</a>
-		</div>
-		<div class="home-link">
-			<a href="#" class="no-link" id="translate" onclick="changeLang(event)" style="display: none;">
-				<span style="position: relative; width: 25px;">
-					<img src="/assets/translate.gif" alt="Translate! (requires JavaScript)" height="25px">
-					<span id="translate-lang" class="back-slight" style="padding: 2px; opacity: 0.6; font-size: 6.5pt; position: absolute; top: -10px; right: 0;">EN</span>
-				</span>
-			</a>
-		</div>
-	</p>
-
-	<div style="margin-top: 25px; margin-bottom: 25px;">
-		<hr>
+<div class="home-blocks">
+	<div class="block">
+		<h3>My Info</h3>
+		<ul>
+			<li><a href="/about">About Me</a></li>
+			<li><a href="/pc">Computer Setups</a></li>
+			<li><a href="/other-tech">Other Tech</a></li>
+		</ul>
 	</div>
-
-	<table class="home-blocks">
-		<tbody>
-		<tr>
-			<td>
-				<h3>Recent Posts</h3>
-				<ul>
-					{% for post in site.posts limit:2 %}
-						<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-					{% endfor %}
-					<li><a href="/posts">See all...</a></li>
-				</ul>
-			</td>
-			<td>
-				<h3>My Info</h3>
-				<ul>
-					<li><a href="/about">About Me</a></li>
-					<li><a href="/pc">Computer Setups</a></li>
-					<li><a href="/other-tech">Other Tech</a></li>
-				</ul>
-			</td>
-			<td>
-				<h3>Personal Projects</h3>
-				<ul>
-					<li><a href="https://gitlab.com/nicholastay/passgen">passgen</a></li>
-					<li><a href="https://github.com/nicholastay/srpm">(Fedora) RPM Specs</a></li>
-					<li><a href="https://github.com/nicholastay/dotfiles">dotfiles</a></li>
-					<li><a href="https://github.com/nicholastay/personal-web">This Website!</a></li>
-				</ul>
-			</td>
-		</tr>
-		</tbody>
-	</table>
+	<div class="block">
+		<h3>Personal Projects</h3>
+		<ul>
+			<li><a href="https://gitlab.com/nicholastay/passgen">passgen</a></li>
+			<li><a href="https://github.com/nicholastay/dotfiles">dotfiles</a></li>
+			<li><a href="https://github.com/nicholastay/personal-web">This Website!</a></li>
+			<li><a href="https://github.com/nicholastay/srpm">(Fedora) RPM Specs</a></li>
+			<li>More on <a href="https://github.com/nicholastay">GitHub</a> | <a href="https://gitlab.com/nicholastay">GitLab</a></li>
+		</ul>
+	</div>
+	<div class="block">
+		<h3>Recent Blog Posts</h3>
+		<ul>
+			{% for post in site.posts limit:10 %}
+				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% endfor %}
+			<li><a href="/posts">See all...</a></li>
+		</ul>
+	</div>
 </div>
-</div>
-
-<script>
-if (!document.getElementById) {
-	if (confirm('You seem to be using a fairly old browser. Navigate to lite version?'))
-		window.location = '/lite';
-}
-</script>
-<script>
-var lang = 0;
-var langData = [
-	[ 'EN', 'Hi, I\'m', 'Nicholas Tay', '', 'BCom/BCompSci Student | Monash University' ],
-	[ 'ZH', '你好，我是', '鄭能鏗', '（Nicholas Tay）', 'BCom/BCompSci 学生 | 莫纳什大学 （Monash University）' ],
-	[ 'KR', '안녕하세요. 저는', 'Nicholas Tay', '라고 합니다', 'BCom/BCompSci 학생 | 모나쉬 대학교 (Monash University)' ]
-];
-var mailData = '85807482219172963994808575738392847621857691';
-
-// js is ok
-document.getElementById('translate').style.display = '';
-document.getElementById('mail').style.display = '';
-
-// mail security stuff
-function showMail(e) {
-	if (e.preventDefault)
-		e.preventDefault();
-	else
-		e.returnValue = false;
-	var mailMatch = mailData.match(/.{1,2}/g);
-	var mailD = '';
-	for (var i = 0; i < mailMatch.length; ++i) {
-		mailD += String.fromCharCode(Number(mailMatch[i])+25);
-	}
-	document.getElementById('mail').onclick = null;
-	document.getElementById('mail-notice').style.display = '';
-	document.getElementById('mail-protect').innerText = mailD;
-	document.getElementById('mail').href = 'mailto:' + mailD;
-}
-
-// translate stuffs
-if (window.location.hash && window.location.hash != '#EN') {
-	var hash = window.location.hash.replace('#', '');
-	for (var i = 0; i < langData.length; ++i) {
-		if (hash === langData[i][0]) {
-			lang = i;
-			setLang();
-		}
-	}
-}
-
-function changeLang(e) {
-	if (e.preventDefault)
-		e.preventDefault();
-	else
-		e.returnValue = false;
-	if (++lang >= langData.length)
-		lang = 0;
-
-	// animation stuff
-	setLang();
-}
-
-function setLang() {
-	document.body.className = 'fadeOut';
-	setTimeout(function() {
-		window.location.hash = lang !== 0 ? langData[lang][0] : '';
-		setElem('translate-lang', 0);
-		setElem('hi', 1);
-		setElem('myname', 2);
-		setElem('subname', 3);
-		setElem('subtitle', 4);
-		document.body.className = '';
-	}, 500);
-}
-
-function setElem(elId, index) {
-	document.getElementById(elId).innerText = langData[lang][index];
-}
-</script>

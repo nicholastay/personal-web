@@ -1,21 +1,7 @@
 ---
 layout: default
 title: Tags
-content_class: post
 ---
-
-<div>
-	<a href="/posts">
-		&lt; Posts
-	</a>
-</div>
-<div>
-	<a href="/">
-		&lt;&lt; Return home
-	</a>
-</div>
-
-<h1>Tags</h1>
 
 {% for tag in site.tags %}
 <div class="tag" id="{{ tag[0] }}">
@@ -39,5 +25,5 @@ content_class: post
 <script>
 	var hash = window.location.hash.substring(1);
 	if (window[hash])
-		window[hash].style.color = 'yellow';
+		window[hash].style.color = 'orange';
 </script>

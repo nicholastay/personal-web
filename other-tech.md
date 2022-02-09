@@ -1,11 +1,7 @@
 ---
 layout: default
 title: Other Tech
-return: true
-content_class: post pc
 ---
-
-# Other Tech
 
 {% include toc.md %}
 
