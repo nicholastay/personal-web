@@ -56,8 +56,8 @@ pre {
 }
 
 img {
-	max-width:100%;
-	max-height:100%;
+	max-width: 100%;
+	max-height: 100%;
 }
 img.round {
 	border-radius: 50%;
@@ -70,9 +70,9 @@ img.smooth {
 /* Generic elements */
 /* Pink bar across top of pages */
 .head-line {
-	height: 10px;
+	height: 5px;
 	background-color: #feb3ff;
-	margin-bottom: 1rem;
+	margin-bottom: 20px;
 }
 
 /* Main area + Nav */
@@ -84,7 +84,7 @@ img.smooth {
 .nav-bar,
 .main {
 	float: left;
-	padding: 1rem;
+	padding: 15px;
 }
 
 .nav-bar {
@@ -94,6 +94,11 @@ img.smooth {
 
 .main {
 	width: 69%;
+}
+
+#face {
+	/* HACK: Old IE scaling of image */
+	_width: 225px;
 }
 
 ul.nav-links {
@@ -136,6 +141,7 @@ ul.nav-links {
 	top: 30px;
 	width: 170px;
 	text-align: center;
+	color: #b0fff7;
 }
 
 #mail-protect {
@@ -181,7 +187,7 @@ ul.nav-links {
 /* Home Page */
 
 .home-blocks .block {
-	margin-bottom: 2rem;
+	margin-bottom: 30px;
 }
 
 .home-blocks ul {
