@@ -146,6 +146,10 @@ ul.nav-links {
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
+.muted {
+	color: #919191;
+}
+
 /* Mobile */
 
 @media(max-width: 750px) {
@@ -233,6 +237,14 @@ h2.date {
 }
 .toc ul#markdown-toc {
 	padding-left: 0;
+}
+
+.footer {
+	margin-top: 2rem;
+}
+.footer hr {
+	border-top: 0.01rem solid #b8b8b8;
+	width: 80%;
 }
 
 
