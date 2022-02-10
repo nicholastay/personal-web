@@ -1,0 +1,19 @@
+* text=auto
+
+*.md text
+*.markdown text
+*.html text
+*.css text
+*.js text
+*.yml text
+*.yaml text
+Gemfile* text
+LICENCE.* text
+*.xml text
+*.asc text
+*.patch text
+
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
