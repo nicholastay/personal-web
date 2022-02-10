@@ -8,10 +8,17 @@
 
 		<link rel="stylesheet" type="text/css" href="/style.css">
 
+		{% if page.layout == 'post' %}
+		{% assign description = page.excerpt | strip_html | strip | truncatewords: 50 %}
+		<meta name="description" content="{{ description }}...">
+		<meta property="og:title" content="{{ page.title }}">
+		<meta property="og:description" content="{{ description }}...">
+		{% else %}
 		<meta name="description" content="Nicholas Tay - BCom/BCompSci Student at Monash University">
 		<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}Nicholas Tay{% endif %}">
-		<meta property="og:url" content="https://nick.tay.blue{{ post.url }}">
 		<meta property="og:description" content="Nicholas Tay - BCom/BCompSci Student at Monash University">
+		{% endif %}
+		<meta property="og:url" content="https://nick.tay.blue{{ post.url }}">
 		<meta property="og:image" content="https://nick.tay.blue/assets/profile.jpg">
 
 		<link rel="alternate" type="application/rss+xml" title="Nicholas Tay (RSS)" href="https://nick.tay.blue/rss.xml" />
