@@ -1,0 +1,30 @@
+---
+layout: post
+title: "New year, new... website redesign."
+date: 2022-02-10 18:17:52 +1100
+tags: jekyll website
+---
+
+I'm finally back... and the whole website now looks different! And we're also CC-BY-SA + BSD-2-Clause open source (see bottom of page)!
+
+To be honest, I've been meaning to write some more posts about some of the random bits and pieces I found when working on various things, both at work and personally. I do have a list of things to write up about! But, I guess I hold myself to too high of a standard, and don't really want to write blog posts that are too short and don't 'properly' convey a point. I'll work towards putting that aside and posting more this year -- more to come (hopefully).
+
+So, why the redesign? Well, I was always pretty unhappy with the homepage. As I was shifting more towards a simplistic, more document-like website, which is viewable as a *page* (not as a design piece(?)), the more I really didn't like the vertical and horizontal centred `div` element. Now I'm a lot happier, and we are back to a light theme (haha). On the Jekyll side, I've also consolidated all of the site into one nice, neat layout -- hooray! Again, I am just leveraging it as a simple templating system that works on GitHub Pages -- I just need something to copy and paste repetitive elements for me.
+
+As for the layout and design, I was inspired by [David Malan's website](https://cs.harvard.edu/malan/) and [Drew DeVault's blog](https://drewdevault.com/). Just a plain layout, with a navigation-sort-of static bit on the left, and the content on the right. I am no UX designer, so coming up with my own novel ideas is not my field, but I have to say I'm pretty happy with the result. If there are any accessibility issues though, **please let me know**! I would love to improve this area; it is actually a goal of mine to ensure it is so -- half so more people can access the page easily, but it also is fun to remain fully compatible!
+
+On the compatible part... this is why I love just keeping it **simple**. All too many times, especially for a simple portfolio*-ish* page like this, we're pulling in React, Vue, etc. That isn't my intention and I love quick, snappy pages that get to the point and just load. Hey, this website is perfectly usable on a text-based browser, look!:
+
+![This website, as viewed in Lynx](/static/post-img/202202-lynx.jpg)
+
+Pretty awesome, right? Well, here it is on Windows 98 SE, Internet Explorer (not perfect, but very usable):
+
+![This website, as viewed in W98 SE IE](/static/post-img/202202-w98.jpg)
+
+...and also on a Nintendo 3DS (yeah, I know this is actually decently modern, lol):
+
+![This website, as viewed in 3DS](/static/post-img/202202-3ds.jpg)
+
+Hope you enjoyed those glimpses into my irrational obsession with keeping my website accessible on almost anything. I am looking into [Gemini](https://gemini.circumlunar.space/) and/or [Gopher](https://en.wikipedia.org/wiki/Gopher_(protocol)), and will see if I can use Jekyll to auto-generate these posts on there too -- I think it'd be pretty neat just as an alternative protocol, because what even is the web in 2022? (I think I'm just sick of the Wéb-Three talk everywhere... :&lt; look I'm trying to avoid mentioning it just in case...)
+
+Anyways, I'll really be trying to post more this year!
