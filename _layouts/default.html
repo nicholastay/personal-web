@@ -14,9 +14,9 @@
 		<meta property="og:title" content="{{ page.title }}">
 		<meta property="og:description" content="{{ description }}...">
 		{% else %}
-		<meta name="description" content="Nicholas Tay - BCom/BCompSci Student at Monash University">
+		<meta name="description" content="Nicholas Tay - {{ site.tagline }}">
 		<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}Nicholas Tay{% endif %}">
-		<meta property="og:description" content="Nicholas Tay - BCom/BCompSci Student at Monash University">
+		<meta property="og:description" content="Nicholas Tay - {{ site.tagline }}">
 		{% endif %}
 		<meta property="og:url" content="https://nick.tay.blue{{ post.url }}">
 		<meta property="og:image" content="https://nick.tay.blue/assets/profile.jpg">
@@ -31,7 +31,7 @@
 					<img src="/assets/profile.jpg" id="face" class="smooth" alt="[My face!]">
 					<h1 id="myname">Nicholas Tay</h1>
 				</a>
-				<p id="subtitle" class="subtitle">Final Year BCom/BCompSci Student @ Monash University</p>
+				<p id="subtitle" class="subtitle">{{ site.tagline }}</p>
 
 				<!-- For text based browsers. -->
 				<div style="display: none;">
