@@ -102,7 +102,7 @@
 						Tags: {% for tag in page.tags %}<a href="/tags#{{ tag }}" class="muted">{{ tag }}</a> {% endfor %}
 					</p>
 				</div>
-				<div id="comments" onclick="loadComments();" style="margin-top: 15px"></div>
+				<a id="comments" class="muted" onclick="return loadComments();" style="margin-top: 15px" href="#"></a>
 				<script>
 					if (document.getElementById) {
 						var comments = document.getElementById("comments");
@@ -121,6 +121,7 @@
 						utt.setAttribute("label", "blog comments");
 						utt.setAttribute("theme", "github-light");
 						comments.appendChild(utt);
+						return false;
 					}
 				</script>
 

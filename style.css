@@ -38,6 +38,9 @@ a {
 	text-decoration: underline;
 	color: #009db5;
 }
+a:hover {
+	color: #006473;
+}
 
 a.no-link {
 	text-decoration: none;
@@ -224,11 +227,6 @@ h2.date {
 	font-size: 16pt;
 	text-align: right;
 	margin-bottom: 0.2rem;
-}
-
-#comments {
-	color: grey;
-	cursor: pointer;
 }
 
 .toc {
