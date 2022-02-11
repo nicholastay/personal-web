@@ -13,7 +13,7 @@ The Keebio Iris Keyboard Rev. 4: it has been my primary choice of input for abou
 
 ## Using the board
 
-It took me about 2 weeks to really get comfortable, but since the keyboard basically has all the letters and numbers in a QWERTY layout, the hardest part was adjusting to the "columnar staggered" linear layout, and (to a lesser extent) the missing symbols. But after a little bit, it actually turned out to be quite comfy, with the symbols actually being easier to type since I didn't have to reach anymore - just use a function layer!
+It took me about 2 weeks to really get comfortable, but since the keyboard basically has all the letters and numbers in a QWERTY layout, the hardest part was adjusting to the "columnar staggered" linear layout, and (to a lesser extent) the missing symbols. But after a little bit, it actually turned out to be quite comfy, with the symbols actually being easier to type since I didn't have to reach anymore -- just use a function layer!
 
 Before using this keyboard, I used to never type properly. I learnt typing through playing games! My left hand would just hover around WASD, and I would somehow type at up to 120WPM like that. Due to the staggered layout, it feels as if this board forces me to type properly -- but it's a good thing! Feels like it's better for my hands, and I'm able to type at the same WPM as before :D.
 
