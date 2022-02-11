@@ -14,6 +14,7 @@ Other bits and pieces of technology I have. May or may not use them often.
 Samsung Galaxy Note 10 Aura Glow 256GB (acquired Nov 2019)
 
 - Earphones: Samsung Galaxy Buds White
+- Headphones: Sony WH-1000XM4
 
 ### Previous phones
 
