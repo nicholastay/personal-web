@@ -92,12 +92,17 @@
 				{{ content }}
 
 				{% if page.layout == 'post' %}
-				<div style="margin-top: 15px; float: right;">
+				<div style="float: right;">
 					<a href="/rss.xml" class="no-link">
 						<img src="/assets/rss.gif" alt="RSS Feed" height="25px" style="opacity: 0.5;">
 					</a>
 				</div>
-				<div id="comments" onclick="loadComments();" style="margin-top: 35px"></div>
+				<div class="muted">
+					<p>
+						Tags: {% for tag in page.tags %}<a href="/tags#{{ tag }}" class="muted">{{ tag }}</a> {% endfor %}
+					</p>
+				</div>
+				<div id="comments" onclick="loadComments();" style="margin-top: 15px"></div>
 				<script>
 					if (document.getElementById) {
 						var comments = document.getElementById("comments");
