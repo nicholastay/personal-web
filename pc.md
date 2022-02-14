@@ -56,10 +56,7 @@ Lenovo ThinkPad X230 (purchased secondhand: May 2019)
 
 Other details:
 
-- OS: Fedora Linux
-	- WM: i3 (installed with i3 spin)
-	- [dotfiles](https://github.com/nicholastay/dotfiles)
-	- [Setup notes](https://gist.github.com/nicholastay/7d4cd6a7352f2a3911a99e982d78c092)
+- OS: Fedora Linux (i3 spin)
 - Keyboard modded to X220 Classic 7-Row Keyboard
 
 ### mocha
@@ -73,7 +70,6 @@ Apple MacBook Air, Mid-2011 (purchased new: ~2011, by family)
 Other details:
 
 - OS: macOS Mojave 10.14.6 (see [my post](/2021/04/11/fde-mac.html) for more details)
-	- WM: [yabai](https://github.com/koekeishiya/yabai)
 - <strike>Surprisingly works pretty damn well still in 2021</strike>
 	- 2022 update: for some reason the fans spin up so dang often, and it frequently just chugs along... :(
 	- Maybe I'll try reverting to High Sierra to see if it works better some time.
@@ -95,27 +91,6 @@ Other details
 - OS: Debian 10 buster
 - My main homelab server in use - small, low power box I can have in the corner plugged in to the main router
 - Honestly powerful enough for everything I need, but the storage (USB3) is janky and internal storage is very little, so I need to offload things to the USB drive (which sucks)
-- Services I run include:
-	- Nginx
-	- Samba
-	- Git
-	- Nextcloud
-	- Pihole
-	- Wireguard
-	- Jellyfin (media server)
-	- Navidrome (music server)
-
-
-## Application details
-
-- BROWSER: Mozilla Firefox
-	- Extensions: uBlock Origin, ViolentMonkey, Stylus, Vimium
-- MUSIC: mpd (Linux/macOS), MusicBee (Windows)
-- EDITOR: Emacs ([Doom](https://github.com/hlissner/doom-emacs)), neovim
-- DOCS: LaTeX, Pandoc / LibreOffice (when absolutely needed)
-- PDF: Zathura (Linux), Skim (macOS), SumatraPDF (Windows)
-- SHELL: zsh (Linux/macOS)
-- TERM: Alacritty (Linux), Terminal.app (macOS), Windows Terminal (Windows)
 
 
 ## Older systems
@@ -145,10 +120,6 @@ Other details
 - OS: Proxmox VE 6.3
 	- Previously (to ~2014): Microsoft Windows 8.1 Pro
 	- Previously (to 2021): Microsoft Windows 10 Pro
-- VMs/LXCs in testing include:
-	- trueno: OPNsense VM
-	- latte: macOS Catalina VM
-	- midnight: Arch Linux LXC with headless display + VNC, for screen capture
 - Previous MONITOR2: LG Flatron L1510T 15" 4:3
 	- I know, this is just here for fun
 
