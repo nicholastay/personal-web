@@ -69,6 +69,25 @@ img.smooth {
 	border-radius: 5%;
 }
 
+/* Triangle ul li marker */
+ul.triangle {
+	margin: 0;
+  	padding: 0;
+  	list-style-type: none;
+  	margin-left: 0.5rem;
+}
+
+ul.triangle li {
+	margin-top: 0.15rem;
+	margin-bottom: 0.15rem;
+}
+ul.triangle li::before {
+	content: "▶";
+	margin-right: 0.3rem;
+	font-size: 9pt;
+	color: grey;
+}
+
 
 /* Generic elements */
 /* Pink bar across top of pages */
@@ -195,25 +214,6 @@ ul.nav-links {
 
 .home-blocks .block {
 	margin-bottom: 30px;
-}
-
-.home-blocks ul {
-	margin: 0;
-  	padding: 0;
-  	list-style-type: none;
-  	margin-left: 0.5rem;
-}
-
-.home-blocks li {
-	margin-top: 0.15rem;
-	margin-bottom: 0.15rem;
-}
-
-.home-blocks li::before {
-	content: "▶";
-	margin-right: 0.3rem;
-	font-size: 9pt;
-	color: grey;
 }
 
 .home-blocks h3 {
