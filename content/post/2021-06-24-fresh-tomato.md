@@ -1,8 +1,8 @@
 ---
-layout: post
-title: "Fresh tomatoes? Yes!: Belkin F7D3402v1 router firmware hacking"
-date: 2021-06-24 11:16:29 +1000
-tags: router
+date: "2021-06-24T11:16:29Z+10:00"
+tags: 
+    - router
+title: 'Fresh tomatoes? Yes!: Belkin F7D3402v1 router firmware hacking'
 ---
 
 So I got the FreshTomato firmware on my Belkin F7D3402v1 modem/router combo working! (albeit with some caveats for now) Here's how I did it. (source patch available at the end)
@@ -62,8 +62,8 @@ Turns out the `boardrev` wasn't the same as the F7D3302, but the F5D8235-4 v3, 1
 A few interesting things/things I haven't been able to figure out (I'll probably edit this as I find more):
 
 - 4 LAN ports still show up, but I've reassigned one of them to be WAN.
-	- WAN port is the top port, just under the RJ11 jack (I had actually got lucky when changing the vlan port settings, that '3' happened to be the top one, which is what I wanted).
-	- LAN0-2 are the next three, top to bottom.
+    - WAN port is the top port, just under the RJ11 jack (I had actually got lucky when changing the vlan port settings, that '3' happened to be the top one, which is what I wanted).
+    - LAN0-2 are the next three, top to bottom.
 - 5GHz doesn't work. The interface doesn't even show up in SSH.
 
 ## Patch

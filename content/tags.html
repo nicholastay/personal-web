@@ -1,20 +1,9 @@
 ---
-layout: default
 title: Tags
+url: /tags.html
 ---
 
-{% for tag in site.tags %}
-<div class="tag" id="{{ tag[0] }}">
-	{{ tag[0] }}
-	<ul class="tag-links">
-		{% for post in tag[1] %}
-		<li>
-			{{ post.date | date: "%Y-%m-%d" }}: <a href="{{ post.url }}">{{ post.title }}</a>
-		</li>
-		{% endfor %}
-	</ul>
-</div>
-{% endfor %}
+{{< posts-by-tag >}}
 
 <div style="margin-top: 15px; float: right;">
 	<a href="/rss.xml" class="no-link">

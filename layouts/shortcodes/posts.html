@@ -1,0 +1,3 @@
+{{ range ( where .Site.RegularPages "Section" "post" | first ( .Get "limit" ) ) }}
+<li><span class="muted small-text"><i>{{ .Date.Format "2006-01-02" }}:</i></span> <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+{{ end }}

@@ -1,8 +1,10 @@
 ---
-layout: post
-title:  "I'm back! – and with a neat little site with Jekyll"
-date:   2021-04-07 23:56:18 +1000
-tags: jekyll website github
+date: "2021-04-07T23:56:18+10:00"
+tags:
+    - jekyll
+    - website
+    - github
+title: I'm back! – and with a neat little site with Jekyll
 ---
 
 Finally, I've setup a basic blog again on my website -- I guess I just want a nice place to put random notes to self, and things like that, since I have a homelab that I setup recently (it's the reason for me getting this domain!) and it might be nice to just write some interesting findings and processes through playing with those technologies.

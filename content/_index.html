@@ -1,8 +1,6 @@
 ---
-layout: default
 title: Home
 ---
-
 
 <div class="home-blocks">
 	<div class="block" style="text-align: center;">
@@ -14,7 +12,7 @@ title: Home
 			<li>Current Computer Science & Finance student at Monash University.</li>
 			<li>Linux user messing with technologies including Proxmox, Docker and more.</li>
 			<li>I post some interesting tech findings here on my website, see my blog posts below!</li>
-			<li><a href="/about">More about me...</a></li>
+			<li><a href="/about.html">More about me...</a></li>
 		</ul>
 	</div>
 	<div class="block">
@@ -23,9 +21,9 @@ title: Home
 	<div class="block">
 		<h3>Info</h3>
 		<ul>
-			<li><a href="/tools">Programs and Tools I Use</a></li>
-			<li><a href="/pc">Computer Setups</a></li>
-			<li><a href="/other-tech">Other Tech</a></li>
+			<li><a href="/tools.html">Programs and Tools I Use</a></li>
+			<li><a href="/pc.html">Computer Setups</a></li>
+			<li><a href="/other-tech.html">Other Tech</a></li>
 		</ul>
 	</div>
 	<div class="block">
@@ -42,10 +40,8 @@ title: Home
 	<div class="block">
 		<h3>Recent Blog Posts</h3>
 		<ul>
-			{% for post in site.posts limit:10 %}
-				<li><span class="muted small-text"><i>{{ post.date | date: "%Y-%m-%d" }}:</i> </span><a href="{{ post.url }}">{{ post.title }}</a></li>
-			{% endfor %}
-			<li><a href="/posts">See all...</a></li>
+			{{< posts limit=5 >}}
+			<li><a href="/posts.html">See all...</a></li>
 		</ul>
 	</div>
 </div>

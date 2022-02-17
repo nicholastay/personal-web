@@ -229,6 +229,7 @@ h2.date {
 	background-color: #ebebeb;
 	padding: 12.5px 30px;
 	border: 1px solid #808080;
+	margin-bottom: 10px;
 }
 .toc h2 {
 	text-align: center;
@@ -237,17 +238,17 @@ h2.date {
 .toc a {
 	text-decoration: none;
 }
-.toc ul#markdown-toc {
+.toc #TableOfContents > ul {
 	margin: 0;
 	padding: 0;
 }
 
 .footer {
-	margin-top: 2rem;
+	margin-top: 3.5rem;
 }
 .footer hr {
 	border-top: 0.01rem solid #b8b8b8;
-	width: 80%;
+	width: 85%;
 }
 
 

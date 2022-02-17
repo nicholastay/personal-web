@@ -1,0 +1,10 @@
+{{ range $tag, $pages := .Site.Taxonomies.tags }}
+<div class="tag" id="{{ $tag }}">
+	<b>{{ $tag }}</b>
+	<ul class="tag-links">
+		{{ range $pages }}
+		<li><span class="muted small-text"><i>{{ .Date.Format "2006-01-02" }}:</i></span> <a href="{{ .Permalink }}">{{ .Title }}</a></li>
+		{{ end }}
+	</ul>
+</div>
+{{ end }}

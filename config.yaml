@@ -1,0 +1,26 @@
+baseURL: https://nick.tay.blue/
+
+params:
+    name: Nicholas Tay
+    tagline: "Final Year BCom/BCompSci Student @ Monash University"
+
+uglyURLs: true
+
+permalinks:
+    post: "/:year/:month/:day/:slug"
+
+frontmatter:
+    # Pick up date from filename, which slug then becomes the part after filename
+    date:
+        - ":filename"
+        - ":default"
+
+outputs:
+    section:
+        - HTML
+        - RSS
+
+outputFormats:
+    RSS:
+        mediatype: "application/rss"
+        baseName: "rss"

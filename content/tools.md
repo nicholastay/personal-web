@@ -1,6 +1,6 @@
 ---
-layout: default
 title: Programs and Tools I Use
+toc: true
 ---
 
 ## OS setup
