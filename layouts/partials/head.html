@@ -25,10 +25,8 @@
 
 <body>
 <div class="head-line"></div>
-<div class="content">
+<div class="page">
 
 {{- partial "nav.html" . -}}
 
-<div class="main">
-{{- if eq .Section "post" -}}<h2 class="date">{{ .Date.Format "2006-01-02" }}</h2>{{- end -}}
-<h1 class="title">{{$.Title}}</h1>
+<div class="content">

@@ -1,7 +1,14 @@
 {{- partial "head.html" . -}}
 
+<main>
+<article>
+<h1 class="title">{{ $.Title }}</h1>
 {{- partial "toc.html" . -}}
 
 {{- .Content -}}
+</article>
+</main>
+
+{{- partial "footer.html" . -}}
 
 {{- partial "end.html" . -}}

@@ -103,23 +103,26 @@ ul.triangle li::before {
 }
 
 /* Main area + Nav */
-.content {
+/* .page = width-constrained page area */
+/* .sidebar = left-side header + nav */
+/* .content = right-side pane */
+.page {
 	margin: auto;
 	max-width: 1000px;
 }
 
-.nav-bar,
-.main {
+.sidebar,
+.content {
 	float: left;
 	padding: 15px;
 }
 
-.nav-bar {
+.sidebar {
 	width: 22%;
 	text-align: right;
 }
 
-.main {
+.content {
 	width: 69%;
 }
 
@@ -143,6 +146,9 @@ ul.triangle li::before {
 #myname {
 	margin-top: 0.3rem;
 	margin-bottom: 0.3rem;
+}
+#myname a {
+	color: #ad68ad;
 }
 
 #subtitle {
@@ -182,14 +188,14 @@ ul.triangle li::before {
 /* Mobile */
 
 @media(max-width: 750px) {
-	.nav-bar,
-	.main {
+	.sidebar,
+	.content {
 		width: 100%;
 		float: none;
 		padding: 0;
 	}
 
-	.content {
+	.page {
 		padding-left: 1rem;
 		padding-right: 1rem;
 	}
@@ -198,7 +204,7 @@ ul.triangle li::before {
 		width: 6rem;
 	}
 
-	.nav-bar {
+	.sidebar {
 		text-align: center;
 	}
 
@@ -245,10 +251,6 @@ h2.date {
 	padding: 0;
 }
 
-.footer {
-	margin-top: 3.5rem;
-}
-.footer hr {
-	border-top: 0.01rem solid #b8b8b8;
-	width: 85%;
+aside {
+	margin-top: 2rem;
 }

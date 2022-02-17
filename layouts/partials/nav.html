@@ -1,11 +1,18 @@
-<div class="nav-bar">
-	<a href="/" class="no-link">
-		<img src="/assets/profile.jpg" id="face" class="smooth" alt="[My face!]">
-		<h1 id="myname">{{ $.Site.Params.name }}</h1>
-	</a>
-	<p id="subtitle" class="subtitle">{{ $.Site.Params.tagline }}</p>
+<div class="sidebar">
 
-	<div class="nav-links" style="margin-top: 25px">
+<header>
+	<h1 id="myname">
+		<a href="/" class="no-link">
+			<img src="/assets/profile.jpg" id="face" class="smooth" alt="[My face!]">
+			{{ $.Site.Params.name }}
+		</a>
+	</h1>
+
+	<p id="subtitle" class="subtitle">{{ $.Site.Params.tagline }}</p>
+</header>
+
+<nav style="margin-top: 25px">
+	<p class="nav-links">
 		<!-- For text based browsers. -->
 		<span style="display: none;">Links: </span>
 		<a href="https://github.com/nicholastay">
@@ -32,11 +39,13 @@
 		<a href="https://www.youtube.com/channel/UC3PCZ5I5prckJHg15hLG5Sg">
 			<img src="/assets/youtube.gif" alt="[YouTube]">
 		</a>
-	</div>
+	</p>
 
 	{{ if ne .Title "Home" }}
 	<p style="margin-top: 25px">
 		<a href="/">&lt; Return home</a>
 	</p>
 	{{ end }}
+</nav>
+
 </div>

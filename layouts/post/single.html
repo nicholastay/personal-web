@@ -1,10 +1,15 @@
 {{- partial "head.html" . -}}
 
+<main>
+<article>
+<h2 class="date">{{ .Date.Format "2006-01-02" }}</h2>
+<h1 class="title">{{ $.Title }}</h1>
+
 {{- partial "toc.html" . -}}
 
 {{- .Content -}}
 
-<div class="footer">
+<aside>
 	<div style="float: right;">
 		<a href="/rss.xml" class="no-link">
 			<img src="/assets/rss.gif" alt="RSS Feed" height="25px" style="opacity: 0.5;">
@@ -37,11 +42,10 @@
 			return false;
 		}
 	</script>
+</aside>
+</article>
+</main>
 
-	<hr style="margin-top: 20px">
-	<p class="muted">
-		Text content on this site is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA-4.0</a> (<a href="https://github.com/nicholastay/personal-web/blob/master/LICENCE.TEXT-CONTENT">text</a>); <a href="https://github.com/nicholastay">code behind it</a> is licensed under the <a href="https://opensource.org/licenses/BSD-2-Clause">BSD-2-Clause</a> (<a href="https://github.com/nicholastay/personal-web/blob/master/LICENCE.CODE">text</a>). All rights reserved to images unless otherwise stated.
-	</p>
-</div>
+{{- partial "footer.html" . -}}
 
 {{- partial "end.html" . -}}
