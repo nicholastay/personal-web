@@ -44,18 +44,23 @@ a.no-link {
 
 pre,
 code {
-	background-color: #323232;
+	background-color: #323232 !important;
 	font-family: monospace;
 	color: white;
 }
 
 code {
-	padding: 0.1rem 0.2rem;
+	padding: 0.15rem 0.35rem;
+	border-radius: 5px;
 }
 
 pre {
+	white-space: pre-wrap;
 	border-radius: 5px;
 	padding: 1rem;
+}
+pre code {
+	padding: 0;
 }
 
 img {
