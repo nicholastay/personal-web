@@ -1,0 +1,2 @@
+{{- range $tag, $pages := .Site.Taxonomies.tags -}}
+<a class="muted" href="/tags.html#{{ $tag }}">{{ $tag }}</a> {{ end }}

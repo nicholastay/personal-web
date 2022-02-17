@@ -255,12 +255,3 @@ h2.date {
 	border-top: 0.01rem solid #b8b8b8;
 	width: 85%;
 }
-
-
-/* Tag listing */
-.posts-tags,
-.posts-tags a:link,
-.posts-tags a:visited {
-	color: grey;
-	text-decoration: none;
-}
