@@ -5,50 +5,34 @@
 	</a>
 	<p id="subtitle" class="subtitle">{{ $.Site.Params.tagline }}</p>
 
-	<!-- For text based browsers. -->
-	<div style="display: none;">
-		My links:
+	<div class="nav-links" style="margin-top: 25px">
+		<!-- For text based browsers. -->
+		<span style="display: none;">Links: </span>
+		<a href="https://github.com/nicholastay">
+			<img src="/assets/github.gif" alt="[GitHub]">
+		</a>
+		<a href="https://twitter.com/@nnktay">
+			<img src="/assets/twitter.gif" alt="[Twitter]">
+		</a>
+		<a id="mail" onclick="showMail(event)" href="#">
+			<span style="position: relative;">
+				<img src="/assets/mail.gif" alt="[Mail]">
+				<span id="mail-notice" class="back-slight" style="display: none;">&lt;business and/or security only emails please!: <span id="mail-protect">nick dot tay -@- windblume dot net</span>&gt;</span>
+			</span>
+		</a>
+		<a href="/static/key.asc">
+			<img src="/assets/key.gif" alt="[PGP: 98CC81FB]">
+		</a>
+		<a href="/rss.xml">
+			<img src="/assets/rss.gif" alt="[RSS]">
+		</a>
+		<a href="https://linkedin.com/in/nktay">
+			<img src="/assets/linkedin.gif" alt="[LinkedIn]">
+		</a>
+		<a href="https://www.youtube.com/channel/UC3PCZ5I5prckJHg15hLG5Sg">
+			<img src="/assets/youtube.gif" alt="[YouTube]">
+		</a>
 	</div>
-	<ul class="nav-links" style="margin-top: 25px">
-		<li>
-			<a href="https://github.com/nicholastay">
-				<img src="/assets/github.gif" alt="GitHub / nicholastay">
-			</a>
-		</li>
-		<li>
-			<a href="https://twitter.com/@nnktay">
-				<img src="/assets/twitter.gif" alt="Twitter / nnktay">
-			</a>
-		</li>
-		<li>
-			<a id="mail" onclick="showMail(event)" href="#">
-				<span style="position: relative;">
-					<img src="/assets/mail.gif" alt="Mail">
-					<span id="mail-notice" class="back-slight" style="display: none;">business and/or security only emails please!: <span id="mail-protect">nick dot tay -@- windblume dot net</span></span>
-				</span>
-			</a>
-		</li>
-		<li>
-			<a href="/static/key.asc">
-				<img src="/assets/key.gif" alt="PGP Key / 515E81D498CC81FB">
-			</a>
-		</li>
-		<li>
-			<a href="/rss.xml">
-				<img src="/assets/rss.gif" alt="RSS Feed">
-			</a>
-		</li>
-		<li>
-			<a href="https://linkedin.com/in/nktay">
-				<img src="/assets/linkedin.gif" alt="LinkedIn / nktay">
-			</a>
-		</li>
-		<li>
-			<a href="https://www.youtube.com/channel/UC3PCZ5I5prckJHg15hLG5Sg">
-				<img src="/assets/youtube.gif" alt="YouTube / {{ $.Site.Params.name }}">
-			</a>
-		</li>
-	</ul>
 
 	{{ if ne .Title "Home" }}
 	<p style="margin-top: 25px">

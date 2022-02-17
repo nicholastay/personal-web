@@ -123,19 +123,11 @@ ul.triangle li::before {
 	_width: 225px;
 }
 
-ul.nav-links {
-	padding: 0;
-}
 .nav-links a {
 	text-decoration: none;
 }
 .nav-links img {
 	height: 20px;
-}
-.nav-links li {
-	padding-left: 1px;
-	padding-right: 1px;
-	display: inline;
 }
 
 #hi {
