@@ -12,13 +12,13 @@
 	<meta property="og:url" content="{{ .Permalink }}">
 	<meta property="og:image" content="{{ $.Site.BaseURL }}/assets/profile.jpg">
 
-	{{ if eq .Section "post" }}
+	{{- if eq .Section "post" -}}
 	<meta name="description" content="{{ replace .Summary "\n" " " }}...">
 	<meta property="og:description" content="{{ replace .Summary "\n" " " }}...">
-	{{ else }}
+	{{- else -}}
 	<meta name="description" content="{{ $.Site.Params.name }} - {{ $.Site.Params.tagline }}">
 	<meta property="og:description" content="{{ $.Site.Params.name }} - {{ $.Site.Params.tagline }}">
-	{{ end }}
+	{{- end -}}
 
 	<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Params.name }} (RSS)" href="https://nick.tay.blue/rss.xml" />
 </head>
@@ -27,8 +27,8 @@
 <div class="head-line"></div>
 <div class="content">
 
-{{ partial "nav.html" . }}
+{{- partial "nav.html" . -}}
 
 <div class="main">
-{{ if eq .Section "post" }}<h2 class="date">{{ .Date.Format "2006-01-02" }}</h2>{{ end }}
+{{- if eq .Section "post" -}}<h2 class="date">{{ .Date.Format "2006-01-02" }}</h2>{{- end -}}
 <h1 class="title">{{$.Title}}</h1>
