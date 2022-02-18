@@ -2,7 +2,7 @@
 title: About
 ---
 
-![Cover photo: My ThinkPad X230 laptop with a X220 keyboard modded in](/assets/cover.jpg)
+![Cover photo: My ThinkPad X230 laptop with a X220 keyboard modded in](/assets/cover.jpg "My ThinkPad X230!{{< cc >}}")
 
 Hey, I'm Nicholas Tay -- but feel free to call me Nick.
 
