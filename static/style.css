@@ -8,7 +8,7 @@ body {
 }
 
 * {
-	font-family: "맑은 고딕", "Malgun Gothic", "Segoe UI", Helvetica, sans-serif;
+	font-family: "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", "Nanum Gothic", "Segoe UI", Helvetica, sans-serif;
 }
 
 /* Basic HTML elements */
@@ -45,7 +45,7 @@ a.no-link {
 pre,
 code {
 	background-color: #323232 !important;
-	font-family: monospace;
+	font-family: "Fantasque Sans Mono", Monaco, Menlo, monospace;
 	color: white;
 }
 
