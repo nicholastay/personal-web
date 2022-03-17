@@ -4,7 +4,8 @@ params:
     name: Nicholas Tay
     tagline: "Final Year BCom/BCompSci Student @ Monash University"
 
-uglyURLs: true
+# I would prefer these on (I think) but CF pages is being dumb
+uglyURLs: false
 
 permalinks:
     post: "/:year/:month/:day/:slug"
