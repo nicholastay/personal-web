@@ -29,7 +29,7 @@ Accessories include:
 - MONITOR2: LG Flatron E2251T-BN 21.5" 60hz FHD 16:9
 - MOUSE: Logitech MX Vertical *(for productivity)*
 - MOUSE2: Microsoft Pro IntelliMouse @ 1550DPI *(for gaming)*
-- KEYBOARD: Keebio Iris Rev. 4 ([self-built](/2022/02/11/iris); Gateron Yellow) *(for productivity)*
+- KEYBOARD: Keebio Iris Rev. 4 ([self-built](/2022/02/11/iris/); Gateron Yellow) *(for productivity)*
 - KEYBOARD2: Cooler Master Quick Fire XT (Cherry MX Red) *(for gaming)*
 - EARPHONES: KZ ZSN PRO Purple (without mic)
 - SPEAKER: Sony SRS-X3
@@ -66,7 +66,7 @@ Apple MacBook Air, Mid-2011 (purchased new: ~2011, by family)
 
 Other details:
 
-- OS: macOS Mojave 10.14.6 (see [my post](/2021/04/11/fde-mac) for more details)
+- OS: macOS Mojave 10.14.6 (see [my post](/2021/04/11/fde-mac/) for more details)
 - <strike>Surprisingly works pretty damn well still in 2021</strike>
 	- 2022 update: for some reason the fans spin up so dang often, and it frequently just chugs along... :(
 	- Maybe I'll try reverting to High Sierra to see if it works better some time.
