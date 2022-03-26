@@ -36,7 +36,7 @@ At the moment I'm personally running [Fedora, i3 spin](https://spins.fedoraproje
 	- dmenu
 	- ranger
 - Running my [dotfiles](https://github.com/nicholastay/dotfiles)
-- [(Fedora setup notes)](/fedora-setup.html)
+- [(Fedora setup notes)](/fedora-setup)
 
 ### macOS
 
