@@ -2,11 +2,16 @@
 ===============
 
 - 31/07/2000 Born
+- 5/2002-6/2002 First visit to Hong Kong
+- 11/2005 Visit to Hong Kong
 - 2006-2012 Primary School @ DGPS
+- 3/2008 First visit to Malaysia, Singapore
+- 12/2010-1/2011 Visit to Hong Kong, First visit to Macau
 - 21/08/2012 Created Instagram account + first post
+- 17/09/2012 Created GitHub account
 - 22/09/2012-1/10/2012 Visit to Hong Kong
 - 2/10/2012-9/10/2012 First visit to Korea - Seoul, Sokcho, Pyeongchang
-- 1/12/2012 First desktop PC (AMD A10)
+- 1/12/2012 Built first desktop PC (AMD A10)
 - 2013-2018 High School @ CGS
 - 30/08/2013 First mobile phone - Google Nexus 4
 - 13/09/2013-3/10/2013 First visit to US - FL, NY & CA
@@ -16,16 +21,16 @@
 - 5/12/2015 Second mobile phone - LG G3
 - 27/2/2016 First desktop HDD died
 - 15/12/2016 Learner Permit acquired (car)
-- 6/12/2018-21/12/2018 First visit to Japan - Tokyo, Hakone, Osaka, Kyoto
 - 5/1/2018 Third mobile phone - LG V20
+- 6/12/2018-21/12/2018 First visit to Japan - Tokyo, Hakone, Osaka, Kyoto
 - 12/2018-12/2019 Private High School Mathematics Tutor
 - 04/03/2019-~ Bachelor of Computer Science and Commerce @ Monash University
 - 10/05/2019 Laptop - ThinkPad X230 ('[stars](/pc/#stars)')
-- 29/10/2019 Fourth mobile phone - Samsung Galaxy Note 10
 - 09/2019-06/2020 Shelf Stacker @ Coles
+- 29/10/2019 Fourth mobile phone - Samsung Galaxy Note 10
 - 02/01/2020-10/01/2020 First cruise - Melbourne, Hobart, Port Lincoln
 - 02/2020-12/2021 Engineering Support @ Mill Software
-- 10/03/2021 Second desktop PC ('[angel](/pc/#angel)')
+- 10/03/2021 Built second desktop PC ('[angel](/pc/#angel)')
 - 17/12/2021 Driver Licence acquired (car)
 - 01/2022-06/2022 IBL Intern (Mobile Apps) @ Monash University (eSolutions)
 - 14/03/2022 [First iOS app](https://git.windblume.net/pub/nick/forayios)
