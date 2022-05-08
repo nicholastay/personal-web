@@ -1,0 +1,32 @@
+@nicholastay's life
+===============
+
+- 31/07/2000 Born
+- 2006-2012 Primary School @ DGPS
+- 21/08/2012 Created Instagram account + first post
+- 22/09/2012-1/10/2012 Visit to Hong Kong
+- 2/10/2012-9/10/2012 First visit to Korea - Seoul, Sokcho, Pyeongchang
+- 1/12/2012 First desktop PC (AMD A10)
+- 2013-2018 High School @ CGS
+- 30/08/2013 First mobile phone - Google Nexus 4
+- 13/09/2013-3/10/2013 First visit to US - FL, NY & CA
+- 11/10/2014 Created [Twitter account](https://twitter.com/@_nexerq)
+- 15/13/2014 First discrete desktop GPU (Nvidia GTX 660)
+- 20/6/2015 Overhauled first desktop PC to Intel i5-4590 ('[breeze/dream](/pc/#dream-aka-breeze)')
+- 5/12/2015 Second mobile phone - LG G3
+- 27/2/2016 First desktop HDD died
+- 15/12/2016 Learner Permit acquired (car)
+- 6/12/2018-21/12/2018 First visit to Japan - Tokyo, Hakone, Osaka, Kyoto
+- 5/1/2018 Third mobile phone - LG V20
+- 12/2018-12/2019 Private High School Mathematics Tutor
+- 04/03/2019-~ Bachelor of Computer Science and Commerce @ Monash University
+- 10/05/2019 Laptop - ThinkPad X230 ('[stars](/pc/#stars)')
+- 29/10/2019 Fourth mobile phone - Samsung Galaxy Note 10
+- 09/2019-06/2020 Shelf Stacker @ Coles
+- 02/01/2020-10/01/2020 First cruise - Melbourne, Hobart, Port Lincoln
+- 02/2020-12/2021 Engineering Support @ Mill Software
+- 10/03/2021 Second desktop PC ('[angel](/pc/#angel)')
+- 17/12/2021 Driver Licence acquired (car)
+- 01/2022-06/2022 IBL Intern (Mobile Apps) @ Monash University (eSolutions)
+- 14/03/2022 [First iOS app](https://git.windblume.net/pub/nick/forayios)
+- 2/05/2022 [Coreboot](https://www.coreboot.org/)-ed ThinkPad X230 laptop

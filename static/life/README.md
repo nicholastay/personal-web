@@ -1,0 +1,1 @@
+Check out [cheeaun/life](https://github.com/cheeaun/life). Used as under the MIT licence.
