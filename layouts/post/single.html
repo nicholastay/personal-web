@@ -19,29 +19,8 @@
 		<p>
 			Tags: {{ range $tag := .Params.Tags }}<a href="/tags#{{ $tag }}" class="muted">{{ $tag }}</a> {{ end }}
 		</p>
+		{{- partial "comments.html" . -}}
 	</div>
-	<a id="comments" class="muted" onclick="return loadComments();" style="margin-top: 15px" href="#"></a>
-	<script>
-		if (document.getElementById) {
-			var comments = document.getElementById("comments");
-			comments.innerText = "Click to load comments (utteranc.es)...";
-		}
-
-		function loadComments() {
-			comments.onclick = null;
-			comments.innerText = "";
-			var utt = document.createElement("script");
-			utt.src = "https://utteranc.es/client.js";
-			utt.async = true;
-			utt.crossOrigin = "anonymous";
-			utt.setAttribute("repo", "nicholastay/personal-web");
-			utt.setAttribute("issue-term", "pathname");
-			utt.setAttribute("label", "blog comments");
-			utt.setAttribute("theme", "github-light");
-			comments.appendChild(utt);
-			return false;
-		}
-	</script>
 </aside>
 </article>
 </main>

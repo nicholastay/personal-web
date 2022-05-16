@@ -1,0 +1,41 @@
+<span>
+    Comments (giscus): <a href="https://github.com/nicholastay/personal-web/discussions/categories/blog-comments" target="_blank">On GitHub</a>
+    <span id="comments-sep"></span>
+    <a id="comments" onclick="return loadComments();" style="margin-top: 15px" href="#"></a>
+</span>
+<script>
+if (document.getElementById) {
+    document.getElementById("comments").innerText = "Load here";
+    document.getElementById("comments-sep").innerText = " | ";
+}
+
+function loadComments() {
+    var comments = document.getElementById("comments");
+    comments.onclick = null;
+    comments.innerText = "";
+    document.getElementById("comments-sep").innerText = "";
+
+    var args = {
+        "src": "https://giscus.app/client.js",
+        "data-repo": "nicholastay/personal-web",
+        "data-repo-id": "MDEwOlJlcG9zaXRvcnkzOTk3Njk4OQ==",
+        "data-category": "Blog Comments",
+        "data-category-id": "DIC_kwDOAmIAHc4CPH-e",
+        "data-mapping": "og:title",
+        "data-reactions-enabled": "1",
+        "data-emit-metadata": "0",
+        "data-input-position": "top",
+        "data-theme": "light",
+        "data-lang": "en",
+        "crossorigin": "anonymous",
+        "async": true
+    };
+
+    var s = document.createElement("script");
+    for (var a in args)
+        s.setAttribute(a, args[a]);
+
+    comments.appendChild(s);
+    return false;
+}
+</script>
