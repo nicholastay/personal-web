@@ -268,9 +268,11 @@ figure {
 	margin: 0;
 	padding: 8px 10px;
 	border-radius: 0.35rem;
+	text-align: center;
 }
 figcaption {
 	font-style: italic;
 	text-align: right;
 	margin-right: 0.35rem;
+	margin-top: 0.2rem;
 }
