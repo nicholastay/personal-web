@@ -17,8 +17,9 @@
 	</div>
 	<div class="muted">
 		<p>
-			Tags: {{ range $tag := .Params.Tags }}<a href="/tags#{{ $tag }}" class="muted">{{ $tag }}</a> {{ end }}
+			Tags: {{ range $tag := .Params.Tags }}<a href="/tags#{{ $tag }}">{{ $tag }}</a> {{ end }}
 		</p>
+		<p>
 		{{- partial "comments.html" . -}}
 	</div>
 </aside>

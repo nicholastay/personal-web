@@ -188,6 +188,12 @@ ul.triangle li::before {
 .muted {
 	color: #919191;
 }
+.muted a {
+	color: #6e6e6e;
+}
+.muted a:hover {
+	color: #303030;
+}
 
 .small-text {
 	font-size: 9pt;
