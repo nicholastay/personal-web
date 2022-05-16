@@ -176,9 +176,11 @@ ul.triangle li::before {
 	text-align: center;
 	color: #b0fff7;
 }
-
 #mail-protect {
 	color: pink;
+}
+#mail:hover #mail-notice {
+	display: block;
 }
 
 .back-slight {
