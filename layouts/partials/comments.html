@@ -9,7 +9,12 @@ if (document.getElementById) {
     document.getElementById("comments-sep").innerText = " | ";
 }
 
+if (window.sessionStorage.getItem("load-comments"))
+    loadComments();
+
 function loadComments() {
+    window.sessionStorage.setItem("load-comments", 1);
+    
     var comments = document.getElementById("comments");
     comments.onclick = null;
     comments.innerText = "";
