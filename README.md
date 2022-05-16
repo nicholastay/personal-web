@@ -2,7 +2,11 @@
 
 This is the source code behind my website, located at: https://nick.tay.blue/
 
-**NOTE**: As this is a personal site, all pull requests will be rejected and any unsolicited ideas will be ignored. For any comments relating to a blog post, please use the comment section below the post itself (should link to a GitHub issue). For any website issues (e.g. compatibility, rendering, etc), please do file an issue against the repo - much appreciated! As usual, any business or security inquiries should be sent to my email.
+**NOTE**: As this is a personal site, all pull requests will be rejected.
+
+* For any comments relating to a blog post, please use the comment section below the post itself (should link up to a GitHub Discussion in the [comments category](https://github.com/nicholastay/personal-web/discussions/categories/blog-comments))
+* For any website issues (e.g. compatibility, rendering, etc), please do [file an issue against the repo](https://github.com/nicholastay/personal-web/issues) - much appreciated! As usual, any business or security inquiries should be sent to my email.
+* For any website ideas, these should go under the [Ideas section in Discussions](https://github.com/nicholastay/personal-web/discussions/categories/ideas), although please don't be offended if they're ignored or rejected :)
 
 ## Running locally
 
