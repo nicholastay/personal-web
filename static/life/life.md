@@ -26,12 +26,14 @@
 - 12/2018-12/2019 Private High School Mathematics Tutor #job
 - 04/03/2019-11/2022 BCompSci/BCom(Finance) @ Monash University #school
 - 10/05/2019 Laptop - ThinkPad X230 ('[stars](/pc/#stars)') #tech
-- 09/2019-06/2020 Shelf Stacker @ Coles #job
+- 09/2019-06/2020 Shelf Stacker @ Coles (casual) #job
 - 29/10/2019 Fourth mobile phone - Samsung Galaxy Note 10 #tech
 - 02/01/2020-10/01/2020 First cruise - Melbourne, Hobart, Port Lincoln #trip
-- 02/2020-12/2021 Engineering Support @ Mill Software #job
+- 02/2020-12/2021 Engineering Support @ Mill Software (casual) #job
 - 10/03/2021 Built second desktop PC ('[angel](/pc/#angel)') #tech
 - 17/12/2021 Driver Licence acquired (car)
-- 01/2022-06/2022 IBL Intern (Mobile Apps) @ Monash University (eSolutions) #job
+- 01/2022-17/06/2022 IBL Intern (Mobile Apps; full-time) @ Monash University (eSolutions) #job
 - 14/03/2022 [First iOS app](https://git.windblume.net/pub/nick/forayios) #tech
 - 2/05/2022 [Coreboot](https://www.coreboot.org/)-ed ThinkPad X230 laptop #tech
+- 14/06/2022 Laptop - ThinkPad X1 Carbon 5th Gen ('[reflect](/pc/#reflect)') #tech
+- 20/06/2022-~ Junior Developer (Mobile Apps; casual) @ Monash University (eSolutions) #job
