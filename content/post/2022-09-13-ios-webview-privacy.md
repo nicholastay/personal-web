@@ -17,13 +17,13 @@ Give it a try -- visit this website via the in-built browser on iOS Facebook Mes
 
 ![Privacy warning as displayed on this website in a potentially invasive browser (Instagram), including 'The browser you are using may be unsafe...'](/static/post-img/202209-privacy-warning.jpg "Privacy warning on this site when opening in Instagram in-app browser")
 
-Interestingly, this shows up in Google Chrome on iOS too... I wonder what it's doing, I'll need to investigate it further some other time. Perhaps it's just relaying events to itself to have better native integration -- but Firefox does not do this, so it still feels a little suspect.
-
 As mentioned in the reference post, it isn't foolproof and can be worked around -- but, I still think it's a valuable step in raising awareness (but also for myself to check if some app is being a bad boy!).
 
 **Let this be a lesson to all of us to not trust in-app browsers on iOS!**
 
 You can find a copy of the script [in the assets folder of this site](/assets/privacy-protect.js), and use it as a reference for your own if you're interested on building something similar for your site -- rest assured it is licensed under the usual BSD-2-Clause.
+
+Note that I only capture very specific events that have the capability to be malicious, i.e. event listeners and script tags. Otherwise, common browser extensions may also fire off the warnings! There definitely is room for improvement here though, e.g. only looking for specific known ones.
 
 ---
 
