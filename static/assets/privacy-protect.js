@@ -16,8 +16,8 @@ function protectWarn() {
 }
 
 // Ensure random scripts aren't added.
-var origCE = document.createElement;
-document.createElement = function() {
+var origCE = HTMLDocument.prototype.createElement;
+HTMLDocument.prototype.createElement = function() {
 	if (!protectDisarm && arguments[0] == "script")
 		protectWarn();
 	else
@@ -29,4 +29,4 @@ window._NTProtectDisarm = function() { protectDisarm = true; }
 
 // Ensure random event listeners aren't added.
 // (complete block since we don't use)
-document.addEventListener = protectWarn;
+HTMLDocument.prototype.addEventListener = protectWarn;
