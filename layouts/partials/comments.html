@@ -13,6 +13,7 @@ if (window.sessionStorage.getItem("load-comments"))
     loadComments();
 
 function loadComments() {
+    window._NTProtectDisarm();
     window.sessionStorage.setItem("load-comments", 1);
     
     var comments = document.getElementById("comments");

@@ -104,10 +104,11 @@ ul.triangle li::before {
 
 /* Generic elements */
 /* Pink bar across top of pages */
-.head-line {
+#head-line {
 	height: 5px;
 	background-color: #feb3ff;
 	margin-bottom: 20px;
+	text-align: center;
 }
 
 /* Main area + Nav */
