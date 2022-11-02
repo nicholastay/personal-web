@@ -24,7 +24,7 @@
 - 5/1/2018 Third mobile phone - LG V20 #tech
 - 6/12/2018-21/12/2018 First visit to Japan - Tokyo, Hakone, Osaka, Kyoto #trip
 - 12/2018-12/2019 Private High School Mathematics Tutor #job
-- 04/03/2019-11/2022 BCompSci/BCom(Finance) @ Monash University #school
+- 04/03/2019-02/11/2022 BCompSc/BCom(Finance) @ Monash University #school
 - 10/05/2019 Laptop - ThinkPad X230 ('[stars](/pc/#stars)') #tech
 - 09/2019-06/2020 Shelf Stacker @ Coles (casual) #job
 - 29/10/2019 Fourth mobile phone - Samsung Galaxy Note 10 #tech
@@ -36,5 +36,5 @@
 - 14/03/2022 [First iOS app](https://git.windblume.net/pub/nick/forayios) #tech
 - 2/05/2022 [Coreboot](https://www.coreboot.org/)-ed ThinkPad X230 laptop #tech
 - 14/06/2022 Laptop - ThinkPad X1 Carbon 5th Gen ('[reflect](/pc/#reflect)') #tech
-- 20/06/2022-~ Junior Developer (Mobile Apps; casual) @ Monash University (eSolutions) #job
+- 20/06/2022-09/12/2022 Junior iOS Developer (casual) @ Monash University (eSolutions) #job
 - 09/09/2022 Fifth mobile phone - iPhone 14 Pro Max (preordered) #tech
