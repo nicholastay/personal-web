@@ -87,29 +87,13 @@ Other details:
 
 ## Servers
 
-### bubble
-
-Acer Chromebox CXI2
-
-- CPU: Intel Celeron 3205U
-- RAM: 4GB
-- SSD: 16GB
-- HDD(USB3): Seagate Expansion Desktop 4TB
-
-Other details
-
-- OS: Debian 10 buster
-- My main homelab server in use - small, low power box I can have in the corner plugged in to the main router
-- Honestly powerful enough for everything I need, but the storage (USB3) is janky and internal storage is very little, so I need to offload things to the USB drive (which sucks)
-
-
-## Older systems
-
-These aren't in active use anymore, but I might use them from time to time.
+("servers" lol)
 
 ### dream (aka breeze)
 
-My previous main desktop, serving me since 2012 (when I built it as my first desktop!), and upgraded through the years. Now being used as my testing grounds for VMs and containers for homelab.
+My previous main desktop, serving me since 2012 (when I built it as my first desktop!), and upgraded through the years.
+
+Now being used as my primary homelab VM and container (LXC) setup. Has its own VM router with OPNsense.
 
 It was called 'breeze' when before '[angel](#angel)' was built, then when I switched it over to a VM host, I renamed it to 'dream'.
 
@@ -133,6 +117,21 @@ Other details
 - Previous MONITOR2: LG Flatron L1510T 15" 4:3
 	- I know, this is just here for fun
 
+### bubble
+
+Small, low power box I can have in the corner, and is my alternative to a RPi.
+
+Acer Chromebox CXI2
+
+- CPU: Intel Celeron 3205U
+- RAM: 4GB
+- SSD: 16GB
+- HDD(USB3): Seagate Expansion Desktop 4TB
+
+Other details
+
+- OS: Debian 10 buster
+- In the process of migrating almost everything to the hypervisor
 
 ## Older accessories
 
