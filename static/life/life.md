@@ -37,3 +37,4 @@
 - 2/05/2022 [Coreboot](https://www.coreboot.org/)-ed ThinkPad X230 laptop #tech
 - 14/06/2022 Laptop - ThinkPad X1 Carbon 5th Gen ('[reflect](/pc/#reflect)') #tech
 - 20/06/2022-~ Junior Developer (Mobile Apps; casual) @ Monash University (eSolutions) #job
+- 09/09/2022 Fifth mobile phone - iPhone 14 Pro Max (preordered) #tech

@@ -8,15 +8,16 @@ Other bits and pieces of technology I have. May or may not use them often.
 
 ### Current phone
 
-Samsung Galaxy Note 10 Aura Glow 256GB (acquired Nov 2019)
+Apple iPhone 14 Pro Max 128GB (acquired Sep 2022)
 
-- Earphones: Samsung Galaxy Buds White
-- Headphones: Sony WH-1000XM4
+- Earphones: Sony WF-1000XM4 Silver (Sony Seconds, Oct 2022)
+- Headphones: Sony WH-1000XM4 Black (Sony Seconds, Sep 2021)
+- Band: Xiaomi Mi Band 7 (China model, Oct 2022)
 
 ### Previous phones
 
-There's a bit of a trend here... until I decided I wanted a change.
-
+- Samsung Galaxy Note 10 Aura Glow 256GB (acquired Nov 2019)
+	- Earphones: Samsung Galaxy Buds White
 - LG V20 H990DS Titan 64GB (acquired Jan 2018)
 	- Still working, have it as a spare dual-sim phone for testing!
 - LG G3 D855 Gold 32GB (acquired Dec 2015)
