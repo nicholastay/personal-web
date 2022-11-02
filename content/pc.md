@@ -43,6 +43,19 @@ Other details:
 
 ## Laptops
 
+### reflect
+
+Lenovo ThinkPad X1 Carbon Gen 5 (purchased secondhand: Jun 2022)
+
+- CPU: Intel Core i5-7200U
+- RAM: 8GB
+- SSD: 256GB NVMe
+
+Other details:
+
+- OS: Fedora Linux (KDE spin + sway)
+- Had macOS on here at one point with OpenCore but performance kinda sucked, drained battery a lot and I couldn't be stuffed tuning it lol
+
 ### stars
 
 Lenovo ThinkPad X230 (purchased secondhand: May 2019)
