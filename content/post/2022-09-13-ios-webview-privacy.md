@@ -19,14 +19,12 @@ Give it a try -- visit this website via the in-built browser on iOS Facebook Mes
 
 As mentioned in the reference post, it isn't foolproof and can be worked around -- but, I still think it's a valuable step in raising awareness (but also for myself to check if some app is being a bad boy!).
 
-**Let this be a lesson to all of us to not trust in-app browsers on iOS!**
+**Let this be a lesson to all of us to not trust in-app browsers on iOS!** Use the 'Open in Safari' option whenever possible!
 
 You can find a copy of the script [in the assets folder of this site](/assets/privacy-protect.js), and use it as a reference for your own if you're interested on building something similar for your site -- rest assured it is licensed under the usual BSD-2-Clause.
 
-Note that I only capture very specific events that have the capability to be malicious, i.e. event listeners and script tags. Otherwise, common browser extensions may also fire off the warnings! There definitely is room for improvement here though, e.g. only looking for specific known ones.
-
 ---
 
-As a next step, I'd like to see if I can somehow make the protection a little more robust, but without having to be too invasive on the browser (i.e. overriding every JavaScript function lol) or losing functionality (e.g. comments section below).
+To Apple: please implement something like 'app-bound domains', i.e. whitelist of sites that an app can inject into.
 
-An idea I had was something similar to [OpenBSD 'pledge'](https://man.openbsd.org/pledge), where the site could 'pledge' and be given the calls it needs, then lock everyone else out. I'm not sure if this is going too far, as userscripts are sometimes fun too!
+To iOS app developers: please just use `SFSafariViewController` :(
