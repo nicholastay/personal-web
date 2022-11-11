@@ -6,11 +6,13 @@ title: About
 
 Hey, I'm Nicholas Tay -- but feel free to call me Nick.
 
-Simply put: final year student at Monash University, working towards finishing a double Bachelor degree in Computer Science and Commerce (Finance major). Enjoy messing with technology, especially a good challenge to learn new things, particularly with software.
+Simply put: final year student at Monash University, working towards finishing a double Bachelor degree in Computer Science and Commerce (Finance major). Currently working as an iOS developer at Monash as well.
 
-Recently, I've been really into virtualisation, containerisation, and more within that space -- I'm still learning! I've got some experience writing programs in C<sup>#</sup>, C and Java, as well as some scripting experience in Shell/Bash, JavaScript/TypeScript (Node.js) and Python 2/3. In terms of the 'cloud', I've been picking up Google Cloud Platform, including Firebase (Cloud Functions/Firestore), BigQuery, Cloud Run/Scheduler and more.
+Enjoy messing with technology, especially a good challenge to learn new things, particularly with software.
 
-In my free time, I really enjoy listening to [some music](https://www.last.fm/user/n2468txd) and play some video games -- at the moment, it happens to be Genshin Impact ([profile](https://webstatic-sea.mihoyo.com/app/community-game-records-sea/index.html?user_id=19309289#/ys)).
+Recently, I've been really into virtualisation, containerisation, and more within that space -- I'm still learning -- Proxmox, VMware, Docker, etc! I've got some experience writing programs in C<sup>#</sup>, C and Swift, as well as some scripting experience in Shell/Bash, Python 2/3 and JavaScript/TypeScript (Node.js).
+
+In my free time, I really enjoy listening to [some music](https://www.last.fm/user/n2468txd) and play some video games -- at the moment, it happens to be Genshin Impact ([profile](https://webstatic-sea.mihoyo.com/app/community-game-records-sea/index.html?user_id=19309289#/ys)). {{< rawhtml >}}<span style="color: transparent;">(keqing #1 :D)</span>{{< /rawhtml >}}
 
 I guess that's about it for now, but I'll be trying to post more on [my blog](/posts) about things I mess with in my spare time, probably with regards to my homelab!
 
