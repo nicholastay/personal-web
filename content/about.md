@@ -6,7 +6,7 @@ title: About
 
 Hey, I'm Nicholas Tay -- but feel free to call me Nick.
 
-Simply put: final year student at Monash University, working towards finishing a double Bachelor degree in Computer Science and Commerce (Finance major). Currently working as an iOS developer at Monash as well.
+I'm a recent double degree graduate with the Bachelors of Computer Science and Commerce (Finance major), from Monash University.
 
 Enjoy messing with technology, especially a good challenge to learn new things, particularly with software.
 

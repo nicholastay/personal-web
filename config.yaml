@@ -2,7 +2,7 @@ baseURL: https://nick.tay.blue/
 
 params:
     name: Nicholas Tay
-    tagline: "Junior Developer @ Monash eSolutions • BCom/BCompSc @ Monash University"
+    tagline: "BCom/BCompSc Grad @ Monash University"
 
 # I would prefer these on (I think) but CF pages is being dumb
 uglyURLs: false

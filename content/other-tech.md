@@ -10,7 +10,8 @@ Other bits and pieces of technology I have. May or may not use them often.
 
 Apple iPhone 14 Pro Max 128GB (acquired Sep 2022)
 
-- Earphones: Sony WF-1000XM4 Silver (Sony Seconds, Oct 2022)
+- Earphones: Sony LinkBuds S White (Sony Seconds, Jan 2023)
+	- ~~Sony WF-1000XM4 Silver (Sony Seconds, Oct 2022)~~ oops, lost the case in Japan...
 - Headphones: Sony WH-1000XM4 Black (Sony Seconds, Sep 2021)
 - Band: Xiaomi Mi Band 7 (China model, Oct 2022)
 
