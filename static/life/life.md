@@ -38,3 +38,5 @@
 - 14/06/2022 Laptop - ThinkPad X1 Carbon 5th Gen ('[reflect](/pc/#reflect)') #tech
 - 20/06/2022-09/12/2022 Junior iOS Developer (casual) @ Monash University (eSolutions) #job
 - 09/09/2022 Fifth mobile phone - iPhone 14 Pro Max (preordered) #tech
+- 30/01/2023 Laptop - Apple MacBook Air M2 2022 ('[starlight](/pc/#starlight)') #tech
+- 10/02/2023- Graduate Site Reliability Engineer @ IMC Trading #job
