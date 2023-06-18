@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>{{ $.Title }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<style>
+body{
+	font-family: sans-serif;
+	color: #fff;
+	background-color: #384047;
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	-webkit-text-size-adjust: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+a{
+	color: #fff;
+}
+header{
+	z-index: 3;
+	background: linear-gradient(to bottom, rgba(56,64,71,0) 0%,rgba(56,64,71,.5) 20%,rgba(56,64,71,1) 50%,rgba(56,64,71,.5) 80%,rgba(56,64,71,0) 100%);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	padding: 10px;
+}
+header a{
+	margin-left: 1em;
+	opacity: .3;
+	text-decoration: none;
+}
+header a:hover{
+	opacity: .7;
+	text-decoration: underline;
+}
+h1{
+	display: inline;
+	font-size: 20px;
+	line-height: 1em;
+	opacity: .5;
+	z-index: 3;
+	font-weight: 300;
+	white-space: nowrap;
+}
+#life{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	cursor: -webkit-grab;
+	cursor: -moz-grab;
+	cursor: grab;
+}
+#life-years{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	white-space: nowrap;
+	pointer-events: none;
+}
+#life-years .year{
+	display: inline-block;
+	box-sizing: border-box;
+	color: #fff;
+	font-weight: 300;
+	white-space: nowrap;
+	box-sizing: border-box;
+	height: 100%;
+	border-left: 1px dashed rgba(255,255,255,.2);
+}
+#life-years .year:first-child{
+	border-left: 0;
+}
+#life-years .year span{
+	background: linear-gradient(to bottom, rgba(56,64,71,1) 30%,rgba(56,64,71,0) 100%);
+	display: block;
+	padding: 10px;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 3;
+}
+#life-years .year span i{
+	opacity: .5;
+	font-style: normal;
+}
+#life-events{
+	padding-top: 40px;
+	padding-bottom: 5em;
+	position: relative;
+}
+#life-events:after{
+	content: '';
+	display: block;
+	clear: left;
+}
+#life .event{
+	padding-right: 20px;
+	padding-bottom: 5px;
+	vertical-align: middle;
+	white-space: nowrap;
+	float: left;
+	clear: left;
+}
+#life .event b{
+	font-weight: normal;
+	color: rgba(255,255,255,.5);
+}
+#life .event .time{
+	display: inline-block;
+	overflow: hidden;
+	height: 0;
+	border: 4px solid #fff;
+	border-radius: 4px;
+	margin-right: 10px;
+	opacity: .3;
+	position: relative;
+	left: -2px;
+}
+#life .event:hover .time{
+	opacity: .5;
+}
+</style>
+
+<!-- TODO: Merge custom CSS -->
+<style>
+body, header, #life-years .year span {
+	background: #f5f2f2;
+	color: black;
+}
+
+a {
+	color: black;
+}
+
+#life-years .year {
+	color: black;
+	border-left: 1px dashed rgba(0,0,0,.2);
+}
+
+#life .event .time {
+	border: 4px solid #888888;
+}
+#life .event b {
+	color: #6b6a6a;
+}
+#life .event .tag {
+	opacity: 0.65;
+}
+
+
+#life .event.tag-job .time {
+	border: 4px solid #eb9305;
+}
+#life .event.tag-job .tag {
+	color: #855301;
+}
+
+#life .event.tag-school .time {
+	border: 4px solid #2baaff;
+}
+#life .event.tag-school .tag {
+	color: #034f82;
+}
+
+#life .event.tag-trip .time {
+	border: 4px solid #942213;
+}
+#life .event.tag-trip .tag {
+	color: #942213;
+}
+
+#life .event.tag-tech .time {
+	border: 4px solid #ad68ad;
+}
+#life .event.tag-tech .tag {
+	color: #783478;
+}
+</style>
+<header>
+	<h1 id="title">{{ $.Title }}</h1>
+	<a href="https://github.com/cheeaun/life">(based on cheeaun/life)</a>
+</header>
+
+<!-- TODO: Style 'to Present' better -->
+<!-- TODO: Handle incomplete dates, so that it can just figure out itself -->
+<!-- TODO: (related to above) Handle 'to Present' better (without yaml hardcode) -->
+{{- $events := $.Params.life.events -}}
+{{- $sortedEvents := sort $events "date" -}}
+{{- $minYear := dateFormat "2006" (index $sortedEvents 0).date | int -}}
+{{- $maxYear := dateFormat "2006" (index $sortedEvents (sub (len $sortedEvents) 1)).date | int -}}
+{{- $startDate := printf "%d-01-01" $minYear | time -}}
+{{- $dayPx := div (div $.Params.life.yearWidth 12.0) 30.0 -}}
+<div id="life">
+	<div id="life-events">
+		<div id="life-years" class="comment_">
+			{{- $age := 0 -}}
+			{{- range seq $minYear (add $maxYear 1) -}}
+			<div class="year" style="width: {{ cond (modBool . 4) 366 365 | mul $dayPx | printf "%.2f" }}px">
+				<span>{{ . }} <i>({{ $age }})</i></span>
+			</div>
+			{{- $age = add $age 1 -}}
+			{{- end -}}
+		</div>
+
+		{{- range $event := $events -}}
+		{{- $date := time $event.date -}}
+		{{- $daysFromFirst := div (sub $date.Unix $startDate.Unix) 86400 -}}
+		<div class="event{{ cond (isset $event "tag") (printf " tag-%s" $event.tag) "" }}" style="margin-left: {{ mul $daysFromFirst $dayPx | printf "%.2f" }}px">
+			{{- $width := $dayPx -}}
+			{{- if isset $event "dateTo" -}}
+				{{- $daysFromTo := div (sub (time $event.dateTo).Unix $date.Unix) 86400 -}}
+				{{- $width = mul $daysFromTo $dayPx -}}
+			{{- end -}}
+			<div class="time" style="width: {{ printf "%.2f" $width }}px"></div>
+			<b>{{ default (cond (isset $event "dateTo") (printf "%s~%s" $event.date $event.dateTo) $event.date) $event.dateText }}</b> {{ $event.title | markdownify -}}
+			{{- if $event.tag -}}
+			<span class="tag"> #{{ $event.tag }}</span>
+			{{- end -}}
+		</div>
+		{{- end -}}
+	</div>
+</div>
+
+<!-- TODO: This isn't possible with pure css right? -->
+<script>
+	var el = document.getElementById('life');
+	var slider = {
+		startingMousePostition: {},
+		containerOffset: {},
+		init: function(){
+			window.addEventListener('mousedown', function(event){
+				slider.startingMousePostition = {
+					x: event.clientX,
+					y: event.clientY
+				};
+				slider.containerOffset = {
+					x: el.scrollLeft,
+					y: el.scrollTop
+				};
+				window.addEventListener('mousemove', slider.slide);
+			});
+			window.addEventListener('mouseup', function(event){
+				window.removeEventListener('mousemove', slider.slide);
+			});
+		},
+		slide: function(event){
+			event.preventDefault();
+			var x = slider.containerOffset.x + (slider.startingMousePostition.x - event.clientX);
+			var y = slider.containerOffset.y + (slider.startingMousePostition.y - event.clientY);
+			el.scrollLeft = x;
+			el.scrollTop = y;
+		}
+	};
+	slider.init();
+</script>
