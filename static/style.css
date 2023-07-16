@@ -47,9 +47,14 @@ a.cc {
 }
 
 pre,
-code {
+code,
+pre code span {
 	background-color: #323232 !important;
 	font-family: "Fantasque Sans Mono", Monaco, Menlo, monospace;
+	
+}
+
+pre, code {
 	color: white;
 }
 
@@ -285,6 +290,13 @@ figcaption {
 	margin-top: 0.2rem;
 }
 
+blockquote {
+	border-left-style: solid;
+    border-left-width: 4px;
+    border-left-color: #eeeeee;
+    padding: 0.05rem 1rem;
+}
+
 /* Dark Theme */
 @media (prefers-color-scheme: dark) {
 	html, body {
@@ -298,5 +310,9 @@ figcaption {
 
 	.toc {
 		background-color: #221c20;
+	}
+
+	blockquote {
+		border-left-color: #aaaaaa;
 	}
 }
