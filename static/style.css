@@ -162,7 +162,6 @@ ul.triangle li::before {
 
 #subtitle {
 	font-size: 15px;
-	color: #363636;
 	margin-top: 0;
 }
 
@@ -273,7 +272,7 @@ aside {
 }
 
 figure {
-	background-color: #d6d6d6;
+	background-color: #323232;
 	margin: 0;
 	padding: 8px 10px;
 	border-radius: 0.35rem;
@@ -284,4 +283,20 @@ figcaption {
 	text-align: right;
 	margin-right: 0.35rem;
 	margin-top: 0.2rem;
+}
+
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+	html, body {
+		background-color: #141620;
+		color: #e5e5e5;
+	}
+
+	img.logo-icon {
+		filter: invert(80%);
+	}
+
+	.toc {
+		background-color: #221c20;
+	}
 }
