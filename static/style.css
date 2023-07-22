@@ -117,32 +117,29 @@ ul.triangle li::before {
 }
 
 /* Main area + Nav */
+
+/* NOTE: Default to small-screen friendly by default!
+ * This means that if media-queries don't work, it gives
+ * something actually useful first. */
+
 /* .page = width-constrained page area */
 /* .sidebar = left-side header + nav */
 /* .content = right-side pane */
 .page {
 	margin: auto;
-	max-width: 1000px;
-}
-
-.sidebar,
-.content {
-	float: left;
-	padding: 15px;
+	max-width: 600px;
+	padding-left: 25px;
+	padding-right: 25px
 }
 
 .sidebar {
-	width: 22%;
-	text-align: right;
-}
-
-.content {
-	width: 69%;
+	text-align: center;
 }
 
 #face {
 	/* HACK: Old IE scaling of image */
-	_width: 225px;
+	_width: 95px;
+	width: 6rem;
 }
 
 .nav-links a {
@@ -206,31 +203,48 @@ ul.triangle li::before {
 	font-size: 9pt;
 }
 
-/* Mobile */
+.side-return {
+	text-align: left;
+}
 
-@media(max-width: 750px) {
+/* Expanded View ('non-mobile') */
+
+.page.type-post #header,
+.page.type-post .nav-links {
+	display: none;
+}
+
+@media(min-width: 750px) {
+	.page {
+		max-width: 1000px;
+	}
+
 	.sidebar,
 	.content {
-		width: 100%;
-		float: none;
-		padding: 0;
-	}
-
-	.page {
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
-
-	#face {
-		width: 6rem;
+		float: left;
+		padding: 15px;
 	}
 
 	.sidebar {
-		text-align: center;
+		width: 22%;
+		text-align: right;
 	}
 
-	h1.title {
-		text-align: center;
+	.content {
+		width: 69%;
+	}
+
+	#face {
+		width: 15rem;
+	}
+
+	.page.type-post #header,
+	.page.type-post .nav-links {
+		display: inherit;
+	}
+
+	.side-return {
+		text-align: right;
 	}
 }
 

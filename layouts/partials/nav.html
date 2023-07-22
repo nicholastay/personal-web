@@ -1,6 +1,7 @@
 <div class="sidebar">
 
 <header>
+	<div id="header">
 	<h1 id="myname">
 		<a href="/" class="no-link">
 			<img src="/assets/profile.jpg" id="face" class="smooth" alt="[My face!]">
@@ -9,6 +10,7 @@
 	</h1>
 
 	<p id="subtitle" class="subtitle">{{ $.Site.Params.navline }}</p>
+	</div>
 </header>
 
 <nav style="margin-top: 25px">
@@ -42,7 +44,7 @@
 	</p>
 
 	{{- if ne .Title "Home" -}}
-	<p style="margin-top: 25px">
+	<p class="side-return" style="margin-top: 25px">
 		<a href="/">&lt; Return home</a>
 	</p>
 	{{- end -}}
