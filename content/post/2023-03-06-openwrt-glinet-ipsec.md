@@ -5,9 +5,9 @@ tags:
     - router
 ---
 
-Recently, I was travelling and got myself a GL.iNet travel router -- the GL-SFT1200 Opal to be specific. It was the usual hotel Wi-Fi being horrible and ethernet being much better. (More explanation later, I want to cut to the chase)
+Recently, I was travelling and got myself a GL.iNet travel router -- the GL-SFT1200 Opal to be specific. It was the usual hotel Wi-Fi being horrible and Ethernet being much better -- I'm talking 3-5mbps and 55-70mbps better! (More explanation later, I want to cut to the chase.)
 
-I usually use an IKEv2 VPN to get back to some of my infrastructure (I know, WireGuard is usually easier to cut through firewalls, but IKE is native on mobile). However, the connection established and logs in just fine (logs on the other end see two-way communication), but traffic just wouldn't flow. Wi-Fi Calling (!) also wasn't working -- I am acutely aware that this feature also relies on IPsec, so what's the problem?
+I usually use an IKEv2 VPN to get back to some of my infrastructure (I know, WireGuard is usually easier to cut through firewalls, but IKE is native on mobile). However, the connection established and logs in just fine (logs on the other end see two-way communication), but traffic just wouldn't flow. Wi-Fi Calling(!) also wasn't working -- I am acutely aware that this feature also relies on IPsec, so what's the problem?
 
 Well, after hours of research and trying many various firewall rules, it turned out to just be this:
 
