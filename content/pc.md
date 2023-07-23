@@ -1,39 +1,39 @@
 ---
-title: Computer Setups
+title: Computer Specs/Info
 toc: true
 ---
 
-At the moment, I frequently use a desktop, 2 laptops and a 'server' (of sorts). I'll list them based on the hostnames I gave them... there's a story behind each of them usually, but I'll keep them to myself :)
+At the moment, I frequently use a desktop, a laptop and a 'server' (of sorts). I'll list them based on the hostnames I gave them... there's a story behind each of them usually, but I'll keep them to myself :)
 
-With regards to the laptops, I primarily use the X230.
+With regards to the laptops, I primarily use the MacBook Air.
 
 ## Desktops
 
-### angel
+### cafe
 
-My current, main computer I use when at home. Recently built: January 2021.
+My current, main computer I use when at home. Recently built as part of the move up to Sydney: April 2023.
 
-- CPU: AMD Ryzen 5 1600AF
-- MOBO: MSI X470 GAMING PLUS MAX
-- RAM: 16GB(2x8) Patriot Viper DDR4-3200 CL16 RGB White
-- GPU: ASUS NVIDIA GTX 980 STRIX 4GB
-- SSD: Samsung 970 EVO 500GB M.2 NVMe
-- HDD: Seagate Desktop SSHD 2TB 3.5" (64MB Cache) [moved over from '[dream](#dream-aka-breeze)']
-- PSU: be quiet! Pure Power 11 600W CM 80 PLUS Gold
-- CASE: InWin 101 Mid Tower ATX White
-- FAN: 3x InWin Sirius Pure ASP120 White ARGB
+- CPU: AMD Ryzen 5 5600 (w/ stock cooler)
+- MOBO: ASRock B550M Pro4 mATX AM4
+- RAM: 16G(2x8) TEAMGROUP T-Force Delta DDR4-3200 CL16 RGB Black
+- GPU: GIGABYTE Radeon RX 6700 XT Eagle 12G
+- SSD: Samsung 970 EVO Plus 1TB M.2 NVMe
+- PSU: Corsair RM750e 750W Full-Modular 80 PLUS Gold
+- CASE: Fractal Design Pop Mini Air RGB White Core mATX Clear Tint TG
+- FAN: 3x Fractal Aspect 12 White ARGB (included with case)
 
 Accessories include:
 
 - MONITOR: Xiaomi Mi Curved Gaming Monitor 34" 144hz WQHD 21:9
-- MONITOR2: LG Flatron E2251T-BN 21.5" 60hz FHD 16:9
-- MOUSE: Logitech MX Vertical *(for productivity)*
-- MOUSE2: Microsoft Pro IntelliMouse @ 1550DPI *(for gaming)*
-- KEYBOARD: Keebio Iris Rev. 4 ([self-built](/2022/02/11/iris/); Gateron Yellow) *(for productivity)*
-- KEYBOARD2: Cooler Master Quick Fire XT (Cherry MX Red) *(for gaming)*
-- EARPHONES: KZ ZSN PRO Purple (without mic)
+- MONITOR2: AOC 24G2SP IPS 23.8" FHD 16:9 *(used in portrait; also for SDVX)*
+- MOUSE: Microsoft Pro IntelliMouse @ 1550DPI *(for gaming)*
+- KEYBOARD: Keebio Iris Rev. 5 (self-built with Mill-Max hotswaps; Akko CS Sakura) *(for productivity)*
+- KEYBOARD2: Akko MOD 008 Pearl White (with all foams, tape modded; Akko CS Lavender Purple) *(for gaming)*
 - SPEAKER: Sony SRS-X3
-- TABLET: Wacom Intuos Pen Small CTL-480 (previously for osu!)
+- CON: Yuancon SDVX White2 (default buttons/switches)
+	- Trying to get into it! USC is pretty cool.
+- CON: Sony DualSense Wireless Controller for PlayStation 5 (White)
+	- I actually use this for Genshin and Honkai, lol -- was great when I was travelling and got PlayCover working on my M2 Mac :)
 
 Other details:
 
@@ -41,7 +41,82 @@ Other details:
 	- I'd rather use Linux, but I use this desktop to play games too, ha...
 	- Education edition is actually quite nice as it doesn't come with the garbage like Candy Crush and Cortana
 
+
 ## Laptops
+
+### starlight
+
+MacBook Air 2022 (purchased: Jan 2023)
+
+- CPU: Apple M2
+- RAM (shared): 8GB
+- SSD: 256GB NVMe
+
+Other details
+
+- OS: Apple macOS 13 Ventura (obviously)
+- Basically as part of the move from Melbourne to Sydney
+- Wanted a laptop to keep a personal environment (avoid using work laptop), while being definitely powerful enough to serve all my needs (without worrying about battery, etc) -- sorry secondhand ThinkPads :'(
+- Definitely ended up being helpful while I had an onboarding over in Amsterdam!
+
+
+## Work accessories
+
+I keep these at work and drive them daily there.
+
+- MOUSE: Logitech MX Vertical *(for productivity)*
+- KEYBOARD: Keebio Iris Rev. 4 ([self-built](/2022/02/11/iris/); Gateron Yellow)
+- EARPHONES: MOONDROP ARIA Snow Edition (thanks to my mates for the birthday present!)
+
+
+## Servers
+
+("servers" lol)
+
+### maze
+
+Small, low power box I can have in the corner, and is my alternative to a RPi.
+
+Acer Chromebox CXI2
+
+- CPU: Intel Celeron 3205U
+- RAM: 4GB
+- SSD: 16GB
+
+Other details
+
+- OS: Rocky Linux 9
+
+---
+
+## Back at home
+
+These are back at home in Melbourne.
+
+### angel
+
+Desktop back at home in Melbourne. Got me through COVID times. Built: January 2021.
+
+- CPU: AMD Ryzen 5 1600AF (w/ stock cooler)
+- MOBO: MSI X470 GAMING PLUS MAX
+- RAM: 16G(2x8) Patriot Viper DDR4-3200 CL16 RGB White
+- GPU: ASUS NVIDIA GTX 980 STRIX 4G
+- SSD: Samsung 970 EVO 500GB M.2 NVMe
+- HDD: Seagate Desktop SSHD 2TB 3.5" (64MB Cache) [moved over from '[dream](#dream-aka-breeze)']
+- PSU: be quiet! Pure Power 11 600W CM Semi-Modular 80 PLUS Gold
+- CASE: InWin 101 Mid Tower ATX White
+- FAN: 3x InWin Sirius Pure ASP120 White ARGB
+
+Accessories include (these basically suck because I moved all the stuff I cared about to Sydney):
+
+- MONITOR: LG Flatron E2251T-BN 21.5" 60hz FHD 16:9
+- KEYBOARD: Cooler Master Quick Fire XT (Cherry MX Red) *(for gaming)*
+- EARPHONES: KZ ZSN PRO Purple (without mic)
+- TABLET: Wacom Intuos Pen Small CTL-480 (previously for osu!)
+
+Other details:
+
+- OS: Microsoft Windows 10 Education (from uni)
 
 ### reflect
 
@@ -69,27 +144,9 @@ Other details:
 - OS: Fedora Linux (i3 spin)
 - Keyboard modded to X220 Classic 7-Row Keyboard
 
-### mocha
-
-Apple MacBook Air, Mid-2011 (purchased new: ~2011, by family)
-
-- CPU: Intel Core i5-2557M
-- RAM: 4GB
-- SSD: 120GB
-
-Other details:
-
-- OS: macOS Mojave 10.14.6 (see [my post](/2021/04/11/fde-mac/) for more details)
-- <strike>Surprisingly works pretty damn well still in 2021</strike>
-	- 2022 update: for some reason the fans spin up so dang often, and it frequently just chugs along... :(
-	- Maybe I'll try reverting to High Sierra to see if it works better some time.
-
-
-## Servers
-
-("servers" lol)
-
 ### dream (aka breeze)
+
+UPDATE: These ambitious plans aren't going ahead really anymore, at least not in this form, since I moved out to Sydney. Time to save up!
 
 My previous main desktop, serving me since 2012 (when I built it as my first desktop!), and upgraded through the years.
 
@@ -119,19 +176,14 @@ Other details
 
 ### bubble
 
-Small, low power box I can have in the corner, and is my alternative to a RPi.
-
-Acer Chromebox CXI2
-
-- CPU: Intel Celeron 3205U
-- RAM: 4GB
-- SSD: 16GB
-- HDD(USB3): Seagate Expansion Desktop 4TB
+Same Chromebox as above, but in Melbourne. I keep this around to jump into my desktop back over there and more.
 
 Other details
 
 - OS: Debian 10 buster
-- In the process of migrating almost everything to the hypervisor
+- <strike>In the process of migrating almost everything to the hypervisor</strike> To build up 'maze' and transition everything across!
+
+---
 
 ## Older accessories
 
