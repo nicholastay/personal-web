@@ -25,15 +25,18 @@ My current, main computer I use when at home. Recently built as part of the move
 Accessories include:
 
 - MONITOR: Xiaomi Mi Curved Gaming Monitor 34" 144hz WQHD 21:9
-- MONITOR2: AOC 24G2SP IPS 23.8" FHD 16:9 *(used in portrait; also for SDVX)*
+- MONITOR2: AOC 24G2SP IPS 23.8" 165hz FHD 16:9 *(used in portrait; also for SDVX)*
 - MOUSE: Microsoft Pro IntelliMouse @ 1550DPI *(for gaming)*
 - KEYBOARD: Keebio Iris Rev. 5 (self-built with Mill-Max hotswaps; Akko CS Sakura) *(for productivity)*
+    - Unfortunately I guess I don't "productivity" much nowadays, with uni being over
 - KEYBOARD2: Akko MOD 008 Pearl White (with all foams, tape modded; Akko CS Lavender Purple) *(for gaming)*
 - SPEAKER: Sony SRS-X3
 - CON: Yuancon SDVX White2 (default buttons/switches)
 	- Trying to get into it! USC is pretty cool.
 - CON: Sony DualSense Wireless Controller for PlayStation 5 (White)
 	- I actually use this for Genshin and Honkai, lol -- was great when I was travelling and got PlayCover working on my M2 Mac :)
+- DESKMAT: 900x400x4mm custom print from AliExpress of [pixiv#98460438](https://www.pixiv.net/en/artworks/98460438), by [@cqtlatte](https://twitter.com/cqtlatte) -- your art looks great and works well on deskmats, keep up the great stuff! (hope you don't mind the personal usage)
+    - (Old deskmat was a custom print of [this deskmat posted on Reddit](https://old.reddit.com/r/KeqingMains/comments/jyvc3k/tried_creating_a_keqing_desk_mat/), by [u/jeryco25](https://old.reddit.com/user/jeryco25) -- a great, low-key, clean design)
 
 Other details:
 
