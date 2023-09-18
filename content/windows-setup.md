@@ -24,3 +24,11 @@ Group Policy
   - -> Allow Telemetry: 0 - Security (for Windows 10)
   - -> Allow Diagnostic Data: Diagnostic data off (for Windows 11)
   - (Note: I use Education edition which allows these to be set to the lowest like this)
+
+## Settings
+
+AMD Graphics
+
+- For SpiceTools (if you know, you know)
+    - Games -> Add 64 exe -> Disable FreeSync
+    - (This fixes the alt-tab in, it works for a bit, then when freesync kicks in, it starts lagging weirdly between 90fps and 300fps(???))
