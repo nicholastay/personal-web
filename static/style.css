@@ -43,7 +43,11 @@ a.no-link {
 }
 a.cc {
 	text-decoration: none;
-	margin-left: 0.05rem;
+	margin-left: 0.5rem;
+}
+
+li {
+	margin: 0.2rem 0;
 }
 
 pre,
@@ -51,7 +55,6 @@ code,
 pre code span {
 	background-color: #323232 !important;
 	font-family: "Fantasque Sans Mono", Monaco, Menlo, monospace;
-	
 }
 
 pre, code {
