@@ -139,3 +139,21 @@ $ sudo grub2-editenv - set menu_auto_hide=2
 # Verify
 $ sudo grub2-editenv - list
 ```
+
+### Game tricks
+
+Various stuff to get game things working
+
+#### WineASIO with PipeWire JACK
+
+See post, http://nick.tay.blue/2024/01/06/wineasio
+
+#### Connect PS5 (DualSense) controller 'raw' in WINE/Proton
+
+(For Genshin Impact in WINE, showing the correct icons. Probably would work for other games who want the 'raw' controller, i.e. in Windows it would work without any sort of XInput wrapping, just the PS Now driver.)
+
+1. Ensure Valve's udev rules are installed: `sudo dnf install steam-devices` (RPMFusion package)
+    - Then, reload udev if not already restarted / replug controller
+    - (These include HIDRAW udev rules, particularly ones for the DualSense/DualShock)
+1. Open the registry for the relevant prefix, and set `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\winebus\DisableHidraw` to 0
+    - (I believe this is enabled by default in vanilla WINE, but is disabled in Proton due to expectation to use Steam Input. I use Wine-GE.)
