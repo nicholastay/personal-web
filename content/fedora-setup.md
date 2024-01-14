@@ -117,13 +117,13 @@ The Zoomer Shell
 $ chsh -s /bin/zsh $USER
 ```
 
-## Desktop utilities
-
-For my mic, I want compressor and EQ to help. `sudo dnf install easyeffects`
-
 ## Misc notes
 
-Other useful tips/tricks, I guess.
+Other useful tips/tricks/utilities, I guess.
+
+### Audio EQ/Effects
+
+For my mic, I want compressor and EQ to help. `sudo dnf install easyeffects`
 
 ### Installing fonts
 
@@ -140,7 +140,17 @@ $ sudo grub2-editenv - set menu_auto_hide=2
 $ sudo grub2-editenv - list
 ```
 
-### Game tricks
+### Wake-on-LAN
+
+I typically shut down my PC, but have a server to hop back into the network and sometimes want to wake my PC to do something. NetworkManager has a way to enable WoL for a connection:
+
+```
+$ nmcli connection modify 'Wired connection 1' 802-3-ethernet.wake-on-lan magic
+```
+
+Then, reboot **twice** (it starts working on the second shutdown -- Arch's wiki was, of course, right!).
+
+## Game notes
 
 Various stuff to get game things working
 
