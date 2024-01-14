@@ -117,6 +117,34 @@ The Zoomer Shell
 $ chsh -s /bin/zsh $USER
 ```
 
+### Set up CJK input
+
+I sometimes have a need to type all 3 of Chinese/Japanese/Korean. Under Wayland, IBus seems to suck (had issues such as key repeat breaking, bad UI/hotkey, etc). So I use Fcitx5, and haven't had a problem!
+
+(fcitx5 = input itself, kcm-fcitx5 = KDE integration, then Chinese / Korean (Hangul) / Japanese (Anthy))
+
+```
+$ sudo dnf install \
+    fcitx5 \
+    kcm-fcitx5 \
+    fcitx5-chinese-addons \
+    fcitx5-hangul \
+    fcitx5-anthy
+```
+
+Then, in Settings:
+
+- Input Devices -> Virtual Keyboard: Fcitx 5
+- Regional Settings -> Input Method (Fcitx 5)
+    - Add Input Method:
+        - 简体中文 (中文) - Pinyin
+        - Korean - Hangul
+        - Japanese - Anthy
+    - Global Options:
+        - Trigger Input Method: Switch to Super+Space
+        - Temporarily switch between: Add Right Alt
+        - Remove 'Group' hotkeys
+
 ## Misc notes
 
 Other useful tips/tricks/utilities, I guess.
