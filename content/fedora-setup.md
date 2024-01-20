@@ -14,11 +14,13 @@ Hostname is set, admin user for self is set up.
 
 ### KDE settings
 
+- Display: Configured as per required refresh rate, with FreeSync off (unforunately my monitor brightness-flickers)
 - Mouse: Flat acceleration curve
 - Keyboard:
   - Hardware: Delay 200ms, Rate 45/s
   - Advanced: Configure keyboard options checked. Caps Lock behavior -> Make Caps Lock an additional Esc
 - Night Color: Sunset/sunrise at current location
+- SDDM: Apply Plasma Settings (do this at end to ensure settings applied for lock screen)
 
 ### DNF config and update
 
@@ -177,6 +179,19 @@ $ nmcli connection modify 'Wired connection 1' 802-3-ethernet.wake-on-lan magic
 ```
 
 Then, reboot **twice** (it starts working on the second shutdown -- Arch's wiki was, of course, right!).
+
+### Running SDDM (lock screen/greeter) on Wayland
+
+As per Arch wiki, `/etc/sddm.conf.d/10-wayland.conf`:
+
+```
+[General]
+DisplayServer=wayland
+GreeterEnvironment=QT_WAYLAND_SHELL_INTEGRATION=layer-shell
+
+[Wayland]
+CompositorCommand=kwin_wayland --drm --no-lockscreen --no-global-shortcuts --locale1
+```
 
 ## Game notes
 
