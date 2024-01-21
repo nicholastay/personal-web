@@ -210,3 +210,11 @@ See post, http://nick.tay.blue/2024/01/06/wineasio
     - (These include HIDRAW udev rules, particularly ones for the DualSense/DualShock)
 1. Open the registry for the relevant prefix, and set `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\winebus\DisableHidraw` to 0
     - (I believe this is enabled by default in vanilla WINE, but is disabled in Proton due to expectation to use Steam Input. I use Wine-GE.)
+
+Then, optionally, for haptics, this requires some additional steps. We need to rename the audio output sink to just "Wireless Controller", as this is how the DualSense controller does haptics (surround sound), and games look for that specific output name (as that is the name in Windows). Fedora uses WirePlumber, and so we need to use that to rename the device as required.
+
+1. Ensure DualSense rename rule exists in WirePlumber config: https://github.com/nicholastay/dotcafe/blob/master/.config/wireplumber/main.lua.d/60-dualsense.lua
+    - If it didn't already, install the file and reboot
+    - In `wpctl status` under Audio Sinks, the controller should now come up as just "Wireless Controller"
+1. Ensure audio output profile for the controller is "Analog Surround 4.0 Output", volume is 100% + unmuted
+    - This can be done easily with pavucontrol
