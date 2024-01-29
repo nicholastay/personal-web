@@ -14,6 +14,7 @@ Ensure [Hugo](https://gohugo.io/) is installed (on Fedora, it is in DNF).
 
 ``` sh
 $ git clone https://github.com/nicholastay/personal-web.git
+$ git lfs pull
 $ hugo server --bind 0.0.0.0
 # Serves on all interfaces, port 1313, with hot reload.
 ```
