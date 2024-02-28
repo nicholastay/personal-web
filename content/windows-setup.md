@@ -2,7 +2,9 @@
 title: Windows setup
 ---
 
-Not ideal but using it for gaming on the desktop. I use Education edition which seems to come with the least crap.
+Note: I don't really use Windows anymore. This is just here for reference if I ever need to again for gaming.
+
+I prefer to use Education edition which seems to come with the least crap.
 
 ## General
 
@@ -29,6 +31,6 @@ Group Policy
 
 AMD Graphics
 
-- For SpiceTools (if you know, you know)
+- Various games where it looks 'stuttery'
     - Games -> Add 64 exe -> Disable FreeSync
-    - (This fixes the alt-tab in, it works for a bit, then when freesync kicks in, it starts lagging weirdly between 90fps and 300fps(???))
+    - (Xiaomi's display also has bad brightness flicker with variable refresh rate, so turning it off when super unstable can help a lot)
