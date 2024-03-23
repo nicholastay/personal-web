@@ -20,11 +20,13 @@ I prefer to use Education edition which seems to come with the least crap.
 
 Group Policy
 
-- Computer Configuration -> Administrative Templates -> Windows Components -> Windows Update -> Manage updates offered from Windows Update -> Do not include drivers with Windows Updates: Enabled
-  - IMPORTANT! After [my experiences on 2023-06-21](/2023/06/21/windows-update-drivers/).
-- Computer Configuration -> Administrative Templates -> Windows Components -> Data Collection and Preview Builds
-  - -> Allow Telemetry: 0 - Security (for Windows 10)
-  - -> Allow Diagnostic Data: Diagnostic data off (for Windows 11)
+- Disable Windows Update driver updates: Computer Configuration -> Administrative Templates -> Windows Components -> Windows Update
+  - (Windows 10) Do not include drivers with Windows Updates: Enabled
+  - (Windows 11) -> Manage updates offered from Windows Update; Do not include drivers with Windows Updates: Enabled
+  - (IMPORTANT! After [my experiences on 2023-06-21](/2023/06/21/windows-update-drivers/).)
+- Reduce Microsoft data collection: Computer Configuration -> Administrative Templates -> Windows Components -> Data Collection and Preview Builds
+  - (Windows 10) Allow Telemetry: 0 - Security
+  - (Windows 11) Allow Diagnostic Data: Diagnostic data off
   - (Note: I use Education edition which allows these to be set to the lowest like this)
 
 ## Settings
