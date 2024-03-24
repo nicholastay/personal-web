@@ -109,7 +109,13 @@ Occasionally things will be distributed this way and it's whatever. I use AppIma
 
 ### Install dotfiles
 
-TODO: Git repo
+Repo: https://github.com/nicholastay/dotcafe
+
+```
+$ git clone --bare https://github.com/nicholastay/dotcafe.git $HOME/.dotcafe.git
+$ rm .bashrc .bash_profile
+$ git --git-dir=$HOME/.dotcafe.git/ --work-tree=$HOME checkout
+```
 
 ### Set shell
 
@@ -140,8 +146,8 @@ Then, in Settings:
 - Regional Settings -> Input Method (Fcitx 5)
     - Add Input Method:
         - 简体中文 (中文) - Pinyin
-        - Korean - Hangul
-        - Japanese - Anthy
+        - 日本語 - Anthy
+        - 한국어 - Hangul
     - Global Options:
         - Trigger Input Method: Switch to Super+Space
         - Temporarily switch between: Add Right Alt
@@ -158,6 +164,8 @@ For my mic, I want compressor and EQ to help. `sudo dnf install easyeffects`
 ### Installing fonts
 
 Place fonts (OTF recommended) into `~/.local/share/fonts`, then reload with `fc-cache -fv`.
+
+For Microsoft Fonts (web compatibility, etc) there is mscorefonts2: https://mscorefonts2.sourceforge.net/ (requires copy of Windows system files).
 
 ### Disabling GRUB boot menu
 
@@ -192,6 +200,18 @@ GreeterEnvironment=QT_WAYLAND_SHELL_INTEGRATION=layer-shell
 [Wayland]
 CompositorCommand=kwin_wayland --drm --no-lockscreen --no-global-shortcuts --locale1
 ```
+
+### External monitor brightness control in KDE
+
+DDC/CI is actually supported in KDE via libddcutil. The default Fedora KDE spin doesn't come with ddcutil itself though.
+
+```
+$ sudo dnf install ddcutil
+```
+
+This will also ship the correct udev rules and kernel module loading (i2c-dev) to get it to work. Reboot after install.
+
+(Only one monitor seems to be working at the moment. Supposedly this could change with Plasma 6.)
 
 ## Game notes
 
