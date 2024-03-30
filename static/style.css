@@ -25,10 +25,6 @@ h3 {
 	font-size: 12pt;
 }
 
-h1,h2,h3,h4 {
-	margin-top: 0;
-}
-
 a {
 	text-decoration: underline;
 	color: #009db5;
@@ -264,6 +260,9 @@ ul.triangle li::before {
 
 
 /* Posts */
+h1.title {
+	margin-top: 0.5rem;
+}
 h2.date {
 	font-size: 16pt;
 	text-align: right;
