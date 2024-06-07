@@ -293,7 +293,7 @@ aside {
 }
 
 figure {
-	background-color: #323232;
+	background-color: #e6e6e6;
 	margin: 0;
 	padding: 8px 10px;
 	border-radius: 0.35rem;
@@ -308,9 +308,9 @@ figcaption {
 
 blockquote {
 	border-left-style: solid;
-    border-left-width: 4px;
-    border-left-color: #eeeeee;
-    padding: 0.05rem 1rem;
+	border-left-width: 4px;
+	border-left-color: #eeeeee;
+	padding: 0.05rem 1rem;
 }
 
 /* Dark Theme */
@@ -330,5 +330,9 @@ blockquote {
 
 	blockquote {
 		border-left-color: #aaaaaa;
+	}
+
+	figure {
+		background-color: #323232;
 	}
 }
