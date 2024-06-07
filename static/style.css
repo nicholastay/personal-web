@@ -46,15 +46,10 @@ li {
 	margin: 0.2rem 0;
 }
 
-pre,
-code,
+pre, code,
 pre code span {
-	background-color: #323232 !important;
+	background-color: #e6e6e6 !important;
 	font-family: "Fantasque Sans Mono", Monaco, Menlo, monospace;
-}
-
-pre, code {
-	color: white;
 }
 
 code {
@@ -334,5 +329,13 @@ blockquote {
 
 	figure {
 		background-color: #323232;
+	}
+
+	pre, code,
+	pre code span {
+		background-color: #323232 !important;
+	}
+	pre, code {
+		color: white;
 	}
 }
