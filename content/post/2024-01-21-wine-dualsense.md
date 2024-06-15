@@ -34,7 +34,7 @@ The main issue is that the PS5 controller uses its audio device for haptics (bac
 
 Under Fedora 39's default config, the audio session manager is WirePlumber for PipeWire. So, in `~/.config/wireplumber/main.lua.d/60-dualsense.lua`, we can create a custom rule:
 
-```
+```lua
 rule = {
 	matches = {
 		{

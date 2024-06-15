@@ -48,8 +48,12 @@ li {
 
 pre, code,
 pre code span {
-	background-color: #e6e6e6 !important;
+	color: #4c4f69;
+	background-color: #eff1f5 !important;
 	font-family: "Fantasque Sans Mono", Monaco, Menlo, monospace;
+}
+pre code > span {
+	padding: 0.1rem 0;
 }
 
 code {
@@ -333,9 +337,7 @@ blockquote {
 
 	pre, code,
 	pre code span {
-		background-color: #323232 !important;
-	}
-	pre, code {
-		color: white;
+		color: #e1dbfd;
+		background-color: #090e15 !important;
 	}
 }
