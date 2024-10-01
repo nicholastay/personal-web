@@ -7,6 +7,19 @@ At the moment, I frequently use a desktop, a laptop and a 'server' (of sorts). I
 
 With regards to the laptops, I primarily use the MacBook Air.
 
+## Work
+
+I use the given MacBook Pro (M1 Max), and keep these below accessories at my office desk, daily drive them there.
+
+- MOUSE: Logitech MX Vertical
+- KEYBOARD: Keebio Iris Rev. 5 (HMX Sillyworks Hyacinth V2) *(for productivity)*
+    - Thanks to my mates for the birthday switches! <3
+    - Self-assembled with Mill-Max hotswap sockets
+    - Tented with some cheap adjustable adhesive legs (works surprisingly well)
+    - Custom FR4 board based on official GitHub DXF files (*maybe I should do a post on this soon of how I did the Gerber conversions, etc?*)
+- EARPHONES: MOONDROP ARIA Snow Edition (thanks to those same guys for this birthday present too!)
+
+
 ## Desktops
 
 ### cafe
@@ -27,8 +40,8 @@ Accessories include:
 - MONITOR: Xiaomi Mi Curved Gaming Monitor 34" 144hz WQHD 21:9
 - MONITOR2: AOC 24G2SP IPS 23.8" 165hz FHD 16:9 *(used in portrait; also for SDVX)*
 - MOUSE: Microsoft Pro IntelliMouse @ 1550DPI *(for gaming)*
-- KEYBOARD: Keebio Iris Rev. 5 (self-built with Mill-Max hotswaps; Akko CS Sakura) *(for productivity)*
     - Unfortunately I guess I don't "productivity" much nowadays, with uni being over
+- KEYBOARD: Keebio Iris Rev. 4 ([self-built](/2022/02/11/iris/); Gateron Yellow) *(for productivity)*
 - KEYBOARD2: Akko MOD 008 Pearl White (with all foams, tape modded; Akko CS Lavender Purple) *(for gaming)*
 - SPEAKER: Sony SRS-X3
 - CON: Yuancon SDVX White2 (default buttons/switches)
@@ -61,15 +74,6 @@ Other details
 - Basically as part of the move from Melbourne to Sydney
 - Wanted a laptop to keep a personal environment (avoid using work laptop), while being definitely powerful enough to serve all my needs (without worrying about battery, etc) -- sorry secondhand ThinkPads :'(
 - Definitely ended up being helpful while I had an onboarding over in Amsterdam!
-
-
-## Work accessories
-
-I keep these at work and drive them daily there.
-
-- MOUSE: Logitech MX Vertical *(for productivity)*
-- KEYBOARD: Keebio Iris Rev. 4 ([self-built](/2022/02/11/iris/); Gateron Yellow)
-- EARPHONES: MOONDROP ARIA Snow Edition (thanks to my mates for the birthday present!)
 
 
 ## Servers
