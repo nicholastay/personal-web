@@ -2,7 +2,7 @@
 
 <main>
 <article>
-<h1 class="title">{{ $.Title }}</h1>
+{{- if default true .Params.show_title }}<h1 class="title">{{ $.Title }}</h1>{{ end -}}
 {{- partial "toc.html" . -}}
 
 {{- .Content -}}
