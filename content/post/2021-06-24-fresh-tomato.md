@@ -1,5 +1,5 @@
 ---
-date: "2021-06-24T11:16:29Z+10:00"
+date: 2021-06-24T11:16:29+10:00
 tags: 
     - router
 title: 'Fresh tomatoes? Yes!: Belkin F7D3402v1 router firmware hacking'
