@@ -16,13 +16,14 @@ gpedit.msc -> Computer Configuration -> Administrative Templates -> Windows Comp
     - Windows 10: Do not include drivers with Windows Update: Enabled.
 ```
 
-One-click .reg file (also useful if you're unfortunate enough to be on a 'Home' version; thanks to [this great tool 'GPS' for the reference key](https://gpsearch.azurewebsites.net/#13437), note I tested only on W10):
+{{< rawhtml >}}<a download="goawaydriverupdates.reg" href="data:text/plain;base64,V2luZG93cyBSZWdpc3RyeSBFZGl0b3IgVmVyc2lvbiA1LjAwDQoNCltIS0VZX0xPQ0FMX01BQ0hJTkVcU09GVFdBUkVcUG9saWNpZXNcTWljcm9zb2Z0XFdpbmRvd3NcV2luZG93c1VwZGF0ZV0NCiJFeGNsdWRlV1VEcml2ZXJzSW5RdWFsaXR5VXBkYXRlIj1kd29yZDowMDAwMDAwMQ0K">One-click .reg file</a>{{< /rawhtml >}} - content below:
 ```
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
 "ExcludeWUDriversInQualityUpdate"=dword:00000001
 ```
+*(also useful if you're unfortunate enough to be on a 'Home' version; thanks to [this great tool 'GPS' for the reference key](https://gpsearch.azurewebsites.net/#13437), note I tested only on W10)*
 
 ---
 
@@ -56,4 +57,4 @@ WTF is Microsoft doing? Don't touch my drivers, they're key to standard operatio
 
 *Updates after initial publishing:*
 
-- 2025-01-27: Added Windows 10 gpedit location & registry location, given I stopped using Windows 11 too
+- 2025-01-27: Added Windows 10 gpedit location & 1-click registry location, given I stopped using Windows 11 too
