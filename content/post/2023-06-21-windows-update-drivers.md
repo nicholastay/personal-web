@@ -9,8 +9,19 @@ This is regarding the "Advanced Micro Devices, Inc. - Display - 31.0.22000.11023
 
 TL;DR Windows Update kept screwing with my drivers -- now it will never have the privilege of doing so again on [any future setup of mine](/windows-setup/). Also my best friend is DDU (and it always has been).
 
+Group Policy Setting:
 ```
-gpedit.msc -> Computer Configuration -> Administrative Templates -> Windows Components -> Windows Update -> Manage updates offered from Windows Update -> Do not include drivers with Windows Updates: Enabled.
+gpedit.msc -> Computer Configuration -> Administrative Templates -> Windows Components -> Windows Update.
+    - Windows 11: -> Manage updates offered from Windows Update. Do not include drivers with Windows Updates: Enabled.
+    - Windows 10: Do not include drivers with Windows Update: Enabled.
+```
+
+One-click .reg file (also useful if you're unfortunate enough to be on a 'Home' version; thanks to [this great tool 'GPS' for the reference key](https://gpsearch.azurewebsites.net/#13437), note I tested only on W10):
+```
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate]
+"ExcludeWUDriversInQualityUpdate"=dword:00000001
 ```
 
 ---
@@ -40,3 +51,9 @@ Honestly, it's pretty insane that I had to nuke the driver with DDU to un\*\*\*\
 I suspect this kept happening on switching driver settings as Windows Update was applying the driver in the background **while I'm using the PC** but wasn't fully taking effect until I changed display settings.
 
 WTF is Microsoft doing? Don't touch my drivers, they're key to standard operation. Particularly if it's going to be applied during regular operation without a restart, and potentially ending up in a bad state.
+
+---
+
+*Updates after initial publishing:*
+
+- 2025-01-27: Added Windows 10 gpedit location & registry location, given I stopped using Windows 11 too
