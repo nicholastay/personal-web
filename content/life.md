@@ -140,8 +140,13 @@ life:
       title: "Laptop - Apple MacBook Air M2 2022 ('[starlight](/pc/#starlight)')"
       tag: tech
     - date: "2023-02-10"
-      dateTo: "2023-06-18"
-      dateText: "2023-02-10~Present"
+      dateTo: "2025-01-15"
+      dateText: "2023-02~2025-01"
       title: "Graduate Site Reliability Engineer @ IMC Trading"
+      tag: job
+    - date: "2025-01-15"
+      dateTo: "NOW"
+      dateText: "2025-01~Present"
+      title: "Trading Engineer @ IMC Trading"
       tag: job
 ---

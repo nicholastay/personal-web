@@ -2,7 +2,7 @@ baseURL: https://nick.tay.blue/
 
 params:
     name: Nicholas Tay
-    navline: "Grad SRE @ IMC Trading | CS/Comm Grad @ Monash Uni"
+    navline: "Trading Systems Engineer by day, still nerding out by night"
     tagline: "Linux user messing with technologies including VMs, containers, networks and more."
 
 # I would prefer these on (I think) but CF pages is being dumb

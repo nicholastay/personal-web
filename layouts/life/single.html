@@ -91,7 +91,6 @@ h1{
 }
 #life-years .year span i{
 	opacity: .5;
-	font-style: normal;
 }
 #life-events{
 	padding-top: 40px;
@@ -213,13 +212,13 @@ a {
 	<a href="https://github.com/cheeaun/life">(based on cheeaun/life)</a>
 </header>
 
-<!-- TODO: Style 'to Present' better -->
 <!-- TODO: Handle incomplete dates, so that it can just figure out itself -->
-<!-- TODO: (related to above) Handle 'to Present' better (without yaml hardcode) -->
+<!-- NB: Just handles present as build date 'to' -->
 {{- $events := $.Params.life.events -}}
 {{- $sortedEvents := sort $events "date" -}}
 {{- $minYear := dateFormat "2006" (index $sortedEvents 0).date | int -}}
-{{- $maxYear := dateFormat "2006" (index $sortedEvents (sub (len $sortedEvents) 1)).date | int -}}
+{{- $maxListYear := dateFormat "2006" (index $sortedEvents (sub (len $sortedEvents) 1)).date | int -}}
+{{- $maxYear := math.Max (dateFormat "2006" time.Now | int) $maxListYear -}}
 {{- $startDate := printf "%d-01-01" $minYear | time -}}
 {{- $dayPx := div (div $.Params.life.yearWidth 12.0) 30.0 -}}
 <div id="life">
@@ -228,7 +227,7 @@ a {
 			{{- $age := 0 -}}
 			{{- range seq $minYear (add $maxYear 1) -}}
 			<div class="year" style="width: {{ cond (modBool . 4) 366 365 | mul $dayPx | printf "%.2f" }}px">
-				<span>{{ . }} <i>({{ $age }})</i></span>
+				<span>{{ . }} <i>({{ cond (eq $age 0) "age: " "" }}{{ $age }})</i></span>
 			</div>
 			{{- $age = add $age 1 -}}
 			{{- end -}}
@@ -240,7 +239,8 @@ a {
 		<div class="event{{ cond (isset $event "tag") (printf " tag-%s" $event.tag) "" }}" style="margin-left: {{ mul $daysFromFirst $dayPx | printf "%.2f" }}px">
 			{{- $width := $dayPx -}}
 			{{- if isset $event "dateTo" -}}
-				{{- $daysFromTo := div (sub (time $event.dateTo).Unix $date.Unix) 86400 -}}
+				{{- $dateTo := time.Now -}}{{- if ne $event.dateTo "NOW" -}}{{- $dateTo = time $event.dateTo -}}{{- end -}}
+				{{- $daysFromTo := div (sub $dateTo.Unix $date.Unix) 86400 -}}
 				{{- $width = mul $daysFromTo $dayPx -}}
 			{{- end -}}
 			<div class="time" style="width: {{ printf "%.2f" $width }}px"></div>
