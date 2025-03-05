@@ -36,3 +36,5 @@ AMD Graphics
 - Various games where it looks 'stuttery'
     - Games -> Add 64 exe -> Disable FreeSync
     - (Xiaomi's display also has bad brightness flicker with variable refresh rate, so turning it off when super unstable can help a lot)
+
+Enable WoL: [my post here about enabling it](/2025/03/05/wol/)

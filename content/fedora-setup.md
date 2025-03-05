@@ -180,13 +180,7 @@ $ sudo grub2-editenv - list
 
 ### Wake-on-LAN
 
-I typically shut down my PC, but have a server to hop back into the network and sometimes want to wake my PC to do something. NetworkManager has a way to enable WoL for a connection:
-
-```
-$ nmcli connection modify 'Wired connection 1' 802-3-ethernet.wake-on-lan magic
-```
-
-Then, reboot **twice** (it starts working on the second shutdown -- Arch's wiki was, of course, right!).
+[Full post here about enabling it](/2025/03/05/wol/)
 
 ### Running SDDM (lock screen/greeter) on Wayland
 
