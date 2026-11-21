@@ -113,6 +113,12 @@ ul.triangle li::before {
 	margin-bottom: 20px;
 	text-align: center;
 }
+#head-line.privacy {
+	background-color: #fcffa6;
+	height: auto;
+	padding: 5px;
+	font-size: 0.8rem;
+}
 
 /* Main area + Nav */
 
@@ -339,5 +345,10 @@ blockquote {
 	pre code span {
 		color: #e1dbfd;
 		background-color: #090e15 !important;
+	}
+
+	#head-line.privacy {
+		background-color: #51531a;
+		color: white;
 	}
 }
